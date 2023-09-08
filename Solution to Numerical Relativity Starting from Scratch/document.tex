@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{setspace}
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+\usepackage{float}
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{amssymb}
+\usepackage{newtxtext}
+\usepackage[subscriptcorrection,mtpcal,nofontinfo]{mtpro2}
+
+\begin{document}
+\title{Solution to Numerical Relativity: Starting from Scratch}
+\maketitle
+\tableofcontents
+
+\cleardoublepage
+
+\section{Newton's and Einstein's Gravity}
+\subsubsection*{Exercise 1.1}
+\begin{enumerate}[label=(\alph*)]
+	\item 
+\end{enumerate}
+\begin{equation*}
+	x=y
+\end{equation*}
+
+\subsubsection*{Exercise 1.2}
+At constant time $t$, constant coordinates $R$ and $\theta$, we have $dt=dR = d\theta = 0$. Therefore, line element becomes
+\begin{equation}
+	ds^2 = R^2 \sin^2 \frac{\pi}{2} d\phi ^2,
+\end{equation}
+and we have proper length
+\begin{equation}
+	C = \int_{0}^{2\pi}dl = \int_0^{2\pi}Rd\phi = 2\pi R.
+\end{equation}
+
+\subsubsection*{Exercise 1.3}
+\begin{enumerate}[label=(\alph*)]
+	\item Given $A^a = (-1, 2, 0, 0)$ and $B^a = (-2, 1, 0, 0)$,
+	\begin{equation}
+		g_{ab}A^a B^b = -2+2 = 0.
+	\end{equation}
+	\item Consider only in $t-x$ diagram, $A$ and $B$ will be looks like they do make a angle $\theta = \cos^{-1}\frac{4}{5}\approx 36.87^\circ$.
+\end{enumerate}
+
+\subsubsection*{Exercise 1.4}
+Since four-velocity defined as
+\begin{equation}
+	u^a = \frac{dx^a}{d\tau},
+\end{equation}
+\begin{align}
+	u_a u^a &= \frac{dx_a}{d\tau}\frac{dx^a}{d\tau}\\
+	&= \frac{g_{ab}dx^adx^b}{d\tau^2}\\
+	&= \frac{-ds^2}{d\tau^2}\\
+	&= -1.
+\end{align}
+
+\section{Foliations of Spacetime: Constraint and Evolution Equations}
+
+\subsubsection*{Exercise 2.1}
+From
+\begin{equation}
+	\mathcal{C}_E = D_i E^i - 4 \pi \rho,
+\end{equation}
+\begin{equation}
+	\partial_t E_i = D_i D^j A_j - D^j D_j A_i - 4 \pi j_i,
+\end{equation}
+\begin{equation}
+	\frac{\partial \rho}{\partial t} + D_i j^i = 0,
+\end{equation}
+we can get
+\begin{align}
+	\partial_t \mathcal{C}_E &= D_i \partial_t E^i - 4\pi \frac{\partial \rho}{\partial t}\\
+	&= D_i (D^i D^j A_j - D^j D_j A^i - 4\pi j^i) + 4\pi D_i j^i\\
+	&= D_i D^i D^j A_j - D_i D^j D_j A^i\\
+	&= 0.
+\end{align}
+
+\section{Solving the Constraint Equations}
+
+\section{Solving the Evolution Equations}
+
+\section{Numerical Simulations of Black-Hole Binaries}
+
+\end{document}

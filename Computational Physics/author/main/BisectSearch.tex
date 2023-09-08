@@ -1,0 +1,49 @@
+%%%%%%%%%%%%%%%%%%%%% chapter.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample chapter
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+%\motto{Use the template \emph{chapter.tex} to style the various elements of your chapter content.}
+\chapter{이분 탐색}
+\label{ch:bisectsearch} % Always give a unique label
+
+\section{이분 탐색}
+방정식
+\begin{equation}
+	e^x + \ln x = 0
+\end{equation}
+을 풀어보자. $f(x) = e^x + \ln x$라 하면, $f(0) \rightarrow -\infty$이고, $f(2) >0$이므로 중간값 정리에 의해 0과 2 사이에 $f(x)=0$이 되는 어떤 $x=x_0$가 존재함은 분명하다. 하지만 $x_0$를 우리가 아는 수로 표현하기는 어렵다. 이것은 아마 무리수이겠지만, 루트나 $e$, $\pi$ 등으로는 표현할 수 없다.
+
+$x_0$의 실제값을 알기 위해 $f(x)$에 몇 가지 값들을 대입할 수 있다. 예를 들어, $f(1) = e > 0$이므로 $x_0 < 1$임을 알 수 있다. 한편 $f(0.1)<0$이므로 $0.1<x_0$임을 알 수 있다. 이를 적당히 반복하면 우리가 원하는 만큼의 정확도로 $x_0$를 찾을 수 있을 것으로 기대할 수 있다.
+
+이를 효율적으로 수행하는 알고리즘이 이분 탐색이다. 이분 탐색은 다음과 같은 과정으로 이루어진다.
+\begin{enumerate}
+	\item 필요한 $f(x)$를 정의한다.
+	\item 구하고자 하는 $x_0$의 범위 $a<x_0<b$를 정한다. 이 구간 내에서 $f(x)$는 단조 함수여야 한다.
+	\item 다음 과정을 충분히 반복한다.
+	\begin{enumerate}
+		\item $c = \frac{a+b}{2}$에 대해 $f(c)$의 값을 구한다.
+		\item ($f(x)$가 증가 함수일 때,) $f(c)<0$이면 해는 $c<x_0<b$에 존재하고, $f(c)>0$이면 해는 $a <x_0<c$에 존재한다.
+		\item 따라서 각 경우에 따라 $a$ 또는 $b$를 $c$로 변경한다.
+	\item $a$ 또는 $b$가 찾고자 하는 $x_0$이다.
+	\end{enumerate}
+\end{enumerate}
+3번 과정에서 한 번 반복을 할 때마다 구간의 길이 $b - a$는 절반으로 줄어든다. 따라서 이 과정을 100번 반복하면 구간의 길이는 기존에 비해 $2^{100} \approx 10^{30}$배로 줄어든다. 이를 이용하여 실제로 $e^x + \ln x = 0$의 해를 찾으면, $x_0 \approx 0.2698741375734493$이다. 만약 더 많은 유효숫자에 대해 계산하고 싶다면, \texttt{decimal} 라이브러리를 사용해 정밀도를 높여 계산하는 것을 추천한다.
+
+\begin{minted}{Python}
+	import math
+	def f(x):
+		return math.exp(x) + math.log(x)
+	a, b = 0, 2
+	for i in range(100):
+		c = (a + b) / 2
+		if f(c) > 0:
+			b = c
+		else:
+			a = c
+\end{minted}
+
+\section{삼분 탐색}
+이분 탐색에서는 단조 함수 $f(x)$에 대하여 $f(x) = 0$의 해를 찾을 수 있었다. 이분 탐색의 논리와 비슷한 방식으로, 이번에는 어떤 함수의 극값을 찾아볼 것이다.

@@ -1,0 +1,108 @@
+% !TEX encoding = UTF-8 Unicode
+%%%%%%%%%%%%%%%%%%%% book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for the chapters of your "monograph"
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox,envcountchap,sectrefs]{style/svmono}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+%\usepackage{mathptmx}
+%\usepackage{helvet}
+%\usepackage{courier}
+%
+
+%\usepackage[utf8]{inputenc}
+%\usepackage{kotex}
+
+\usepackage{setspace}
+
+\usepackage{type1cm}         
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+\usepackage{float}
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\usepackage{multirow}
+
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{amssymb}
+
+\renewcommand{\qed}{\hfill$\blacksquare$}
+\newcommand{\qedwhite}{\hfill \ensuremath{\Box}}
+
+%\usepackage{palatino}
+\usepackage{newtxtext}       % 
+%\usepackage{newtxmath}       % selects Times Roman as basic font
+\usepackage[subscriptcorrection,mtpcal,nofontinfo]{mtpro2}
+
+\newcommand{\dmf}{{}^{(4)}}
+\newcommand{\dmt}{{}^{(3)}}
+\newcommand{\dmtwo}{{}^{(2)}}
+
+%\newcommand{\dimf}{{}^{(4)}
+%\newcommand{\dimh}{${}^{(3)$}
+
+%\usepackage{utopia}
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\graphicspath{{./}{images/}}
+
+\begin{document}
+
+\author{D.C. Kim}
+\title{Numerical Relativity}
+\subtitle{supplementary note}
+\maketitle
+
+\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setstretch{1.4}
+
+%\include{author/dedication}
+%\include{author/foreword}
+%\include{author/preface}
+%\include{author/acknowledgement}
+
+\tableofcontents
+
+%\include{author/acronym}
+
+
+\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{author/part}
+\include{author/main/Spin}
+%\include{author/chapter}
+%\include{author/appendix}
+
+\backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{author/glossary}
+%\include{author/solutions}
+\printindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+
+
+

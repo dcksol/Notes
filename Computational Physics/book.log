@@ -1,0 +1,918 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2022.12.1)  10 JAN 2023 19:22
+entering extended mode
+**./book.tex
+(book.tex
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-08-27> (style/svmono.cls
+
+LaTeX Warning: You have requested document class `style/svmono',
+               but the document class provides `svmono'.
+
+Document Class: svmono 2018/06/25 v5.6 
+Springer Verlag global LaTeX document class for monographs
+Class Springer-SVMono Info: extra/valid Springer sub-package 
+(Springer-SVMono)           not found in option list - using "global" style.
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count182
+\c@section=\count183
+\c@subsection=\count184
+\c@subsubsection=\count185
+\c@paragraph=\count186
+\c@subparagraph=\count187
+\c@figure=\count188
+\c@table=\count189
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+\svparindent=\dimen139
+\betweenumberspace=\dimen140
+\headlineindent=\dimen141
+\c@chapter=\count190
+\mottowidth=\dimen142
+\svitemindent=\dimen143
+\verbatimindent=\dimen144
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 849.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 850.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 851.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 852.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 853.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 854.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 855.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 856.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 857.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 858.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 859.
+\tocchpnum=\dimen145
+\tocsecnum=\dimen146
+\tocsectotal=\dimen147
+\tocsubsecnum=\dimen148
+\tocsubsectotal=\dimen149
+\tocsubsubsecnum=\dimen150
+\tocsubsubsectotal=\dimen151
+\tocparanum=\dimen152
+\tocparatotal=\dimen153
+\tocsubparanum=\dimen154
+\foot@parindent=\dimen155
+\spthmsep=\dimen156
+\c@theorem=\count191
+\c@case=\count192
+\c@conjecture=\count193
+\c@corollary=\count194
+\c@definition=\count195
+\c@example=\count196
+\c@exercise=\count197
+\c@lemma=\count198
+\c@note=\count199
+\c@problem=\count266
+\c@property=\count267
+\c@proposition=\count268
+\c@question=\count269
+\c@solution=\count270
+\c@remark=\count271
+\c@prob=\count272
+\instindent=\dimen157
+\figgap=\dimen158
+\bildb@x=\box50
+\figcapgap=\dimen159
+\tabcapgap=\dimen160
+\c@merk=\count273
+LaTeX Info: Redefining \abstract on input line 1912.
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+ (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\x11nam.def
+File: x11nam.def 2016/05/11 v2.12 Predefined colors according to Unix/X11 (UK)
+))
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/ntheorem\ntheorem.sty
+Style `ntheorem', Version 1.33 <2011/08/15>
+Package: ntheorem 2011/08/15 1.33
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\theorem@style=\toks16
+\theorem@@style=\toks17
+\theorembodyfont=\toks18
+\theoremnumbering=\toks19
+\theorempreskipamount=\skip49
+\theorempostskipamount=\skip50
+\theoremframepreskipamount=\skip51
+\theoremframepostskipamount=\skip52
+\theoreminframepreskipamount=\skip53
+\theoreminframepostskipamount=\skip54
+\theorem@preskip=\toks20
+\theorem@postskip=\toks21
+\theorem@framepreskip=\toks22
+\theorem@framepostskip=\toks23
+\theorem@inframepreskip=\toks24
+\theorem@inframepostskip=\toks25
+\theoremindent=\dimen161
+\theorem@indent=\dimen162
+\theoremrightindent=\dimen163
+\theorem@rightindent=\dimen164
+\theoremheaderfont=\toks26
+\theoremseparator=\toks27
+\theoremprework=\toks28
+\theorempostwork=\toks29
+\theoremsymbol=\toks30
+\qedsymbol=\toks31
+\theoremkeyword=\toks32
+\qedsymbol=\toks33
+\thm@topsep=\skip55
+\thm@topsepadd=\skip56
+Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
+\c@endNonectr=\count274
+\c@currNonectr=\count275
+\mysavskip=\skip57
+Package ntheorem Info: Option `thref' loaded on input line 1175.
+\mysavskip=\skip58
+)
+\c@currproofctr=\count276
+\c@endproofctr=\count277
+\c@proof=\count278
+\minitoc=\write3
+\c@minitocdepth=\count279
+\c@@inst=\count280
+\c@@auth=\count281
+\c@auco=\count282
+\instindent=\dimen165
+\authrun=\box51
+\authorrunning=\toks34
+\tocauthor=\toks35
+\titrun=\box52
+\titlerunning=\toks36
+\toctitle=\toks37
+\c@contribution=\count283
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip59
+\fb@frw=\dimen166
+\fb@frh=\dimen167
+\FrameRule=\dimen168
+\FrameSep=\dimen169
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/cjk-ko\kotex.sty
+Package: kotex 2015/04/19 v1.6 Korean TeX (ko.TeX)
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/kotex-utf\kotex.cfg)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/kotex-utf\kotexutf.sty
+Package: kotexutf 2015/07/18 v2.1.1 typesetting UTF-8 Korean documents
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks38
+\inpenc@posthook=\toks39
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/plain/kotex-plain\kotexutf-co
+re.tex
+\unih@ngulpoint=\count284
+\dhucs@emph@raise=\dimen170
+)
+Now handling font encoding LUC ...
+... processing UTF-8 mapping file for font encoding LUC
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/kotex-utf\lucenc.dfu
+File: lucenc.dfu 2007/09/05 UTF-8 support for dhucs
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+3001 (decimal 12289)
+   defining Unicode char U+3002 (decimal 12290)
+   defining Unicode char U+3008 (decimal 12296)
+   defining Unicode char U+3009 (decimal 12297)
+   defining Unicode char U+300A (decimal 12298)
+   defining Unicode char U+300B (decimal 12299)
+   defining Unicode char U+300C (decimal 12300)
+   defining Unicode char U+300D (decimal 12301)
+   defining Unicode char U+300E (decimal 12302)
+   defining Unicode char U+300F (decimal 12303)
+   defining Unicode char U+3010 (decimal 12304)
+   defining Unicode char U+3011 (decimal 12305)
+   defining Unicode char U+3014 (decimal 12308)
+   defining Unicode char U+3015 (decimal 12309)
+   defining Unicode char U+3016 (decimal 12310)
+   defining Unicode char U+3017 (decimal 12311)
+   defining Unicode char U+3018 (decimal 12312)
+   defining Unicode char U+3019 (decimal 12313)
+   defining Unicode char U+301A (decimal 12314)
+   defining Unicode char U+301B (decimal 12315)
+   defining Unicode char U+FF01 (decimal 65281)
+   defining Unicode char U+FF08 (decimal 65288)
+   defining Unicode char U+FF09 (decimal 65289)
+   defining Unicode char U+FF0C (decimal 65292)
+   defining Unicode char U+FF0E (decimal 65294)
+   defining Unicode char U+FF1A (decimal 65306)
+   defining Unicode char U+FF1B (decimal 65307)
+   defining Unicode char U+FF1C (decimal 65308)
+   defining Unicode char U+FF1D (decimal 65309)
+   defining Unicode char U+FF1E (decimal 65310)
+   defining Unicode char U+FF1F (decimal 65311)
+   defining Unicode char U+FF3B (decimal 65339)
+   defining Unicode char U+FF3D (decimal 65341)
+   defining Unicode char U+FF5B (decimal 65371)
+   defining Unicode char U+FF5D (decimal 65373)
+   defining Unicode char U+FF61 (decimal 65377)
+   defining Unicode char U+FF62 (decimal 65378)
+   defining Unicode char U+FF63 (decimal 65379)
+   defining Unicode char U+FF64 (decimal 65380)
+   defining Unicode char U+FF65 (decimal 65381)
+)
+\@josa=\count285
+\josatoks=\toks40
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/cjk-ko\kolabels-utf.sty
+Package: kolabels-utf 2015/03/20 v1.5 UTF-8 Hangul item labels
+)))
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/type1cm\type1cm.sty
+Package: type1cm 2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, p
+atched RF)
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks41
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen171
+\Gin@req@width=\dimen172
+) (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count286
+\float@exts=\toks42
+\float@box=\box53
+\@float@everytoks=\toks43
+\@floatcapt=\box54
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count287
+\mult@box=\box55
+\multicol@leftmargin=\dimen173
+\c@unbalance=\count288
+\c@collectmore=\count289
+\doublecol@number=\count290
+\multicoltolerance=\count291
+\multicolpretolerance=\count292
+\full@width=\dimen174
+\page@free=\dimen175
+\premulticols=\dimen176
+\postmulticols=\dimen177
+\multicolsep=\skip60
+\multicolbaselineskip=\skip61
+\partial@page=\box56
+\last@line=\box57
+\maxbalancingoverflow=\dimen178
+\mult@rightbox=\box58
+\mult@grightbox=\box59
+\mult@gfirstbox=\box60
+\mult@firstbox=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\c@minrows=\count293
+\c@columnbadness=\count294
+\c@finalcolumnbadness=\count295
+\last@try=\dimen179
+\multicolovershoot=\dimen180
+\multicolundershoot=\dimen181
+\mult@nat@firstbox=\box99
+\colbreak@box=\box100
+\mc@col@check@num=\count296
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/footmisc\footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks44
+\footnotemargin=\dimen182
+\c@pp@next@reset=\count297
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip62
+\multirow@cntb=\count298
+\multirow@dima=\skip63
+\bigstrutjot=\dimen183
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/physics\physics.sty
+Package: physics 
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2021-08-27 L3 programming layer (loader) 
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count299
+\l__pdf_internal_box=\box101
+))
+Package: xparse 2021-08-27 L3 Experimental document command parser
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2021/04/20 v2.17j AMS math features
+\@mathmargin=\skip64
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks45
+\ex@=\dimen184
+))
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen185
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count300
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count301
+\leftroot@=\count302
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count303
+\DOTSCASE@=\count304
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box102
+\strutbox@=\box103
+\big@size=\dimen186
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count305
+\c@MaxMatrixCols=\count306
+\dotsspace@=\muskip16
+\c@parentequation=\count307
+\dspbrk@lvl=\count308
+\tag@help=\toks46
+\row@=\count309
+\column@=\count310
+\maxfields@=\count311
+\andhelp@=\toks47
+\eqnshift@=\dimen187
+\alignsep@=\dimen188
+\tagshift@=\dimen189
+\tagwidth@=\dimen190
+\totwidth@=\dimen191
+\lineht@=\dimen192
+\@envbody=\toks48
+\multlinegap=\skip65
+\multlinetaggap=\skip66
+\mathdisplay@stack=\toks49
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+))
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/newtx\newtxtext.sty
+Package: newtxtext 2021/09/01 v1.656
+
+`newtxtext' v1.656, 2021/09/01 Text macros taking advantage of TeX-Gyre Termes 
+fonts (msharpe)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/fontaxes\fontaxes.sty
+Package: fontaxes 2020/07/21 v1.0e Font selection axes
+LaTeX Info: Redefining \upshape on input line 29.
+LaTeX Info: Redefining \itshape on input line 31.
+LaTeX Info: Redefining \slshape on input line 33.
+LaTeX Info: Redefining \swshape on input line 35.
+LaTeX Info: Redefining \scshape on input line 37.
+LaTeX Info: Redefining \sscshape on input line 39.
+LaTeX Info: Redefining \ulcshape on input line 41.
+LaTeX Info: Redefining \textsw on input line 47.
+LaTeX Info: Redefining \textssc on input line 48.
+LaTeX Info: Redefining \textulc on input line 49.
+)
+\ntx@fs=\dimen193
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks50
+\XKV@tempa@toks=\toks51
+)
+\XKV@depth=\count312
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count313
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
+\integerpart=\count314
+\decimalpart=\count315
+)
+Package: xstring 2021/07/21 v1.84 String manipulations (CT)
+) (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt.sty
+) (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line
+ 112.
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/newtx\t1ntxtlf.fd
+File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
+)
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.0pt on input line 112.
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+LaTeX Font Info:    Changing ? sub-encoding to TS1/0 on input line 78.
+)
+\ntxt@cntz=\count316
+LaTeX Font Info:    Redeclaring math symbol \mathsterling on input line 325.
+)
+(C:/Users/halin/Desktop/Temp/mtp2fonts.zip/texmf\tex/latex/mtpro2\mtpro2.sty
+Package: mtpro2 2009/4/27 v2.3 MathTimePro II - added arc accents MathTimePro I
+I - fixed rbrace problem with straightbraces and morphedbraces options MathTime
+Pro II - fix bug with z = \backslash widetilde{\backslash sum_{x }}MathTimePro 
+II v2 font support (PCTeX/WaS)MathTimePro II v2.1a Allowed alternate form of I 
+in Math Script Fonts (MS)
+\c@mv@heavy=\count317
+Now handling font encoding LMP1 ...
+... no UTF-8 mapping file for font encoding LMP1
+Now handling font encoding LMP2 ...
+... no UTF-8 mapping file for font encoding LMP2
+Now handling font encoding LMP3 ...
+... no UTF-8 mapping file for font encoding LMP3
+\pointcount@=\count318
+\prePbox@=\box104
+\Pbox@=\box105
+\LRbox@=\box106
+\HATbox@=\box107
+\TDbox@=\box108
+\CHbox@=\box109
+\ARCbox@=\box110
+\preSbox@=\box111
+\Sbox@=\box112
+\SQcount@=\count319
+\SQRTbox@=\box113
+\UPROOT@=\count320
+\LEFTROOT@=\count321
+\limtype@=\count322
+\xlfont@=\count323
+\xlposition@=\count324
+\xlposition@ii=\count325
+\optype@=\count326
+\x@count=\count327
+\maxXLscripts@=\dimen194
+\symAMSa=\mathgroup4
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.sty
+Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
+ty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextra.sty
+Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2021/08/12 v3.8 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count328
+\FV@InFile=\read2
+\FV@TabBox=\box114
+\c@FancyVerbLine=\count329
+\FV@StepNumber=\count330
+\FV@OutFile=\write4
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count331
+\output=\toks52
+\linenoprevgraf=\count332
+\linenumbersep=\dimen195
+\linenumberwidth=\dimen196
+\c@linenumber=\count333
+\c@pagewiselinenumber=\count334
+\c@LN@truepage=\count335
+\c@internallinenumber=\count336
+\c@internallinenumbers=\count337
+\quotelinenumbersep=\dimen197
+\bframerule=\dimen198
+\bframesep=\dimen199
+\bframebox=\box115
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count338
+\c@FV@TrueTabCounter=\count339
+\FV@TabBox@Group=\box116
+\FV@TmpLength=\skip67
+\c@FV@HighlightLinesStart=\count340
+\c@FV@HighlightLinesStop=\count341
+\FV@LoopCount=\count342
+\FV@NCharsBox=\box117
+\FV@BreakIndent=\dimen256
+\FV@BreakIndentNChars=\count343
+\FV@BreakSymbolSepLeft=\dimen257
+\FV@BreakSymbolSepLeftNChars=\count344
+\FV@BreakSymbolSepRight=\dimen258
+\FV@BreakSymbolSepRightNChars=\count345
+\FV@BreakSymbolIndentLeft=\dimen259
+\FV@BreakSymbolIndentLeftNChars=\count346
+\FV@BreakSymbolIndentRight=\dimen260
+\FV@BreakSymbolIndentRightNChars=\count347
+\c@FancyVerbLineBreakLast=\count348
+\FV@LineBox=\box118
+\FV@LineIndentBox=\box119
+\FV@LineWidth=\dimen261
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count349
+\calc@Bcount=\count350
+\calc@Adimen=\dimen262
+\calc@Bdimen=\dimen263
+\calc@Askip=\skip68
+\calc@Bskip=\skip69
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count351
+\calc@Cskip=\skip70
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/ifplatform\ifplatform.s
+ty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.s
+ty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)) (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+))
+\minted@appexistsfile=\read3
+\minted@bgbox=\box120
+\minted@code=\write5
+\c@minted@FancyVerbLineTemp=\count352
+\c@minted@pygmentizecounter=\count353
+\@float@every@listing=\toks53
+\c@listing=\count354
+)
+runsystem(if not exist _minted-book mkdir _minted-book)...executed.
+
+\@indexfile=\write6
+\openout6 = `book.idx'.
+
+
+Writing index file book.idx
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > bo
+ok.aex <nul: /p x=^%~$PATH:i>> book.aex)...executed.
+
+runsystem(del book.aex)...executed.
+
+(book.aux (author/acronym.aux) (author/main/PythonBasic.aux)
+(author/main/BisectSearch.aux) (author/glossary.aux) (author/solutions.aux))
+\openout1 = `book.aux'.
+
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/nanumtype1\lucnanummj.f
+d
+File: lucnanummj.fd 2013/02/12 v0.1 Nanum Myeongjo font definitions
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count355
+\scratchdimen=\dimen264
+\scratchbox=\box121
+\nofMPsegments=\count356
+\nofMParguments=\count357
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count358
+\MPscratchDim=\dimen265
+\MPnumerator=\count359
+\makeMPintoPDFobject=\count360
+\everyMPtoPDFconversion=\toks55
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+\c@mv@tabular=\count361
+\c@mv@boldtabular=\count362
+ [1
+
+{C:/Users/halin/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2
+
+
+]
+(book.toc)
+\tf@toc=\write7
+\openout7 = `book.toc'.
+
+ [5
+
+
+]
+\openout2 = `author/acronym.aux'.
+
+ (author/acronym.tex [6
+
+
+
+]
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/newtx\t1ntxtt.fd
+File: t1ntxtt.fd 2012/04/20 v3.1
+))
+[7] [8
+
+
+
+
+]
+\openout2 = `author/main/PythonBasic.aux'.
+
+ (author/main/PythonBasic.tex
+Chapter 1.
+[1
+
+
+
+]
+(C:/Users/halin/Desktop/Temp/mtp2fonts.zip/texmf\tex/latex/mtpro2\umt2hrb.fd
+File: umt2hrb.fd 2009/1/30 v2.2 MathTimePro II Holey Roman Bold (PCTeX/WaS)
+))
+[2]
+\openout2 = `author/main/BisectSearch.aux'.
+
+ (author/main/BisectSearch.tex
+Chapter 2.
+\openout4 = `book.pyg'.
+
+(_minted-book/default-pyg-prefix.pygstyle) (_minted-book/default.pygstyle)
+runsystem(pygmentize -l Python -f latex -P commandprefix=PYG -F tokenmerge -o _
+minted-book/2E6A1774D6C7FFD7C363A2FFA3C801B3503B56C880319C9D90D26A337E423A1F.py
+gtex book.pyg)...executed.
+
+
+(_minted-book/2E6A1774D6C7FFD7C363A2FFA3C801B3503B56C880319C9D90D26A337E423A1F.
+pygtex
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+[3
+
+
+
+
+
+])) [4]
+\openout2 = `author/glossary.aux'.
+
+ (author/glossary.tex) [5
+
+
+
+
+
+
+
+]
+\openout2 = `author/solutions.aux'.
+
+ (author/solutions.tex [6
+
+
+
+
+
+]
+
+LaTeX Warning: Reference `intro' on page 7 undefined on input line 4.
+
+
+LaTeX Warning: Reference `prob1' on page 7 undefined on input line 6.
+
+
+LaTeX Warning: Reference `prob2' on page 7 undefined on input line 11.
+
+) [7]
+No file book.ind.
+\tf@thm=\write8
+\openout8 = `book.thm'.
+
+(book.aux (author/acronym.aux) (author/main/PythonBasic.aux)
+(author/main/BisectSearch.aux) (author/glossary.aux) (author/solutions.aux))
+
+LaTeX Warning: There were undefined references.
+
+runsystem(del book.pyg)...executed.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 10879 strings out of 478889
+ 173647 string characters out of 7600833
+ 80541376 words of memory out of 160250935
+ 28430 multiletter control sequences out of 15000+600000
+ 494116 words of font info for 134 fonts, out of 799999 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 74i,6n,81p,1076b,482s stack positions out of 5000i,500n,10000p,7999999b,79999s
+{C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tl
+f.enc}<C:/Users/halin/Desktop/Temp/mtp2fonts.zip/texmf/fonts/type1/pctex/mtpro2
+/mt2hrbdt.pfb><C:/Users/halin/Desktop/Temp/mtp2fonts.zip/texmf/fonts/type1/pcte
+x/mtpro2/mt2mis.pfb><C:/Users/halin/Desktop/Temp/mtp2fonts.zip/texmf/fonts/type
+1/pctex/mtpro2/mt2mit.pfb><C:/Users/halin/Desktop/Temp/mtp2fonts.zip/texmf/font
+s/type1/pctex/mtpro2/mt2sys.pfb><C:/Users/halin/Desktop/Temp/mtp2fonts.zip/texm
+f/fonts/type1/pctex/mtpro2/mt2syt.pfb><C:/Users/halin/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/nanumtype1/nanummjbae.pfb><C:/Users/halin/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjbbd.pfb><C:/Users/halin/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjbc0.pfb><C:/U
+sers/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjb
+c7.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumty
+pe1/nanummjbcd.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/nanumtype1/nanummjbd0.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/nanumtype1/nanummjmac.pfb><C:/Users/halin/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/nanumtype1/nanummjmac.pfb><C:/Users/halin/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmad.pfb><C:/Users/ha
+lin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmae.pfb>
+<C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nan
+ummjmb0.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/na
+numtype1/nanummjmb1.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/nanumtype1/nanummjmb2.pfb><C:/Users/halin/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/nanumtype1/nanummjmb2.pfb><C:/Users/halin/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/nanumtype1/nanummjmb3.pfb><C:/Users/halin/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmb4.pfb><C:/Use
+rs/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmb5
+.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype
+1/nanummjmb6.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/nanumtype1/nanummjmb7.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/font
+s/type1/public/nanumtype1/nanummjmb8.pfb><C:/Users/halin/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/nanumtype1/nanummjmb9.pfb><C:/Users/halin/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmba.pfb><C:/Users/hali
+n/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmbb.pfb><C
+:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanum
+mjmbc.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanu
+mtype1/nanummjmbc.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/nanumtype1/nanummjmbd.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/nanumtype1/nanummjmbd.pfb><C:/Users/halin/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/nanumtype1/nanummjmbe.pfb><C:/Users/halin/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmbf.pfb><C:/Users
+/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmc0.p
+fb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/
+nanummjmc1.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/nanumtype1/nanummjmc1.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/nanumtype1/nanummjmc2.pfb><C:/Users/halin/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/nanumtype1/nanummjmc3.pfb><C:/Users/halin/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmc4.pfb><C:/Users/halin/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmc5.pfb><C:/
+Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummj
+mc6.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumt
+ype1/nanummjmc7.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/nanumtype1/nanummjmc7.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/nanumtype1/nanummjmc8.pfb><C:/Users/halin/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/nanumtype1/nanummjmc9.pfb><C:/Users/halin/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmcc.pfb><C:/Users/h
+alin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmcd.pfb
+><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/na
+nummjmce.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/n
+anumtype1/nanummjmd0.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/nanumtype1/nanummjmd1.pfb><C:/Users/halin/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/nanumtype1/nanummjmd1.pfb><C:/Users/halin/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmd2.pfb><C:/Users/halin/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmd3.pfb><C:/Us
+ers/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmd
+4.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/nanumtyp
+e1/nanummjmd5.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/nanumtype1/nanummjmd5.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/nanumtype1/nanummjmd6.pfb><C:/Users/halin/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/nanumtype1/nanummjmd6.pfb><C:/Users/halin/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/nanumtype1/nanummjmd7.pfb><C:/Users/hal
+in/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xbtt.pfb><C:/User
+s/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/
+Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:
+/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C
+:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
+Output written on book.pdf (13 pages, 2756022 bytes).
+PDF statistics:
+ 371 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

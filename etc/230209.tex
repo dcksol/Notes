@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{kotex}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{setspace} % 줄간격 지원
+% \usepackage{unicode-math}
+% \usepackage{mathptmx}
+\usepackage{physics}
+\usepackage{newtxtext}       % 
+%\usepackage{newtxmath}       % selects Times Roman as basic font
+\usepackage[subscriptcorrection,mtpcal,mtphrd,nofontinfo]{mtpro2}
+\usepackage[version=4]{mhchem}
+\usepackage{physics}
+\setstretch{1.6} % 줄간격 설정
+\usepackage{indentfirst} % 매 문단 들여쓰기
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage{bm}
+\usepackage{enumitem}
+
+\title{GR}
+\date{\today}
+\author{D.C. Kim}
+\begin{document}
+	\maketitle
+	교재와 같이
+	\begin{equation}
+		\bar{h}^{\alpha \beta} := h^{\alpha\beta} - \frac{1}{2}\eta^{\alpha\beta}h,
+	\end{equation}
+	\begin{equation}
+		\bar{h}:= \bar{h}^\alpha {}_\alpha
+	\end{equation}
+	라 정의하면,
+	\begin{align}
+			\bar{h}^{\alpha}{}_\alpha &= \eta_{\alpha\beta} \bar{h}^{\alpha\beta}\\
+			&= \eta_{\alpha\beta} \qty(h^{\alpha\beta} - \frac{1}{2}\eta^{\alpha \beta}h)\\
+			&= \eta_{\alpha\beta}h^{\alpha\beta} - \frac{1}{2}\eta^{\alpha\beta}\eta_{\alpha\beta}h\\
+			&= h^{\alpha}{}_\alpha - \frac{1}{2}\delta^\alpha{}_\alpha h\\
+			&= h - 2h\\
+			&= -h
+	\end{align}
+	이므로 교재의 식 (8.30)이 맞음을 확인할 수 있다. $\bar{h}^{\alpha\beta}$가 $h_{\alpha\beta}$의 `trace reverse' 텐서라고 불리는 것은 이와 같이 trace가 정말로 $h_{\alpha\beta}$와 크기가 같고 부호가 반대이기 때문이다. 이렇게 정의하면 좋은 것은 앞으로 수식을 전개함에 있어 편리하다는 것인데, 이는 교재의 뒷 내용을 따라가면 자세히 알 수 있다.
+\end{document}

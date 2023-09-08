@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{kotex}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{setspace} % 줄간격 지원
+% \usepackage{unicode-math}
+% \usepackage{mathptmx}
+\usepackage{physics}
+\usepackage{newtxtext}       % 
+%\usepackage{newtxmath}       % selects Times Roman as basic font
+\usepackage[subscriptcorrection,mtpcal,mtphrd,nofontinfo]{mtpro2}
+\usepackage[version=4]{mhchem}
+\usepackage{physics}
+\setstretch{1.6} % 줄간격 설정
+\usepackage{indentfirst} % 매 문단 들여쓰기
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{natbib}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\title{ADM equations in isotropic Schwarzschild metric}
+\date{\today}
+\author{D.C. Kim}
+\begin{document}
+	\maketitle
+	This article is based on the p.49 in \cite{baumgarte2010numerical}.
+	
+	What we want to prove is the following theorem.
+	
+	\begin{theorem}
+		For the isotropic Schwarzschild metric, the numerically computed solutions from the ADM equations are static and stable when lapse and shift are chosen as follows:
+		\begin{equation}
+			\alpha = \frac{1 - M / (2r)}{1+M/(2r)}, \quad \beta^i = 0.
+		\end{equation}
+	\end{theorem}
+
+	\begin{proof}
+		Assume that Proposition 2 holds. Then $\Sigma_0=\Sigma_1$ for the initial condition $\Sigma_0 = (\gamma_{ij}, K_{ij})$ and for any $t$, $\Sigma_t$ is entirely determined by $\Sigma_{t-1}$, so $\Sigma_t = \Sigma_0$.
+	\end{proof}
+
+	Here, the spatial metric is given by
+	\begin{equation}
+		\gamma_{ij} = \qty(1 + \frac{M}{2r})^4 \mathrm{diag}\qty(1, r^2, r^2\sin^2\theta).\label{eq:2}
+	\end{equation}
+
+	As initial data, $K_{ij}$ is determined by the equation for the evolution of the spatial metric in the following ADM equation:
+	\begin{equation}
+		\partial_t \gamma_{ij} = - 2 \alpha K_{ij} + D_i \beta_j + D_j \beta_i.
+	\end{equation}
+	Since $\gamma_{ij}$ is time independent as in Eq. (\ref{eq:2}), and $\beta^i = 0$, we can see that $K_{ij}$ is obviously zero.
+	
+	Now let's prove the following proposition:
+	\begin{proposition}
+		Analytically, as $t$ increases, $K_{ij}$ can always have a value of zero, even if the evolution scheme proceeds.
+	\end{proposition}
+	\begin{proof}
+		The non-trivial three-dimensional Ricci tensor computed from a given spatial metric:
+		\begin{equation}
+			R_{rr} = - \frac{8rM}{(2r^2+Mr)^2}, \quad R_{\theta\theta} = \frac{4r^3M}{(2r^2+Mr)^2}, \quad R_{\phi\phi} = \sin^2\theta R_{\theta\theta}.\label{eq:4}
+		\end{equation}
+		By taking the trace from them, we get $R=0$. Thus, we see that the first equation in the ADM equations, the Hamiltonian constraint
+		\begin{equation}
+			R+K^2 - K_{ij}K^{ij} = 16 \pi \rho,
+		\end{equation}
+		is satisfied. The second equation in the ADM equations, the momentum constraint
+		\begin{equation}
+			D_j (K^{ij} - \gamma^{ij} K) = 8 \pi S^i,
+		\end{equation}
+		is self-evident. The third equation, the evolution equation for the spatial metric, is a obviously true since we constructed the initial conditions here. Now the non-trivial, fourth equation
+		\begin{equation}
+			\partial_t K_{ij} = \alpha ( R_{ij} - 2K_{ik} K^{k}_j + KK_{ij}) - D_i D_j \alpha - 8 \pi \alpha \qty( S_{ij} - \frac{1}{2}\gamma_{ij} (S-\rho)) + \beta^k(\text{some terms}),
+		\end{equation}
+		is simplified to
+		\begin{equation}
+			\partial_t K_{ij} = \alpha R_{ij} - D_i D_j \alpha .\label{eq:8}
+		\end{equation}
+		Using $D_aD_b\alpha = \partial_a\partial_b \alpha - \partial_c \alpha \Gamma^c{}_{ba}$, we can see that the second term has a specific form.
+		Significant Christoffel symbol is
+		\begin{align}
+			\Gamma^{r}{}_{rr} &= - \frac{M}{r^2 \qty(1 + \frac{M}{2r})},\\
+			\Gamma^{r}{}_{\theta\theta} &= \frac{r(M-2r)}{M+2r},\\
+			\Gamma^{r}{}_{\phi\phi} &= \frac{r(M-2r)\sin^2\theta}{M+2r}.
+		\end{align}
+		And we get
+		\begin{align}
+			D_rD_r\alpha &= \frac{8M(M-2r)}{r(M+2r)^3},\\
+			D_\theta D_\theta \alpha&= - \frac{4 M r \left(M - 2 r\right)}{\left(M + 2 r\right)^{3}},\\
+			D_\phi D_\phi \alpha&= - \frac{4 M r \left(M - 2 r\right) \sin^{2}{\theta}}{\left(M + 2 r\right)^{3}}.
+		\end{align}
+		Substituting this into Eq. (\ref{eq:8}) along with Eq. (\ref{eq:4}), we see that $\partial_{t}K_{ij}=0$.
+	\end{proof}
+	In the numerical calculation, the second term is always constant regardless of $t$, so a fixed value is used, and the first term is calculated as a simple second-order derivative. Now, in a simulation where $\partial_t K_{ij}$ is computed to be zero with sufficient precision, $(\gamma_{ij}, K_{ij})$ for all $t$ will be consistent with the initial value.
+	
+	If we write $\partial_t K_{ij}$ in the form of a second-order derivative, we have
+	\begin{equation}
+		\partial_t K_{ij} = \frac{\alpha}{2}\gamma^{kl}(\partial_i\partial_j \gamma_{kj} + \partial_k \partial_j \gamma_{il} - \partial_i \partial_j \gamma_{kl} - \partial_k \partial_l \gamma_{ij}) + \alpha \gamma^{kl}(\Gamma^m{}_{il} \Gamma_{mkj} - \Gamma^m{}_{ij} \Gamma_{mkl})- \partial_i \partial_j \alpha + \partial_c \alpha \Gamma^c{}_{ij}.
+	\end{equation}
+	
+	According to the p.168 in \cite{alcubierre2008introduction}, 1) the momentum constraints can
+	be guaranteed to be identically satisfied, and 2) either the densitized lapse $\tilde{\alpha} := \alpha / \sqrt{\gamma}$ is
+	assumed to be a known function of spacetime (but not the lapse itself), or we
+	use a slicing condition of the Bona–Masso family, then the ADM system would
+	be strongly hyperbolic. 
+
+	\bibliography{ref}
+	\bibliographystyle{plain}
+
+\end{document}
+
+
+
+
+

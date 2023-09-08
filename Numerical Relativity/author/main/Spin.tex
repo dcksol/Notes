@@ -1,0 +1,253 @@
+%%%%%%%%%%%%%%%%%%%%% chapter.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample chapter
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+%\motto{Use the template \emph{chapter.tex} to style the various elements of your chapter content.}
+\chapter{Locating black hole horizons}
+\label{ch:7} % Always give a unique label
+% use \chaptermark{}
+% to alter or adjust the chapter heading in the running head
+
+%\abstract*{Each chapter should be preceded by an abstract (no more than 200 words) that summarizes the content. The abstract will appear \textit{online} at \url{www.SpringerLink.com} and be available with unrestricted access. This allows unregistered users to read the abstract as a teaser for the complete chapter.
+%Please use the 'starred' version of the new \texttt{abstract} command for typesetting the text of the online abstracts (cf. source file of this chapter template \texttt{abstract}) and include them with the source files of your manuscript. Use the plain \texttt{abstract} command if the abstract is also to appear in the printed version of the book.}
+
+%\abstract{Each chapter should be preceded by an abstract (no more than 200 words) that summarizes the content. The abstract will appear \textit{online} at \url{www.SpringerLink.com} and be available with unrestricted access. This allows unregistered users to read the abstract as a teaser for the complete chapter. \newline\indent
+%Please use the 'starred' version of the new \texttt{abstract} command for typesetting the text of the online abstracts (cf. source file of this chapter template \texttt{abstract}) and include them with the source files of your manuscript. Use the plain \texttt{abstract} command if the abstract is also to appear in the printed version of the book.}
+
+\section{Concepts}
+\begin{definition}
+	The fact that the event horizon area cannot decrease motivates the definition of the \textit{irreducible mass}
+	\begin{equation}
+		M_\mathrm{irr} \equiv \qty(\frac{\mathcal{A}}{16\pi})^{1/2}.
+	\end{equation}
+\end{definition}
+
+\begin{example}
+Irreducible mass of Schwarzschild black hole is equal to the ADM mass $M_\mathrm{ADM}$.
+\end{example}
+\begin{proof}
+From Schwarzschild metric
+\begin{equation}
+	ds^2 = -\qty(1 - \frac{2M}{r}) dt^2 + \qty(1 - \frac{2M}{r})^{-1} dr^2 + r^2 d\theta^2 + r^2\sin^2 \theta d\phi^2,
+\end{equation}
+we can write 2-metric on the horizon($r=2M$, $t=\mathrm{constant}$)
+\begin{equation}
+	{}^{(2)}ds^2 = 4M^2 d\theta^2 + 4M^2 \sin^2 \theta d\phi^2.
+\end{equation}
+Two-dimensional proper surface area of the horizon is given by
+\begin{align}
+	\mathcal{A} &= \iint \sqrt{{}^{(2)} g}d\theta d\phi\\
+	&= \iint 4M^2\sin \theta d\theta d\phi\\
+	&= 16\pi M^2.
+\end{align}
+Therefore,
+\begin{align}
+	M_\mathrm{irr} &= \qty(\frac{\mathcal{A}}{16\pi})^{1/2}\\
+	&= M.
+\end{align}
+\qed
+\end{proof}
+
+Given the irreducible mass $M_\mathrm{irr}$ and the angular momentum $J$ of an isolated, stationary black hole, we can compute the \textit{Kerr mass} $M$ ($=M_\mathrm{ADM}$) from
+\begin{equation}
+	M^2 = M_\mathrm{irr}^2 + \frac{1}{4}\frac{J^2}{M_\mathrm{irr}}^2.
+\end{equation}
+Solving for $M_\mathrm{irr}$ we find
+\begin{equation}
+	M_\mathrm{irr}^2 = \frac{M^2}{2}\qty(1 + \sqrt{1 - \frac{J^2}{M^4}}),
+\end{equation}
+which implies that we have $M^2 / M_\mathrm{irr}^2 \le 2$ for Kerr black holes, with equality in the extreme Kerr limit when $J = M^2$.
+\begin{proof}
+The solution to Einstein's equations describing a stationary, rotating, uncharged black hole of mass $M$ and angular momentum $J$ in vacuum may be expressed in Boyer-Lindquist coordinates in the form
+\begin{equation}
+	ds^2 = - \qty(1 - \frac{2Mr}{\Sigma})dt^2 - \frac{4aMr\sin^2 \theta}{\Sigma}dtd\phi + \frac{\Sigma}{\Delta}dr^2 + \Sigma d\theta^2 + \qty(r^2 + a^2 + \frac{2a^2Mr\sin^2\theta}{\Sigma})\sin^2\theta d\phi^2,
+\end{equation}
+where
+\begin{equation}
+	a\equiv J / M, \quad \Delta \equiv r^2 - 2Mr + a^2, \quad \Sigma \equiv r^2 + a^2 \cos^2 \theta,
+\end{equation}
+and where the black hole is rotating in the $+\phi$ direction. The horizon of the black hole is located at $r_+$, the largest root of the equation $\Delta = 0$,
+\begin{equation}
+	r_+ = M + (M^2 - a^2)^{1/2}. \label{eq:1.65}
+\end{equation}
+By squaring equation \eqref{eq:1.65},
+\begin{align}
+	r_+^2 &= 2M^2 - a^2 + 2M(M^2 - a^2)^{1/2},\\
+	r_+^2 + a^2 &= 2M(M + (M^2 - a^2)^{1/2})\\
+	&= 2Mr_+.
+\end{align}
+Setting $r=r_+$ and $t=\mathrm{constant}$, 2-metric on the horizon is
+\begin{equation}
+	\dmtwo ds^2 = \qty(r_+^2 + a^2\cos^2\theta)d\theta^2 + \frac{(2Mr_+)^2}{r_+^2+a^2\cos^2\theta}\sin^2\theta d\phi^2,
+\end{equation}
+from which we may derive $\mathcal{A}$ according to
+\begin{align}
+\mathcal{A} &= \iint \sqrt{\dmtwo g}d\theta d\phi\\
+&= \iint 2Mr_+ \sin\theta d\theta d\phi\\
+&= \iint 8\pi M r_+\\
+&= 8\pi M \qty[M + (M^2 - a^2)^{1/2}],
+\end{align}
+which reduces to $\mathcal{A} = 4\pi (2M)^2$ when $a=0$. Therefore,
+\begin{align}
+M_\mathrm{irr}^2 &= \sqrt{\frac{M\qty[M + (M^2 - a^2)^{1/2}]}{2}}\\
+&= \frac{M^2}{2}\qty(1 + \sqrt{1 + \frac{a^2}{M^2}})\\
+&= \frac{M^2}{2}\qty(1 + \sqrt{1 + \frac{J^2}{M^4}}).
+\end{align}
+It is easy to write $M$ as function of $M_\mathrm{irr}^2$, solving quadratic equation,
+\begin{equation}
+	M^2 = M_\mathrm{irr}^2 + \frac{J^2}{4M_\mathrm{irr}^2}.
+\end{equation}
+\qed
+\end{proof}
+
+$ \tilde{E}^2 - (1 - \frac{2M}{r})( 1 + \frac{\tilde{L}^2}{r^2})$
+
+While the event horizon has some very interesting geometric properties, its global nature make it very difficult to locate in a numerical simulation. The reason is that knowledge of the entire future spacetime is required to decide whether or not any particular null geodesic will ultimately escape to infinity. In numerical simulations an event horizon can be found only ``after the fact", i.e., after the evolution has proceeded long enough to have settled down to stationary state.
+
+The spacetime singularities inside the black holes must be excluded from the numerical grid, since they would otherwise spoil the numerical calculation. One approach is based on the realization that, by definition, the interior of a black hole is causally disconnected from, and hence can never influence, the exterior. This fact suggests that we may ``excise'', i.e., remove from the computational domain, the spacetime region inside the event horizon. Black hole ``excision'' requires at least approximate knowledge of the location of the horizon at all times during the evolution, so the construction of the event horizon after the fact is not sufficient.
+
+The concept of \textit{apparent horizons} allows us to locate black holes during the evolution. The apparent horizon is defined as the outermost smooth 2-surface, embedded in the spatial slices $\Sigma$, whose outgoing future null geodesics have zero expansion everywhere. We will explain this notion in much greater detail. As we will see, the apparent horizon can be located on each slice $\Sigma$, when it exists, and is therefore a local (in time) concept. The singularity theorems of general relativity tell us that if an apparent horizon exists on a given time slice, it must be inside a black hole event horizon. This theorem makes it safe to excise the interior of an apparent horizon from a numerical domain. Note, however, that absence of proof is not proof of absence: the absence of an apparent horizon does not necessarily imply that a black hole is absent. One example can be found in the Oppenheimer-Snyder collapse of spherical dust to a black hole. It is also possible to construct slicing of the Schwarzschild geometry in which no apparent horizon exists. Also, it is straightforward to show that apparent horizons do not form during spherical collapse in polar slicing.
+
+\begin{remark}
+	abcd
+\end{remark}
+
+\section{Event horizons}
+
+An obvious approach to locating an event horizon in this situation is to evolve null geodesics, whose worldlines are governed by the equation
+\begin{equation}
+	\frac{d^2x^a}{d\lambda^2} + \dmf \Gamma^a_{bc}\frac{dx^b}{d\lambda}\frac{dx^c}{d\lambda} = 0,
+\end{equation}
+where $\lambda$ is an affine parameter. Splitting this second-order equation into two first-order equations and substituting 3 + 1 metric quantities yields
+\begin{equation}
+	\frac{dp_i}{d\lambda} = - \alpha \partial_i \alpha (p^0)^2 + \partial_i \beta^k p_k p^0 - \frac{1}{2}\partial_i \gamma^{lm} p_l p_m, \label{eq:7.6a}
+\end{equation}
+\begin{equation}
+	\frac{dx^i}{d\lambda} = \gamma^{ij}p_j - \beta^i p^0. \label{eq:7.6b}
+\end{equation}
+where we have used $p^i = dx^i / d\lambda$ and $p^0 = (\gamma^{ij}p_ip_j)^{1/2}/\alpha$ (which enforces $g^{ab}p_ap_b = 0$).
+
+\begin{exercise}
+Derive equations \eqref{eq:7.6a}, \eqref{eq:7.6b}.
+
+\begin{align}
+	\dmf \Gamma^a_{bc} &= \frac{1}{2}g^{ad} [\partial_c (\gamma_{db} - n_d n_b) + \partial_b (\gamma_{dc} - n_d n_c) - \partial_d (\gamma_{bc} - n_b n_c)]\\
+	&= \frac{1}{2}[\partial_c \gamma^a{}_b - (\partial_c \alpha) (n^a \delta^0_b + n_b \delta^{a0}) + \partial_b \gamma^a{}_c - (\partial_b \alpha)(n^a \delta^0_c + n_c \delta^{a0}) + \partial^a \gamma_bc - (\partial^a \alpha)(n_b \delta^0_c + n_c \delta^0_b)] .
+\end{align}
+\begin{equation}
+	\dmf \Gamma^a_{bc}p^bp^c = \frac{1}{2}(2p^bp^c\partial_c \gamma^a{}_b+p^bp^c\gamma^a\gamma_{bc} - 2(p^0p^c(\partial_c\alpha)n^a + p^bp^c(\partial_c\alpha)n_b\delta^{a0})+2\alpha (p^0)^2(\partial_a\alpha)).
+\end{equation}
+
+\end{exercise}
+
+The search for an event horizon can be expedited by knowing the location of the apparent horizon. If all light rays sent out from an event $x^a$ end up inside an apparent horizon (which is always located inside an event horizon) the event must reside inside the event horizon as well. If, on the other hand, at least one light ray sent out from the event escapes to large separations, it is not inside an event horizon. By distinguishing events in this way, ejection ans propagation of light rays from various points in spacetime can delineate the location of the event horizon.
+
+
+\section{Apparent horizons}
+
+The expansion of the outgoing null geodesics orthogonal to $S$ is
+\begin{equation}
+	\label{eq:7.15}
+	\Theta = m^{ab} \nabla_a k_b.
+\end{equation}
+Note that $k^a$ is only defined on $S$. The projection with $m^{ab}$ ensures that only derivatives tangent to $S$ enter this expression, so that no knowledge of $k^a$ away from $S$ is required in this definition of the expansion.
+
+\begin{exercise}
+Show that the definition \eqref{eq:7.15} is equivalent to
+\begin{equation}
+	\label{eq:7.16}
+\Theta = \nabla_a k^a
+\end{equation}
+if we assume that the null tangent vectors $k^a$ are affinely parametrized, i.e., $k^a\nabla_a k^b=0$, in a neighborhood of $S$.
+\end{exercise}
+
+We can write the spacetime line element in spherical polar coordinates in the form
+\begin{equation}
+	ds^2 = - (\alpha^2 - A^2 \beta^2) dt^2 + 2A^2 \beta drdt + A^2 dr^2 + B^2r^2 (d\theta^2 + \sin^2 \theta d\phi^2).
+\end{equation}
+The only nonvanishing component of the shift vector $\beta^i$ is the radial component, which we call $\beta$, and we may further assume that $\alpha$, $\beta$, $A$ and $B$ are functions of $t$ and $r$ only.
+
+Consider a spherical surface $S$ centered on the origin. The spatial normal vector $s^i$ to $S$ must then be radial and take the form
+\begin{align}
+	s^a &= (0, A^{-1}, 0, 0),\\
+s_a &= (A\beta , A, 0, 0).
+\end{align}
+We can now construct the outgoing null normal
+\begin{align}
+	k_a &= \frac{1}{\sqrt{2}}(A\beta - \alpha, A, 0, 0)\\
+	k^a &= \frac{1}{\sqrt{2}}(\alpha^{-1}, A^{-1} - \alpha^{-1}\beta, 0, 0),
+\end{align}
+as well as the induced metric on $S$
+\begin{equation}
+	m_{ab} = \mathrm{diag}(0, 0, B^2r^2, B^2r^2\sin^2 \theta).
+\end{equation}
+Computing the expansion $\Theta$ we find
+\begin{equation}
+	\label{eq:7.22}
+	\Theta = \frac{\sqrt{2}}{rB}\qty(\frac{1}{\alpha}\partial_t(Br) + \qty(\frac{1}{A} - \frac{\beta}{\alpha})\partial_r(Br)).
+\end{equation}
+
+\begin{exercise}
+Derive equation \eqref{eq:7.22}.
+
+By using \eqref{eq:7.16}, we can write expansion
+\begin{align}
+	\Theta &= \partial_a k^a + \Gamma^a_{ad}k^d\\
+	&= \sqrt{2}\qty[\frac{1}{rB}\qty(\frac{1}{\alpha}\partial_t(Br) + \qty(\frac{1}{A} - \frac{\beta}{\alpha})\partial_r(Br)) + \frac{\partial_t A + \partial_r \alpha - A\partial_r \beta - \beta \partial_r A}{2A\alpha}].
+\end{align}
+We also using condition $k^a\nabla_ak^b=0$ when $b=t$,
+\begin{equation}
+	\partial_t A + \partial_r \alpha - A\partial_r \beta - \beta \partial_r A = 0.
+\end{equation}
+Therefore, the surviving term is equal to \eqref{eq:7.22}.
+
+\end{exercise}
+
+
+\section*{Appendix}
+\addcontentsline{toc}{section}{Appendix}
+
+In spacetime line element in spherical polar coordinates in the form,
+\begin{equation}
+	ds^2 = - (\alpha^2 - A^2 \beta^2) dt^2 + 2A^2 \beta drdt + A^2 dr^2 + B^2r^2 (d\theta^2 + \sin^2 \theta d\phi^2).
+\end{equation}
+the nonvanishing Christoffel symbols are
+%\begin{align}
+%\Gamma^{t}_{t t}&= - \frac{A^{2} \beta^{2} \partial_{r} \beta + A \beta^{3} \partial_{r} A - A \beta^{2} \partial_{t} A - \alpha \beta \partial_{r} \alpha - \alpha \partial_{t} \alpha}{\alpha^{2}} ,\\
+%\Gamma^{t}_{r t}&= - \frac{A^{2} \beta \partial_{r} \beta + A \beta^{2} \partial_{r} A - A \beta \partial_{t} A - \alpha \partial_{r} \alpha}{\alpha^{2}} ,\\
+%\Gamma^{t}_{r r}&= - \frac{\left(A \partial_{r} \beta + \beta \partial_{r} A - \partial_{t} A\right) A}{\alpha^{2}} ,\\
+%\Gamma^{t}_{\theta \theta}&= - \frac{r \left(r \beta \partial_{r} B - r \partial_{t} B + B \beta\right) B}{\alpha^{2}} ,\\
+%\Gamma^{t}_{\phi \phi}&= - \frac{r \left(r \beta \partial_{r} B - r \partial_{t} B + B \beta\right) B \sin^{2}{\theta}}{\alpha^{2}} ,\\
+%\Gamma^{r}_{t t}&= \frac{A^{4} \beta^{3} \partial_{r} \beta + A^{3} \beta^{4} \partial_{r} A - A^{3} \beta^{3} \partial_{t} A - A^{2} \alpha^{2} \beta \partial_{r} \beta + A^{2} \alpha^{2} \partial_{t} \beta - A^{2} \alpha \beta^{2} \partial_{r} \alpha - A^{2} \alpha \beta \partial_{t} \alpha - A \alpha^{2} \beta^{2} \partial_{r} A + 2 A \alpha^{2} \beta \partial_{t} A + \alpha^{3} \partial_{r} \alpha}{A^{2} \alpha^{2}} ,\\
+%\Gamma^{r}_{r t}&= \frac{A^{3} \beta^{2} \partial_{r} \beta + A^{2} \beta^{3} \partial_{r} A - A^{2} \beta^{2} \partial_{t} A - A \alpha \beta \partial_{r} \alpha + \alpha^{2} \partial_{t} A}{A \alpha^{2}} ,\\
+%\Gamma^{r}_{r r}&= \frac{A^{3} \beta \partial_{r} \beta + A^{2} \beta^{2} \partial_{r} A - A^{2} \beta \partial_{t} A + \alpha^{2} \partial_{r} A}{A \alpha^{2}} ,\\
+%\Gamma^{r}_{\theta \theta}&= \frac{r \left(r A^{2} \beta^{2} \partial_{r} B - r A^{2} \beta \partial_{t} B - r \alpha^{2} \partial_{r} B + A^{2} B \beta^{2} - B \alpha^{2}\right) B}{A^{2} \alpha^{2}} ,\\
+%\Gamma^{r}_{\phi \phi}&= \frac{r \left(r A^{2} \beta^{2} \partial_{r} B - r A^{2} \beta \partial_{t} B - r \alpha^{2} \partial_{r} B + A^{2} B \beta^{2} - B \alpha^{2}\right) B \sin^{2}{\theta}}{A^{2} \alpha^{2}} ,\\
+%\Gamma^{\theta}_{\theta t}&= \frac{\partial_{t} B}{B} ,\\
+%\Gamma^{\theta}_{\theta r}&= \frac{r \partial_{r} B + B}{r B} ,\\
+%\Gamma^{\theta}_{\phi \phi}&= - \sin{\theta} \cos{\theta} ,\\
+%\Gamma^{\phi}_{\phi t}&= \frac{\partial_{t} B}{B} ,\\
+%\Gamma^{\phi}_{\phi r}&= \frac{r \partial_{r} B + B}{r B} ,\\
+%\Gamma^{\phi}_{\phi \theta}&= \frac{\cos{\theta}}{\sin{\theta}}.
+%\end{align}
+\begin{align}
+\Gamma^{t}_{t t}&= \frac{- A^{2} \beta^{2} \partial_{r} \beta - A \beta^{3} \partial_{r} A + A \beta^{2} \partial_{t} A + \alpha \beta \partial_{r} \alpha + \alpha \partial_{t} \alpha}{\alpha^{2}} ,\\
+\Gamma^{t}_{r t}&= \frac{- A^{2} \beta \partial_{r} \beta - A \beta^{2} \partial_{r} A + A \beta \partial_{t} A + \alpha \partial_{r} \alpha}{\alpha^{2}} ,\\
+\Gamma^{t}_{r r}&= \frac{\left(- A \partial_{r} \beta - \beta \partial_{r} A + \partial_{t} A\right) A}{\alpha^{2}} ,\\
+\Gamma^{t}_{\theta \theta}&= \frac{r \left(r \partial_{t} B - \left(r \partial_{r} B + B\right) \beta\right) B}{\alpha^{2}} ,\\
+\Gamma^{t}_{\phi \phi}&= \frac{r \left(r \partial_{t} B - \left(r \partial_{r} B + B\right) \beta\right) B \sin^{2}{\theta}}{\alpha^{2}} ,\\
+\Gamma^{r}_{t t}&= \frac{- \left(A^{2} \beta^{2} - \alpha^{2}\right) \left(- A^{2} \beta \partial_{r} \beta + A^{2} \partial_{t} \beta - A \beta^{2} \partial_{r} A + 2 A \beta \partial_{t} A + \alpha \partial_{r} \alpha\right) + \left(A^{2} \beta \partial_{t} \beta + A \beta^{2} \partial_{t} A - \alpha \partial_{t} \alpha\right) A^{2} \beta}{A^{2} \alpha^{2}} ,\\
+\Gamma^{r}_{r t}&= \frac{- \left(A^{2} \beta^{2} - \alpha^{2}\right) \partial_{t} A + \left(A^{2} \beta \partial_{r} \beta + A \beta^{2} \partial_{r} A - \alpha \partial_{r} \alpha\right) A \beta}{A \alpha^{2}} ,\\
+\Gamma^{r}_{r r}&= \frac{- \left(A^{2} \beta^{2} - \alpha^{2}\right) \partial_{r} A + \left(A \partial_{r} \beta + 2 \beta \partial_{r} A - \partial_{t} A\right) A^{2} \beta}{A \alpha^{2}} ,\\
+\Gamma^{r}_{\theta \theta}&= \frac{r \left(- r A^{2} \beta \partial_{t} B + \left(r \partial_{r} B + B\right) \left(A^{2} \beta^{2} - \alpha^{2}\right)\right) B}{A^{2} \alpha^{2}} ,\\
+\Gamma^{r}_{\phi \phi}&= \frac{r \left(- r A^{2} \beta \partial_{t} B + \left(r \partial_{r} B + B\right) \left(A^{2} \beta^{2} - \alpha^{2}\right)\right) B \sin^{2}{\theta}}{A^{2} \alpha^{2}} ,\\
+\Gamma^{\theta}_{\theta t}&= \frac{\partial_{t} B}{B} ,\\
+\Gamma^{\theta}_{\theta r}&= \frac{\partial_{r} B}{B} + \frac{1}{r} ,\\
+\Gamma^{\theta}_{\phi \phi}&= - \frac{\sin{2 \theta }}{2} ,\\
+\Gamma^{\phi}_{\phi t}&= \frac{\partial_{t} B}{B} ,\\
+\Gamma^{\phi}_{\phi r}&= \frac{\partial_{r} B}{B} + \frac{1}{r} ,\\
+\Gamma^{\phi}_{\phi \theta}&= \frac{1}{\tan{\theta}}.
+\end{align}

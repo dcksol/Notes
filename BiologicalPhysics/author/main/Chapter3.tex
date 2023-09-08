@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%% chapter.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample chapter
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+%\motto{Use the template \emph{chapter.tex} to style the various elements of your chapter content.}
+\chapter{The molecular dance}
+
+\section{The probabilistic facts of life}
+\subsection{Discrete distributions}
+We say the \textbf{probability} of observing $x_i$ is $ P(x_i) $, where
+\begin{equation}
+	N_i / N \rightarrow P(x_i) \; \text{for large } N.
+\end{equation}
+Since the probability of observing \emph{some} value of $x$ is 100\% (that is, 1), we must have
+\begin{equation}
+	\sum_{i} P(x_i) = (N_1 + N_2 + \cdots ) / N = N / N = 1.
+\end{equation}
+
+\subsection{Continuous distributions}
+We say that the probability of observing $x$ in this interval is $P(x_0)dx$, where
+\begin{equation}
+	\dd{N(x_0)/N} \rightarrow P(x_0) \; \text{for large }N.
+\end{equation}
+
+\begin{equation}
+	\int_{a}^{b}\dd{x}P(x) = 1.
+\end{equation}
+
+The Gaussian distribution is
+\begin{equation}
+	P(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-(x - x_0)^2/2\sigma^2}.
+\end{equation}
+
+\subsection{Mean and variance}
+The \textbf{average} (or \textbf{mean} or \textbf{expectation value}) of $x$ for any distribution is written $ \expval{x} $ and defined by
+\begin{equation}
+	\expval{x} = \begin{cases}
+		\sum_i x_i P(x_i) &, \text{discrete}\\
+		\int \dd{x} xP(x) &, \text{continuous.}
+	\end{cases}
+\end{equation}
+
+More generally, even if we know the distribution of $ x $ we may instead want the mean value of some other quantity $f(x)$ depending on $x$. We can find $\expval{f}$ via
+\begin{equation}
+	\expval{f} = \begin{cases}
+		\sum_i f(x_i) P(x_i) &, \text{discrete}\\
+		\int \dd{x} f(x)P(x) &, \text{continuous.}
+	\end{cases}
+\end{equation}
+
+If you go out and measure $x$ just once you won't necessarily get $\expval{x}$ right on the nose. There is some spread, which we measure using the \textbf{root-mean-squre deviation} (or \textbf{RMS deviation}, or \textbf{standard deviation}):
+\begin{equation}
+	\text{RMS deviation} = \sqrt{\expval{(x - \expval{x})^2}}.
+\end{equation}
+
+\subsection{Addition and multiplication rules}
+\runinhead{Addition rule} The probability that the next measured value of $x$ is either $x_i$ or $x_j$ equals $P(x_i) + P(x_j)$, unless $i=j$. For a continuous distribution, the probability that the next measured value of $x$ is either between $a$ and $b$ or between $c$ and $d$ equals the sum, $ \int_{a}^{b}\dd{x}P(x) + \int_{c}^{d}\dd{x}P(x) $, provided the two intervals don't overlap.
+
+\runinhead{Multiplication rule} Multiplication rule says
+\begin{equation}
+	P_\mathrm{joint}(x_i, y_K) = P_\mathrm{coin}(x_i) \times P_\mathrm{die}(y_K).
+\end{equation}
+
+

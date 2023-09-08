@@ -1,0 +1,12 @@
+\contentsline {chapter}{\numberline {1}Python 기초}{1}{}%
+\contentsline {section}{\numberline {1.1}Linear Vector Spaces: Basics}{1}{}%
+\contentsline {chapter}{\numberline {2}이분 탐색}{3}{}%
+\contentsline {section}{\numberline {2.1}이분 탐색}{3}{}%
+\contentsline {section}{\numberline {2.2}삼분 탐색}{4}{}%
+\contentsline {chapter}{Glossary}{5}{}%
+\contentsline {paragraph}{glossary term}{5}{}%
+\contentsline {paragraph}{glossary term}{5}{}%
+\contentsline {paragraph}{glossary term}{5}{}%
+\contentsline {paragraph}{glossary term}{5}{}%
+\contentsline {paragraph}{glossary term}{5}{}%
+\contentsline {chapter}{Solutions}{7}{}%

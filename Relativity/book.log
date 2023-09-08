@@ -1,0 +1,677 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.7.30)  30 JUL 2023 16:45
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./book.tex
+(book.tex
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-06-30>
+(style/svmono.cls
+
+LaTeX Warning: You have requested document class `style/svmono',
+               but the document class provides `svmono'.
+
+Document Class: svmono 2018/06/25 v5.6 
+Springer Verlag global LaTeX document class for monographs
+Class Springer-SVMono Info: extra/valid Springer sub-package 
+(Springer-SVMono)           not found in option list - using "global" style.
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count181
+\c@section=\count182
+\c@subsection=\count183
+\c@subsubsection=\count184
+\c@paragraph=\count185
+\c@subparagraph=\count186
+\c@figure=\count187
+\c@table=\count188
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+\svparindent=\dimen141
+\betweenumberspace=\dimen142
+\headlineindent=\dimen143
+\c@chapter=\count189
+\mottowidth=\dimen144
+\svitemindent=\dimen145
+\verbatimindent=\dimen146
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 849.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 850.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 851.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 852.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 853.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 854.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 855.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 856.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 857.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 858.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 859.
+\tocchpnum=\dimen147
+\tocsecnum=\dimen148
+\tocsectotal=\dimen149
+\tocsubsecnum=\dimen150
+\tocsubsectotal=\dimen151
+\tocsubsubsecnum=\dimen152
+\tocsubsubsectotal=\dimen153
+\tocparanum=\dimen154
+\tocparatotal=\dimen155
+\tocsubparanum=\dimen156
+\foot@parindent=\dimen157
+\spthmsep=\dimen158
+\c@theorem=\count190
+\c@case=\count191
+\c@conjecture=\count192
+\c@corollary=\count193
+\c@definition=\count194
+\c@example=\count195
+\c@exercise=\count196
+\c@lemma=\count197
+\c@note=\count198
+\c@problem=\count199
+\c@property=\count266
+\c@proposition=\count267
+\c@question=\count268
+\c@solution=\count269
+\c@remark=\count270
+\c@prob=\count271
+\instindent=\dimen159
+\figgap=\dimen160
+\bildb@x=\box51
+\figcapgap=\dimen161
+\tabcapgap=\dimen162
+\c@merk=\count272
+LaTeX Info: Redefining \abstract on input line 1912.
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 227.
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+) (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.lt
+x)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+ (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\x11nam.def
+File: x11nam.def 2022/06/12 v2.14 Predefined colors according to Unix/X11 (UK)
+))
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/ntheorem\ntheorem.sty
+Style `ntheorem', Version 1.33 <2011/08/15>
+Package: ntheorem 2011/08/15 1.33
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\theorem@style=\toks17
+\theorem@@style=\toks18
+\theorembodyfont=\toks19
+\theoremnumbering=\toks20
+\theorempreskipamount=\skip50
+\theorempostskipamount=\skip51
+\theoremframepreskipamount=\skip52
+\theoremframepostskipamount=\skip53
+\theoreminframepreskipamount=\skip54
+\theoreminframepostskipamount=\skip55
+\theorem@preskip=\toks21
+\theorem@postskip=\toks22
+\theorem@framepreskip=\toks23
+\theorem@framepostskip=\toks24
+\theorem@inframepreskip=\toks25
+\theorem@inframepostskip=\toks26
+\theoremindent=\dimen163
+\theorem@indent=\dimen164
+\theoremrightindent=\dimen165
+\theorem@rightindent=\dimen166
+\theoremheaderfont=\toks27
+\theoremseparator=\toks28
+\theoremprework=\toks29
+\theorempostwork=\toks30
+\theoremsymbol=\toks31
+\qedsymbol=\toks32
+\theoremkeyword=\toks33
+\qedsymbol=\toks34
+\thm@topsep=\skip56
+\thm@topsepadd=\skip57
+Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
+\c@endNonectr=\count273
+\c@currNonectr=\count274
+\mysavskip=\skip58
+Package ntheorem Info: Option `thref' loaded on input line 1175.
+\mysavskip=\skip59
+)
+\c@currproofctr=\count275
+\c@endproofctr=\count276
+\c@proof=\count277
+\minitoc=\write3
+\c@minitocdepth=\count278
+\c@@inst=\count279
+\c@@auth=\count280
+\c@auco=\count281
+\instindent=\dimen167
+\authrun=\box52
+\authorrunning=\toks35
+\tocauthor=\toks36
+\titrun=\box53
+\titlerunning=\toks37
+\toctitle=\toks38
+\c@contribution=\count282
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip60
+\fb@frw=\dimen168
+\fb@frh=\dimen169
+\FrameRule=\dimen170
+\FrameSep=\dimen171
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/cjk-ko\kotex.sty
+Package: kotex 2015/04/19 v1.6 Korean TeX (ko.TeX)
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/kotex-utf\kotex.cfg)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/xetex/xetexko\xetexko.sty
+Package: xetexko 2022/11/01 v4.2 typesetting Korean with XeTeX
+\XeTeXcharclassID=\XeTeXcharclass1
+\XeTeXcharclassCJ=\XeTeXcharclass2
+\XeTeXcharclassOP=\XeTeXcharclass3
+\XeTeXcharclassCL=\XeTeXcharclass4
+\XeTeXcharclassEX=\XeTeXcharclass5
+\XeTeXcharclassCM=\XeTeXcharclass6
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/generic/unicode-data\load-uni
+code-xetex-classes.tex 
+load-unicode-xetex-classes.tex v1.16 (2022-09-17)
+Reading Unicode east Asian character class data
+# LineBreak-15.0.0.txt 
+# Date: 2022-07-28, 09:20:42 GMT [KW, LI] 
+# EastAsianWidth-15.0.0.txt 
+# Date: 2022-05-24, 17:40:20 GMT [KW, LI] 
+)
+\XeTeXcharclassHG=\XeTeXcharclass7
+\XeTeXcharclassJJ=\XeTeXcharclass8
+\XeTeXcharclassMD=\XeTeXcharclass9
+\XeTeXcharclassFS=\XeTeXcharclass10
+\XeTeXcharclassLD=\XeTeXcharclass11
+\XeTeXcharclassSY=\XeTeXcharclass12
+\XeTeXcharclassAO=\XeTeXcharclass13
+\XeTeXcharclassAC=\XeTeXcharclass14
+\XeTeXcharclassAM=\XeTeXcharclass15
+\XeTeXcharclassAH=\XeTeXcharclass16
+\XeTeXcharclassAP=\XeTeXcharclass17
+\XeTeXcharclassVC=\XeTeXcharclass18
+\XeKo@toks@=\toks39
+\XeKo@toks@ii=\toks40
+\XeKo@skip@=\skip61
+\XeKo@count@=\count283
+\XeKo@dimen@=\dimen172
+\XeKo@box@=\box54
+\XeKo@dotemph@box=\box55
+ (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-06-30 L3 programming layer (loader) 
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xet
+ex.def
+File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
+\g__graphics_track_int=\count284
+\l__pdf_internal_box=\box56
+\g__pdf_backend_object_int=\count285
+\g__pdf_backend_annotation_int=\count286
+\g__pdf_backend_link_int=\count287
+))
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex
+.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count288
+\l__fontspec_language_int=\count289
+\l__fontspec_strnum_int=\count290
+\l__fontspec_tmp_int=\count291
+\l__fontspec_tmpa_int=\count292
+\l__fontspec_tmpb_int=\count293
+\l__fontspec_tmpc_int=\count294
+\l__fontspec_em_int=\count295
+\l__fontspec_emdef_int=\count296
+\l__fontspec_strong_int=\count297
+\l__fontspec_strongdef_int=\count298
+\l__fontspec_tmpa_dim=\dimen173
+\l__fontspec_tmpb_dim=\dimen174
+\l__fontspec_tmpc_dim=\dimen175
+ (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg))
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/cjk-ko\kolabels-utf.sty
+Package: kolabels-utf 2015/03/20 v1.5 UTF-8 Hangul item labels
+)))
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/type1cm\type1cm.sty
+Package: type1cm 2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, p
+atched RF)
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks41
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+)
+\Gin@req@height=\dimen176
+\Gin@req@width=\dimen177
+) (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count299
+\float@exts=\toks42
+\float@box=\box57
+\@float@everytoks=\toks43
+\@floatcapt=\box58
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count300
+\mult@box=\box59
+\multicol@leftmargin=\dimen178
+\c@unbalance=\count301
+\c@collectmore=\count302
+\doublecol@number=\count303
+\multicoltolerance=\count304
+\multicolpretolerance=\count305
+\full@width=\dimen179
+\page@free=\dimen180
+\premulticols=\dimen181
+\postmulticols=\dimen182
+\multicolsep=\skip62
+\multicolbaselineskip=\skip63
+\partial@page=\box60
+\last@line=\box61
+\mc@boxedresult=\box62
+\maxbalancingoverflow=\dimen183
+\mult@rightbox=\box63
+\mult@grightbox=\box64
+\mult@firstbox=\box65
+\mult@gfirstbox=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\c@minrows=\count306
+\c@columnbadness=\count307
+\c@finalcolumnbadness=\count308
+\last@try=\dimen184
+\multicolovershoot=\dimen185
+\multicolundershoot=\dimen186
+\mult@nat@firstbox=\box103
+\colbreak@box=\box104
+\mc@col@check@num=\count309
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/footmisc\footmisc.sty
+Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
+\FN@temptoken=\toks44
+\footnotemargin=\dimen187
+\@outputbox@depth=\dimen188
+Package footmisc Info: Declaring symbol style bringhurst on input line 696.
+Package footmisc Info: Declaring symbol style chicago on input line 704.
+Package footmisc Info: Declaring symbol style wiley on input line 713.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 724.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 744.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 765
+.
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip64
+\multirow@cntb=\count310
+\multirow@dima=\skip65
+\bigstrutjot=\dimen189
+)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\palatino.sty
+Package: palatino 2020/03/25 PSNFSS-v9.3 (SPQR) 
+)
+(C:/Users/halin/TexCustom\tex/latex/mtpro2\mtpro2.sty
+Package: mtpro2 2009/4/27 v2.3 MathTimePro II - added arc accents MathTimePro I
+I - fixed rbrace problem with straightbraces and morphedbraces options MathTime
+Pro II - fix bug with z = \backslash widetilde{\backslash sum_{x }}MathTimePro 
+II v2 font support (PCTeX/WaS)MathTimePro II v2.1a Allowed alternate form of I 
+in Math Script Fonts (MS)
+\c@mv@heavy=\count311
+\pointcount@=\count312
+\prePbox@=\box105
+\Pbox@=\box106
+\LRbox@=\box107
+\HATbox@=\box108
+\TDbox@=\box109
+\CHbox@=\box110
+\ARCbox@=\box111
+\preSbox@=\box112
+\Sbox@=\box113
+\SQcount@=\count313
+\SQRTbox@=\box114
+\UPROOT@=\count314
+\LEFTROOT@=\count315
+\limtype@=\count316
+\xlfont@=\count317
+\xlposition@=\count318
+\xlposition@ii=\count319
+\optype@=\count320
+\x@count=\count321
+\maxXLscripts@=\dimen190
+\symAMSa=\mathgroup4
+)
+\@indexfile=\write4
+\openout4 = `book.idx'.
+
+
+Writing index file book.idx
+(book.aux (author/acronym.aux) (author/part.aux) (author/main/Spin.aux)
+(author/appendix.aux) (author/glossary.aux) (author/solutions.aux))
+\openout1 = `book.aux'.
+
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+
+Package fontspec Info: Font family 'UnBatang.ttf(0)' created for font
+(fontspec)             'UnBatang.ttf' with options
+(fontspec)             [Ligatures=TeX,BoldFont={UnBatangBold.ttf},Script={Hangu
+l},Language={Korean}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[UnBatang.ttf]/OT:script=hang;language=KOR;mapping=t
+ex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[UnBatangBold.ttf]/OT:script=hang;language=KOR;mappi
+ng=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'UnDotum.ttf(0)' created for font
+(fontspec)             'UnDotum.ttf' with options
+(fontspec)             [Ligatures=TeX,BoldFont={UnDotumBold.ttf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[UnDotum.ttf]/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[UnDotumBold.ttf]/OT:language=dflt;mapping=tex-text;
+"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'UnDotum.ttf(1)' created for font
+(fontspec)             'UnDotum.ttf' with options
+(fontspec)             [BoldFont={UnDotumBold.ttf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[UnDotum.ttf]/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[UnDotumBold.ttf]/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+\big@size=\dimen191
+
+[1
+
+] [2
+
+
+] (book.toc)
+\tf@toc=\write5
+\openout5 = `book.toc'.
+
+ [5
+
+
+]
+\openout2 = `author/acronym.aux'.
+
+ (author/acronym.tex [6
+
+
+
+]) [7] [8
+
+
+
+
+]
+\openout2 = `author/part.aux'.
+
+ (author/part.tex
+[1
+
+
+
+] [2])
+\openout2 = `author/main/Spin.aux'.
+
+ (author/main/Spin.tex
+Chapter 1.
+[3
+
+
+
+
+
+] [4]
+File: images/figure.pdf Graphic file (type pdf)
+<use images/figure.pdf>
+ [5] [6]
+File: images/figure.pdf Graphic file (type pdf)
+<use images/figure.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+[]\TU/ppl/b/it/10 mRNA cleav-
+ []
+
+[7]
+Overfull \hbox (2.52452pt too wide) in paragraph at lines 186--187
+[]\TU/ppl/b/it/10 That addresses central themes pertainng to migration, health,
+ and disease. In Sect. 1.4.1[],
+ []
+
+[8]
+Overfull \hbox (3.0pt too wide) detected at line 264
+ [] 
+ []
+
+[9]
+Overfull \hbox (3.0pt too wide) detected at line 271
+ [] 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 279
+ [] 
+ []
+
+[10]
+Overfull \hbox (3.0pt too wide) detected at line 287
+ [] 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 294
+ [] 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 306
+ [] 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 314
+ [] 
+ []
+
+[11
+
+]
+Overfull \hbox (3.0pt too wide) detected at line 321
+ [] 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 332
+ [] 
+ []
+
+[12
+
+]
+File: images/prob.pdf Graphic file (type pdf)
+<use images/prob.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--382
+
+ []
+
+) [13]
+\openout2 = `author/appendix.aux'.
+
+ (author/appendix.tex [14
+
+
+
+
+
+]
+Appendix A.
+[15]
+File: images/figure.pdf Graphic file (type pdf)
+<use images/figure.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
+[]\TU/phv/m/n/10 mRNA cleav-
+ []
+
+) [16]
+\openout2 = `author/glossary.aux'.
+
+ (author/glossary.tex) [17
+
+
+
+
+
+
+
+]
+\openout2 = `author/solutions.aux'.
+
+ (author/solutions.tex [18
+
+
+
+
+
+]
+
+LaTeX Warning: Reference `intro' on page 19 undefined on input line 4.
+
+) [19]
+No file book.ind.
+\tf@thm=\write6
+\openout6 = `book.thm'.
+
+(book.aux (author/acronym.aux) (author/part.aux) (author/main/Spin.aux)
+(author/appendix.aux) (author/glossary.aux) (author/solutions.aux))
+ ***********
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-06-30>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 10566 strings out of 410678
+ 189168 string characters out of 5792708
+ 1929869 words of memory out of 5000000
+ 31426 multiletter control sequences out of 15000+600000
+ 706947 words of font info for 139 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 108i,12n,121p,750b,2752s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on book.pdf (25 pages).
