@@ -7,13 +7,28 @@
 \usepackage[bottom]{footmisc}% places footnotes at page bottom
 
 \usepackage{multirow}
-
+\usepackage{amssymb}
+\usepackage{amsmath}
 \usepackage{cancel}
 \usepackage{physics}
-\usepackage{tensor}
-\usepackage{amssymb}
+
+
 \usepackage{newtxtext}
 \usepackage[subscriptcorrection,mtpcal,nofontinfo]{mtpro2}
+
+\makeatletter
+\edef\savedcodes{\catcode`\noexpand\_=\the\catcode`\_}
+\edef\@tempa{\csname opt@newtxmath.sty\endcsname}
+\def\@tempb{{subscriptcorrection}}
+\expandafter\expandafter\expandafter
+\in@\expandafter\@tempb\expandafter{\@tempa}
+\ifin@
+\catcode`\_=12 %
+\fi
+\makeatother
+\usepackage{tensor}
+\savedcodes
+
 
 \begin{document}
 \title{Solution to Numerical Relativity}
@@ -119,5 +134,17 @@ Therefore $\nabla_bn_c = \nabla_cn_b$.
 
 
 \section{Constructing initial data}
+
+\subsubsection*{Exercise 3.1}
+
+Starting from connection coefficients for spatial components
+\begin{align}
+\Gamma\indices{^{i}_{jk}} = & \frac{1}{2}\gamma^{il}(\partial_k \gamma_{lj} + \partial_j \gamma_{lk} - \partial_l \gamma_{jk})\\
+= & \frac{1}{2}\psi^{-4} \bar{\gamma}^{il} (\partial_k (\psi^4 \bar{\gamma}_{lj}) + \partial_j (\psi^4 \bar{\gamma}_{lk}) - \partial_l (\psi^4 \bar{\gamma}_{jk}))\\
+= & \frac{1}{2}\psi^{-4}\bar{\gamma}^{il}\qty{4\psi^3 (\bar{\gamma}_{lj} \partial_k \psi + \bar{\gamma}_{lk}\partial_j \psi + \bar{\gamma}_{jk}\partial_l \psi ) + \psi^4 (\bar{\gamma}_{lj} + \bar{\gamma}_{lk} + \bar{\gamma}_{jk})} \\
+= & \frac{1}{2}\bar{\gamma}^{il}(\bar{\gamma}_{lj} + \bar{\gamma}_{lk} + \bar{\gamma}_{jk}) + 2\psi^{-1} \bar{\gamma}^{il}(\bar{\gamma}_{lj}\partial_k \psi + \bar{\gamma}_{lk}\partial_j \psi + \bar{\gamma}_{jk}\partial_l \psi)\\
+= & \tensor{\bar{\Gamma}}{^{i}_{jk}} + 2\bar{\gamma}^{il}(\bar{\gamma}_{lj}\partial_k \ln \psi + \bar{\gamma}_{lk}\partial_j \ln \psi + \bar{\gamma}_{jk}\partial_l \ln \psi)\\
+= & \tensor{\bar{\Gamma}}{^{i}_{jk}} + 2\qty(\delta^i_j \partial_k \ln \psi + \delta^i_k \partial_j \ln \psi - \bar{\gamma}^{il}\bar{\gamma}_{jk}\partial_l \ln \psi).
+\end{align}
 
 \end{document}
