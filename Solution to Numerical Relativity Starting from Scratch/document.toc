@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}Newton's and Einstein's Gravity}{2}{}%
+\contentsline {section}{\numberline {2}Foliations of Spacetime: Constraint and Evolution Equations}{3}{}%
+\contentsline {section}{\numberline {3}Solving the Constraint Equations}{3}{}%
+\contentsline {section}{\numberline {4}Solving the Evolution Equations}{3}{}%
+\contentsline {section}{\numberline {5}Numerical Simulations of Black-Hole Binaries}{3}{}%
