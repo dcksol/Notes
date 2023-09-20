@@ -57,7 +57,11 @@
 
 \usepackage{newtxtext}
 %\usepackage{newtxmath}
-\usepackage[subscriptcorrection,mtpcal,nofontinfo]{mtpro2}
+\usepackage[subscriptcorrection,nofontinfo]{mtpro2}
+\usepackage[scr=rsfs]{mathalfa}
+\usepackage{physics}
+\usepackage[shortlabels]{enumitem}
+
 
 \begin{document}
 
@@ -115,7 +119,93 @@ use the optional argument of the \verb+\item+ command to give the category of ea
 
 %\tableofcontents
 
+\section{Introduction}
+
+\section{Initial data}
+We need to specify the spatial metric $\gamma_{ij}$ and the extrinsic curvature $K_{ij}$ which satisfy the Hamiltonian constraint
+\begin{equation}
+	\label{eq:ham}
+	R + K^2 - K_{ij}K^{ij} = 16 \pi \rho,
+\end{equation}
+and the momentum constraint
+\begin{equation}
+	\label{eq:mom}
+	D_j(K^{ij} - \gamma^{ij}K) = 8\pi j^i.
+\end{equation}
+
+To construct a single puncture initial data, we adopt York-Lichnerowicz conformal decompositions. The spatial metric is decomposed into a conformal factor $\psi$ multiplying an conformally related metric:
+\begin{equation}
+	\gamma_{ij} = \psi^4 \bar{\gamma}_{ij}.
+\end{equation}
+With this, \eqref{eq:ham} turns into
+\begin{equation}
+	\label{eq:conham}
+	\bar{D}^2\psi - \frac{\psi}{8}\bar{R}+\frac{\psi^5}{8}\qty(K_{ij}K^{ij}-K^2)=-2\pi \psi^5 \rho,
+\end{equation}
+where we define the conformal Laplace operator
+\begin{equation}
+	\bar{D}^2\psi \equiv \bar{\gamma}^{ij}\bar{D}_i\bar{D}_j \psi.
+\end{equation}
+We assume
+\begin{enumerate}[1)]
+	\item \textit{vacuum spacetime} ($\rho = 0$, $j^i = 0$),
+	\item \textit{time symmetry} ($\partial_t \gamma_{ij} = 0$, $\beta^i = 0$),
+\end{enumerate}
+so the extrinsic curvature
+\begin{equation}
+	K_{ij} = \frac{1}{2\alpha}\qty(\mathcal{L}_\beta \gamma_{ij} - \partial_t \gamma_{ij})
+\end{equation}
+vanishes and also $K=0$. Therefore, \eqref{eq:mom} satisfied identically. If we assume \textit{conformal flatness}, the conformally related metric to be flat,
+\begin{equation}
+	\bar{\gamma}_{ij} = \eta_{ij},
+\end{equation}
+\eqref{eq:conham} reduces to the simple Laplace equation
+\begin{equation}
+	\bar{D}^2\psi = 0,
+\end{equation}
+which has the solution
+\begin{equation}
+	\psi = A + \frac{B}{r}.
+\end{equation}
+To satisfy asymptotically flat as $r\to \infty$, and ADM mass to be $M$, we should choose $A=1$ and $B=\frac{M}{2}$:
+\begin{equation}
+	\label{eq:psi}
+	\psi = 1 + \frac{M}{2r}.
+\end{equation}
+
+\textsc{TwoPunctures} use Bowen-York approach \cite{PhysRevD.21.2047} and using method in \cite{PhysRevD.77.024027}. Since there is a single puncture with neither spin nor momentum, the result should be same as \eqref{eq:psi}. We used \texttt{TP_epsilon} to $10^{-6}$ and \texttt{TP_Tiny} to $0$, so
+\begin{equation}
+	\psi = 1 + \frac{M}{2\tilde{r}},
+\end{equation}
+where
+\begin{equation}
+	\tilde{r} = \qty(r^4 + 10^{-24})^{1/4}.
+\end{equation}
+
+The initial metric set by \textsc{TwoPunctures} exactly has the form
+\begin{equation}
+	\gamma_{ij} = \qty(1 + \frac{M}{2\tilde{r}})^4\eta_{ij},
+\end{equation}
+for all grid points. Fig.~\ref{fig:gammaxx} shows $\gamma_{xx}$ along $x$-axis at initial time. Each marker represents grid point for refinement level respectively. Non-diagonal component of spatial metric and all component of extrinsic curvature has value of 0 explicitly.
+
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{data/gammaxx.png}% Here is how to import EPS art
+	\caption{\label{fig:gammaxx} $\gamma_{xx}$ along $x$-axis at initial time. Only 3 of 7 refinement level plotted.}
+\end{figure}
+
+\subsection{Constraints}
+
+
+
+\section{Evolution}
+
+
+
 \section{Numerical Setup}
+
+\subsection{Mesh Refinement}
+
+We used mesh refinement for puncture center with 7 levels. Refinement factor set to 2, so the minimum resolution is $3.072M\times 2^{-6} = 0.048M$.
 
 We have used the \textsc{Einstein Toolkit} to simulate evolving a single puncture. 
 

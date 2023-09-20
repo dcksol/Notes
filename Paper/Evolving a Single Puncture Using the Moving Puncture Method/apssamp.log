@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  17 SEP 2023 22:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  20 SEP 2023 22:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -323,38 +323,63 @@ Now handling font encoding LMP3 ...
 \x@count=\count295
 \maxXLscripts@=\dimen153
 )
-Class revtex4-2 Info: Unrecognized array package. Please update this document c
-lass! (Proceeding with fingers crossed.) on input line 62.
-Class revtex4-2 Info: cite was not loaded (OK!) on input line 62.
-Class revtex4-2 Info: mcite was not loaded (OK!) on input line 62.
-Class revtex4-2 Info: multicol was not loaded (OK!) on input line 62.
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/mathalpha\mathalfa.sty)
 
-(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ot1ntxtlf.fd
-File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
-)
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/mathalpha\mathalpha.sty
+Package: mathalpha 2021/11/18 - 1.143mathalpha (License LPPL) Michael Sharpe
+`mathalpha' v1.143, 2021/11/18, a renaming of mathalfa (msharpe))
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/physics\physics.sty
+Package: physics 
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-06-30 L3 programming layer (loader) 
+
 (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count296
 \l__pdf_internal_box=\box80
-) (apssamp.aux)
+))
+Package: xparse 2023-02-02 L3 Experimental document command parser
+))
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip58
+\enit@outerparindent=\dimen154
+\enit@toks=\toks29
+\enit@inbox=\box81
+\enit@count@id=\count297
+\enitdp@description=\count298
+)
+Class revtex4-2 Info: Unrecognized array package. Please update this document c
+lass! (Proceeding with fingers crossed.) on input line 66.
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 66.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 66.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 66.
+
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ot1ntxtlf.fd
+File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
+)
+(apssamp.aux)
 \openout1 = `apssamp.aux'.
 
 
 (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count297
-\scratchdimen=\dimen154
-\scratchbox=\box81
-\nofMPsegments=\count298
-\nofMParguments=\count299
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count300
-\MPscratchDim=\dimen155
-\MPnumerator=\count301
-\makeMPintoPDFobject=\count302
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count299
+\scratchdimen=\dimen155
+\scratchbox=\box82
+\nofMPsegments=\count300
+\nofMParguments=\count301
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count302
+\MPscratchDim=\dimen156
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
+\everyMPtoPDFconversion=\toks31
 )
 (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -397,10 +422,10 @@ G,.JBIG2,.JB2,.eps]
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@mv@tabular=\count303
-\c@mv@boldtabular=\count304
-LaTeX Info: Command `\dddot' is already robust on input line 62.
-LaTeX Info: Command `\ddddot' is already robust on input line 62.
+\c@mv@tabular=\count305
+\c@mv@boldtabular=\count306
+LaTeX Info: Command `\dddot' is already robust on input line 66.
+LaTeX Info: Command `\ddddot' is already robust on input line 66.
 \openout3 = `apssampNotes.bib'.
 
  (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ot1ntxtt.fd
@@ -412,45 +437,54 @@ Class revtex4-2 Warning: Assuming \noaffiliation for collaboration.
 (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 2486) in paragraph at lines 125--130
-[]\OT1/ntxtlf/m/n/10 This sam-ple doc-u-ment demon-strates proper use of
- []
-
-
-Underfull \hbox (badness 1571) in paragraph at lines 158--160
- \OT1/ntxtlf/m/it/10 a. Note (Fourth-level head is run in)[] \OT1/ntxtlf/m/n/10
- The width-
- []
-
 [1{C:/Users/halin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ha
 lin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{C:/Use
 rs/halin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf-pc.enc
 }]
-Underfull \hbox (badness 2173) in paragraph at lines 250--258
+<data/gammaxx.png, id=18, 358.7001pt x 212.9556pt>
+File: data/gammaxx.png Graphic file (type png)
+<use data/gammaxx.png>
+Package pdftex.def Info: data/gammaxx.png  used on input line 192.
+(pdftex.def)             Requested size: 255.0pt x 151.39449pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 192--193
+ [][] 
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 215--220
+[]\OT1/ntxtlf/m/n/10 This sam-ple doc-u-ment demon-strates proper use of
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 248--250
+ \OT1/ntxtlf/m/it/10 a. Note (Fourth-level head is run in)[] \OT1/ntxtlf/m/n/10
+ The width-
+ []
+
+[2 <./data/gammaxx.png>]
+Underfull \hbox (badness 2173) in paragraph at lines 340--348
 []\OT1/ntxtlf/m/n/10 A ref-er-ence in the bib-li-og-ra-phy is spec-i-fied by a
  []
 
-[2] (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
+(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-(C:/Users/halin/TexCustom\tex/latex/mtpro2\umt2ms.fd
-File: umt2ms.fd 2009/1/30 v2.2 MathTimePro II Script (PCTeX/WaS)
-)
-(C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ot1txtt.fd
+[3] (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 1859) in paragraph at lines 389--400
+Underfull \hbox (badness 1859) in paragraph at lines 479--490
 \OT1/ntxtlf/m/n/10 pack-age. Place the [][]\OT1/ntxtt/m/n/10 \tag{#1} []\OT1/nt
 xtlf/m/n/10 com-mand be-fore the
  []
 
 
-Underfull \hbox (badness 5622) in paragraph at lines 421--427
+Underfull \hbox (badness 5622) in paragraph at lines 511--517
 \OT1/ntxtlf/m/n/10 Giving a [][]\OT1/ntxtt/m/n/10 \label{#1} []\OT1/ntxtlf/m/n/
 10 com-mand di-rectly af-ter the
  []
 
-[3]
+[4]
 Package epstopdf Info: Source file: <fig_1.eps>
 (epstopdf)                    date: 2023-09-17 13:12:50
 (epstopdf)                    size: 187 bytes
@@ -459,16 +493,16 @@ Package epstopdf Info: Source file: <fig_1.eps>
 (epstopdf)                    size: 4831 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=fig_1-e
 ps-converted-to.pdf fig_1.eps>
-(epstopdf)             \includegraphics on input line 493.
+(epstopdf)             \includegraphics on input line 583.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./fig_1-eps-converted-to.pdf): PDF inclusion
 : found PDF version <1.7>, but at most version <1.5> allowed
-<fig_1-eps-converted-to.pdf, id=27, 100.375pt x 100.375pt>
+<fig_1-eps-converted-to.pdf, id=34, 100.375pt x 100.375pt>
 File: fig_1-eps-converted-to.pdf Graphic file (type pdf)
 <use fig_1-eps-converted-to.pdf>
-Package pdftex.def Info: fig_1-eps-converted-to.pdf  used on input line 493.
+Package pdftex.def Info: fig_1-eps-converted-to.pdf  used on input line 583.
 (pdftex.def)             Requested size: 100.37474pt x 100.37474pt.
 Package epstopdf Info: Source file: <fig_2.eps>
 (epstopdf)                    date: 2023-09-17 13:12:50
@@ -478,18 +512,17 @@ Package epstopdf Info: Source file: <fig_2.eps>
 (epstopdf)                    size: 5107 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=fig_2-e
 ps-converted-to.pdf fig_2.eps>
-(epstopdf)             \includegraphics on input line 509.
+(epstopdf)             \includegraphics on input line 599.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./fig_2-eps-converted-to.pdf): PDF inclusion
 : found PDF version <1.7>, but at most version <1.5> allowed
-<fig_2-eps-converted-to.pdf, id=28, 501.875pt x 80.3pt>
+<fig_2-eps-converted-to.pdf, id=35, 501.875pt x 80.3pt>
 File: fig_2-eps-converted-to.pdf Graphic file (type pdf)
 <use fig_2-eps-converted-to.pdf>
-Package pdftex.def Info: fig_2-eps-converted-to.pdf  used on input line 509.
+Package pdftex.def Info: fig_2-eps-converted-to.pdf  used on input line 599.
 (pdftex.def)             Requested size: 501.87376pt x 80.29979pt.
-[4 <./fig_1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <vid_1a.eps>
 (epstopdf)                    date: 2023-09-17 13:12:50
 (epstopdf)                    size: 194 bytes
@@ -498,16 +531,16 @@ Package epstopdf Info: Source file: <vid_1a.eps>
 (epstopdf)                    size: 4925 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=vid_1a-
 eps-converted-to.pdf vid_1a.eps>
-(epstopdf)             \includegraphics on input line 668.
+(epstopdf)             \includegraphics on input line 758.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./vid_1a-eps-converted-to.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<vid_1a-eps-converted-to.pdf, id=37, 100.375pt x 100.375pt>
+<vid_1a-eps-converted-to.pdf, id=36, 100.375pt x 100.375pt>
 File: vid_1a-eps-converted-to.pdf Graphic file (type pdf)
 <use vid_1a-eps-converted-to.pdf>
-Package pdftex.def Info: vid_1a-eps-converted-to.pdf  used on input line 668.
+Package pdftex.def Info: vid_1a-eps-converted-to.pdf  used on input line 758.
 (pdftex.def)             Requested size: 100.37474pt x 100.37474pt.
 Package epstopdf Info: Source file: <vid_1b.eps>
 (epstopdf)                    date: 2023-09-17 13:12:50
@@ -517,58 +550,54 @@ Package epstopdf Info: Source file: <vid_1b.eps>
 (epstopdf)                    size: 4989 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=vid_1b-
 eps-converted-to.pdf vid_1b.eps>
-(epstopdf)             \includegraphics on input line 670.
+(epstopdf)             \includegraphics on input line 760.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./vid_1b-eps-converted-to.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<vid_1b-eps-converted-to.pdf, id=38, 100.375pt x 100.375pt>
+<vid_1b-eps-converted-to.pdf, id=37, 100.375pt x 100.375pt>
 File: vid_1b-eps-converted-to.pdf Graphic file (type pdf)
 <use vid_1b-eps-converted-to.pdf>
-Package pdftex.def Info: vid_1b-eps-converted-to.pdf  used on input line 670.
+Package pdftex.def Info: vid_1b-eps-converted-to.pdf  used on input line 760.
 (pdftex.def)             Requested size: 100.37474pt x 100.37474pt.
-[5 <./fig_2-eps-converted-to.pdf>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 705.
-
-(apssamp.bbl [6 <./vid_1a-eps-converted-to.pdf> <./vid_1b-eps-converted-to.pdf>
-])
+[5 <./fig_1-eps-converted-to.pdf>] [6 <./fig_2-eps-converted-to.pdf> <./vid_1a-
+eps-converted-to.pdf> <./vid_1b-eps-converted-to.pdf>] (apssamp.bbl [7])
 
 Class revtex4-2 Warning: To use \bm, please load the bm package!.
 
-[7] (apssamp.aux)
+[8] (apssamp.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 7889 strings out of 475513
- 118183 string characters out of 5760853
- 1965238 words of memory out of 5000000
- 28970 multiletter control sequences out of 15000+600000
- 665025 words of font info for 137 fonts, out of 8000000 for 9000
+ 9035 strings out of 475513
+ 135083 string characters out of 5760853
+ 1961238 words of memory out of 5000000
+ 30099 multiletter control sequences out of 15000+600000
+ 663662 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,16n,79p,567b,471s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/eul
-er/eufm10.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/
-mt2exa.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2mif.pfb><C:/Us
-ers/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2mis.pfb><C:/Users/halin/TexCust
-om/fonts/type1/pctex/mtpro2/mt2mit.pfb><C:/Users/halin/TexCustom/fonts/type1/pc
-tex/mtpro2/mt2syat.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2sy
-f.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2sys.pfb><C:/Users/h
-alin/TexCustom/fonts/type1/pctex/mtpro2/mt2syt.pfb><C:/Users/halin/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/txfonts/txtt.pfb><C:/Users/halin/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/txfonts/txtt.pfb><C:/Users/halin/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/halin/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/halin/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
-Output written on apssamp.pdf (7 pages, 268293 bytes).
+ 79i,16n,93p,567b,471s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/euler/eufm10.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/symbols/msbm10.pfb><C:/Users/halin/TexCustom/fonts/type1/pcte
+x/mtpro2/mt2exa.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2mif.p
+fb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2mis.pfb><C:/Users/hali
+n/TexCustom/fonts/type1/pctex/mtpro2/mt2mit.pfb><C:/Users/halin/TexCustom/fonts
+/type1/pctex/mtpro2/mt2syat.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtp
+ro2/mt2syf.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2sys.pfb><C
+:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2syt.pfb><C:/Users/halin/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txtt.pfb><C:/Users/halin/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txtt.pfb><C:/Users/hal
+in/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/ha
+lin/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/h
+alin/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
+Output written on apssamp.pdf (8 pages, 331625 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
+ 141 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

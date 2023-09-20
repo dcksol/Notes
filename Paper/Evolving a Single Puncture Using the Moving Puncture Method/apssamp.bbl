@@ -7,7 +7,7 @@
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
 \providecommand{\noopsort}[1]{}\providecommand{\singleletter}[1]{#1}%
-\begin{thebibliography}{45}%
+\begin{thebibliography}{47}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -51,6 +51,31 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{\citenamefont {Bowen}\ and\ \citenamefont
+  {York}(1980)}]{PhysRevD.21.2047}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Bowen}}\ and\ \bibinfo {author} {\bibfnamefont {J.~W.}\ \bibnamefont
+  {York}},\ }\bibfield  {title} {\bibinfo {title} {Time-asymmetric initial data
+  for black holes and black-hole collisions},\ }\href
+  {https://doi.org/10.1103/PhysRevD.21.2047} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {21}},\ \bibinfo
+  {pages} {2047} (\bibinfo {year} {1980})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Br\"ugmann}\ \emph {et~al.}(2008)\citenamefont
+  {Br\"ugmann}, \citenamefont {Gonz\'alez}, \citenamefont {Hannam},
+  \citenamefont {Husa}, \citenamefont {Sperhake},\ and\ \citenamefont
+  {Tichy}}]{PhysRevD.77.024027}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Br\"ugmann}}, \bibinfo {author} {\bibfnamefont {J.~A.}\ \bibnamefont
+  {Gonz\'alez}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Hannam}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Husa}}, \bibinfo {author}
+  {\bibfnamefont {U.}~\bibnamefont {Sperhake}},\ and\ \bibinfo {author}
+  {\bibfnamefont {W.}~\bibnamefont {Tichy}},\ }\bibfield  {title} {\bibinfo
+  {title} {Calibration of moving puncture simulations},\ }\href
+  {https://doi.org/10.1103/PhysRevD.77.024027} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {77}},\ \bibinfo
+  {pages} {024027} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Witten}(2001)}]{witten2001}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont

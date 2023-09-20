@@ -36,45 +36,45 @@ Warning--empty title in Fields2005
 Warning--empty institution in Fields2005
 Warning--empty chapter and pages in ballagh2000
 Warning--empty chapter and pages in Smith80
-You've used 47 entries,
+You've used 49 entries,
             6079 wiz_defined-function locations,
-            1916 strings with 20067 characters,
-and the built_in function-call counts, 40680 in all, are:
-= -- 2952
-> -- 764
-< -- 226
-+ -- 270
-- -- 178
-* -- 6056
-:= -- 4077
-add.period$ -- 45
-call.type$ -- 47
-change.case$ -- 262
-chr.to.int$ -- 70
-cite$ -- 54
-duplicate$ -- 4064
-empty$ -- 3043
-format.name$ -- 450
-if$ -- 7963
+            1934 strings with 20600 characters,
+and the built_in function-call counts, 43092 in all, are:
+= -- 3123
+> -- 832
+< -- 239
++ -- 290
+- -- 194
+* -- 6433
+:= -- 4297
+add.period$ -- 47
+call.type$ -- 49
+change.case$ -- 272
+chr.to.int$ -- 72
+cite$ -- 56
+duplicate$ -- 4280
+empty$ -- 3215
+format.name$ -- 490
+if$ -- 8463
 int.to.chr$ -- 9
-int.to.str$ -- 54
-missing$ -- 542
-newline$ -- 188
-num.names$ -- 144
-pop$ -- 1584
+int.to.str$ -- 56
+missing$ -- 576
+newline$ -- 194
+num.names$ -- 150
+pop$ -- 1665
 preamble$ -- 2
-purify$ -- 224
+purify$ -- 234
 quote$ -- 0
-skip$ -- 1489
+skip$ -- 1596
 stack$ -- 0
-substring$ -- 929
-swap$ -- 3689
-text.length$ -- 116
+substring$ -- 987
+swap$ -- 3904
+text.length$ -- 124
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 590
+type$ -- 620
 warning$ -- 8
-while$ -- 141
+while$ -- 147
 width$ -- 0
-write$ -- 440
+write$ -- 458
 (There were 8 warnings)
