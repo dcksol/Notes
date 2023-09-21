@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  20 SEP 2023 22:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  21 SEP 2023 22:25
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -441,50 +441,68 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 lin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{C:/Use
 rs/halin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf-pc.enc
 }]
-<data/gammaxx.png, id=18, 358.7001pt x 212.9556pt>
+<data/gammaxx.png, id=18, 361.1091pt x 212.9556pt>
 File: data/gammaxx.png Graphic file (type png)
 <use data/gammaxx.png>
-Package pdftex.def Info: data/gammaxx.png  used on input line 192.
-(pdftex.def)             Requested size: 255.0pt x 151.39449pt.
+Package pdftex.def Info: data/gammaxx.png  used on input line 194.
+(pdftex.def)             Requested size: 255.0pt x 150.38391pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 192--193
+Overfull \hbox (9.0pt too wide) in paragraph at lines 194--195
+ [][] 
+ []
+
+<data/ham_xy.png, id=20, 256.3176pt x 206.9331pt>
+File: data/ham_xy.png Graphic file (type png)
+<use data/ham_xy.png>
+Package pdftex.def Info: data/ham_xy.png  used on input line 210.
+(pdftex.def)             Requested size: 255.0pt x 205.87164pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 210--211
  [][] 
  []
 
 
-Underfull \hbox (badness 2486) in paragraph at lines 215--220
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <./data/gammaxx.png> <./data/ham_xy.png>]
+Overfull \hbox (4.2877pt too wide) in alignment at lines 269--274
+ [][][] []
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 315--320
 []\OT1/ntxtlf/m/n/10 This sam-ple doc-u-ment demon-strates proper use of
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 248--250
+Underfull \hbox (badness 1571) in paragraph at lines 348--350
  \OT1/ntxtlf/m/it/10 a. Note (Fourth-level head is run in)[] \OT1/ntxtlf/m/n/10
  The width-
  []
 
-[2 <./data/gammaxx.png>]
-Underfull \hbox (badness 2173) in paragraph at lines 340--348
+[3]
+Underfull \hbox (badness 2173) in paragraph at lines 440--448
 []\OT1/ntxtlf/m/n/10 A ref-er-ence in the bib-li-og-ra-phy is spec-i-fied by a
  []
 
 (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-[3] (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ot1txtt.fd
+[4] (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 1859) in paragraph at lines 479--490
+Underfull \hbox (badness 1859) in paragraph at lines 579--590
 \OT1/ntxtlf/m/n/10 pack-age. Place the [][]\OT1/ntxtt/m/n/10 \tag{#1} []\OT1/nt
 xtlf/m/n/10 com-mand be-fore the
  []
 
 
-Underfull \hbox (badness 5622) in paragraph at lines 511--517
+Underfull \hbox (badness 5622) in paragraph at lines 611--617
 \OT1/ntxtlf/m/n/10 Giving a [][]\OT1/ntxtt/m/n/10 \label{#1} []\OT1/ntxtlf/m/n/
 10 com-mand di-rectly af-ter the
  []
 
-[4]
+[5]
 Package epstopdf Info: Source file: <fig_1.eps>
 (epstopdf)                    date: 2023-09-17 13:12:50
 (epstopdf)                    size: 187 bytes
@@ -493,16 +511,16 @@ Package epstopdf Info: Source file: <fig_1.eps>
 (epstopdf)                    size: 4831 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=fig_1-e
 ps-converted-to.pdf fig_1.eps>
-(epstopdf)             \includegraphics on input line 583.
+(epstopdf)             \includegraphics on input line 683.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./fig_1-eps-converted-to.pdf): PDF inclusion
 : found PDF version <1.7>, but at most version <1.5> allowed
-<fig_1-eps-converted-to.pdf, id=34, 100.375pt x 100.375pt>
+<fig_1-eps-converted-to.pdf, id=40, 100.375pt x 100.375pt>
 File: fig_1-eps-converted-to.pdf Graphic file (type pdf)
 <use fig_1-eps-converted-to.pdf>
-Package pdftex.def Info: fig_1-eps-converted-to.pdf  used on input line 583.
+Package pdftex.def Info: fig_1-eps-converted-to.pdf  used on input line 683.
 (pdftex.def)             Requested size: 100.37474pt x 100.37474pt.
 Package epstopdf Info: Source file: <fig_2.eps>
 (epstopdf)                    date: 2023-09-17 13:12:50
@@ -512,17 +530,18 @@ Package epstopdf Info: Source file: <fig_2.eps>
 (epstopdf)                    size: 5107 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=fig_2-e
 ps-converted-to.pdf fig_2.eps>
-(epstopdf)             \includegraphics on input line 599.
+(epstopdf)             \includegraphics on input line 699.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./fig_2-eps-converted-to.pdf): PDF inclusion
 : found PDF version <1.7>, but at most version <1.5> allowed
-<fig_2-eps-converted-to.pdf, id=35, 501.875pt x 80.3pt>
+<fig_2-eps-converted-to.pdf, id=41, 501.875pt x 80.3pt>
 File: fig_2-eps-converted-to.pdf Graphic file (type pdf)
 <use fig_2-eps-converted-to.pdf>
-Package pdftex.def Info: fig_2-eps-converted-to.pdf  used on input line 599.
+Package pdftex.def Info: fig_2-eps-converted-to.pdf  used on input line 699.
 (pdftex.def)             Requested size: 501.87376pt x 80.29979pt.
+[6 <./fig_1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <vid_1a.eps>
 (epstopdf)                    date: 2023-09-17 13:12:50
 (epstopdf)                    size: 194 bytes
@@ -531,16 +550,16 @@ Package epstopdf Info: Source file: <vid_1a.eps>
 (epstopdf)                    size: 4925 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=vid_1a-
 eps-converted-to.pdf vid_1a.eps>
-(epstopdf)             \includegraphics on input line 758.
+(epstopdf)             \includegraphics on input line 858.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./vid_1a-eps-converted-to.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<vid_1a-eps-converted-to.pdf, id=36, 100.375pt x 100.375pt>
+<vid_1a-eps-converted-to.pdf, id=50, 100.375pt x 100.375pt>
 File: vid_1a-eps-converted-to.pdf Graphic file (type pdf)
 <use vid_1a-eps-converted-to.pdf>
-Package pdftex.def Info: vid_1a-eps-converted-to.pdf  used on input line 758.
+Package pdftex.def Info: vid_1a-eps-converted-to.pdf  used on input line 858.
 (pdftex.def)             Requested size: 100.37474pt x 100.37474pt.
 Package epstopdf Info: Source file: <vid_1b.eps>
 (epstopdf)                    date: 2023-09-17 13:12:50
@@ -550,54 +569,60 @@ Package epstopdf Info: Source file: <vid_1b.eps>
 (epstopdf)                    size: 4989 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=vid_1b-
 eps-converted-to.pdf vid_1b.eps>
-(epstopdf)             \includegraphics on input line 760.
+(epstopdf)             \includegraphics on input line 860.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./vid_1b-eps-converted-to.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<vid_1b-eps-converted-to.pdf, id=37, 100.375pt x 100.375pt>
+<vid_1b-eps-converted-to.pdf, id=51, 100.375pt x 100.375pt>
 File: vid_1b-eps-converted-to.pdf Graphic file (type pdf)
 <use vid_1b-eps-converted-to.pdf>
-Package pdftex.def Info: vid_1b-eps-converted-to.pdf  used on input line 760.
+Package pdftex.def Info: vid_1b-eps-converted-to.pdf  used on input line 860.
 (pdftex.def)             Requested size: 100.37474pt x 100.37474pt.
-[5 <./fig_1-eps-converted-to.pdf>] [6 <./fig_2-eps-converted-to.pdf> <./vid_1a-
-eps-converted-to.pdf> <./vid_1b-eps-converted-to.pdf>] (apssamp.bbl [7])
+[7 <./fig_2-eps-converted-to.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 895.
+
+(apssamp.bbl [8 <./vid_1a-eps-converted-to.pdf> <./vid_1b-eps-converted-to.pdf>
+])
 
 Class revtex4-2 Warning: To use \bm, please load the bm package!.
 
-[8] (apssamp.aux)
+[9] (apssamp.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9035 strings out of 475513
- 135083 string characters out of 5760853
- 1961238 words of memory out of 5000000
- 30099 multiletter control sequences out of 15000+600000
+ 9046 strings out of 475513
+ 135290 string characters out of 5760853
+ 1962238 words of memory out of 5000000
+ 30110 multiletter control sequences out of 15000+600000
  663662 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,16n,93p,567b,471s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/euler/eufm10.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb><C:/Users/halin/TexCustom/fonts/type1/pcte
-x/mtpro2/mt2exa.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2mif.p
-fb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2mis.pfb><C:/Users/hali
-n/TexCustom/fonts/type1/pctex/mtpro2/mt2mit.pfb><C:/Users/halin/TexCustom/fonts
-/type1/pctex/mtpro2/mt2syat.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtp
-ro2/mt2syf.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2sys.pfb><C
-:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2syt.pfb><C:/Users/halin/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txtt.pfb><C:/Users/halin/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txtt.pfb><C:/Users/hal
-in/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/ha
-lin/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/h
-alin/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
-Output written on apssamp.pdf (8 pages, 331625 bytes).
+fonts/cm/cmsy9.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/euler/eufm10.pfb><C:/Users/halin/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/halin/TexCustom/fonts/ty
+pe1/pctex/mtpro2/mt2exa.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/
+mt2mif.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2mis.pfb><C:/Us
+ers/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2mit.pfb><C:/Users/halin/TexCust
+om/fonts/type1/pctex/mtpro2/mt2syat.pfb><C:/Users/halin/TexCustom/fonts/type1/p
+ctex/mtpro2/mt2syf.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2sy
+s.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2syt.pfb><C:/Users/h
+alin/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txtt.pfb><C:/User
+s/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txtt.pfb><C:/U
+sers/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/
+Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:
+/Users/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
+Output written on apssamp.pdf (9 pages, 414125 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
+ 151 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

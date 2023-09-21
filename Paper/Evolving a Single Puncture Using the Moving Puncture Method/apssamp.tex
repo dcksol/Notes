@@ -122,6 +122,7 @@ use the optional argument of the \verb+\item+ command to give the category of ea
 \section{Introduction}
 
 \section{Initial data}
+\subsection{Spatial metric}
 We need to specify the spatial metric $\gamma_{ij}$ and the extrinsic curvature $K_{ij}$ which satisfy the Hamiltonian constraint
 \begin{equation}
 	\label{eq:ham}
@@ -135,6 +136,7 @@ and the momentum constraint
 
 To construct a single puncture initial data, we adopt York-Lichnerowicz conformal decompositions. The spatial metric is decomposed into a conformal factor $\psi$ multiplying an conformally related metric:
 \begin{equation}
+	\label{eq:conformalmetric}
 	\gamma_{ij} = \psi^4 \bar{\gamma}_{ij}.
 \end{equation}
 With this, \eqref{eq:ham} turns into
@@ -186,20 +188,103 @@ The initial metric set by \textsc{TwoPunctures} exactly has the form
 \begin{equation}
 	\gamma_{ij} = \qty(1 + \frac{M}{2\tilde{r}})^4\eta_{ij},
 \end{equation}
-for all grid points. Fig.~\ref{fig:gammaxx} shows $\gamma_{xx}$ along $x$-axis at initial time. Each marker represents grid point for refinement level respectively. Non-diagonal component of spatial metric and all component of extrinsic curvature has value of 0 explicitly.
+for all grid points. Fig.~\ref{fig:gammaxx} shows $\gamma_{xx}$ along $x$ axis at initial time. Each marker represents grid point for refinement level respectively. Non-diagonal component of spatial metric and all component of extrinsic curvature has value of 0 explicitly.
 
 \begin{figure}[h]
 	\includegraphics[width=0.5\textwidth]{data/gammaxx.png}% Here is how to import EPS art
-	\caption{\label{fig:gammaxx} $\gamma_{xx}$ along $x$-axis at initial time. Only 3 of 7 refinement level plotted.}
+	\caption{\label{fig:gammaxx} $\gamma_{xx}$ along $x$ axis at initial time. Only 3 of 7 refinement level plotted.}
 \end{figure}
 
 \subsection{Constraints}
 
+From \eqref{eq:ham} and \eqref{eq:mom}, we can define
+\begin{equation}
+	\mathcal{H} \equiv R + K^2 -K_{ij}K^{ij}-16\pi \rho,
+\end{equation}
+\begin{equation}
+	\mathcal{M}^ i \equiv D_j (K^{ij} - \gamma^{ij}K) - 8\pi j^i,
+\end{equation}
+and it should be satisfy that $\mathcal{H} = 0$ and $\mathcal{M}^i = 0$. Fig.~\ref{fig:ham_xy} shows $\log_{10}\qty|\mathcal{H}|$ on the $xy$ plane at the initial time. Every value at each grid points is less than $10^{-7}$. In case of $\mathcal{M}^i$, all of the values are explicitly 0.
 
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{data/ham_xy.png}% Here is how to import EPS art
+	\caption{\label{fig:ham_xy} $\log_{10}\qty|\mathcal{H}|$ on the $xy$ plane at the initial time.}
+\end{figure}
 
 \section{Evolution}
 
+\subsection{Gauge Condition}
 
+We used 1+log slicing
+\begin{eqnarray}
+	\partial_t \alpha = -2\alpha K + \beta^i \partial_i \alpha,
+\end{eqnarray}
+and hyperbolic gamma driver condition for the shift,
+\begin{eqnarray}
+	\partial_t \beta^i = \frac{3}{4}B^i + \beta^j\partial_j \beta^i,
+\end{eqnarray}
+\begin{eqnarray}
+	\partial_t B^i = \partial_t \bar{\Gamma}^i -B^i + \beta^j \partial_j B^i,
+\end{eqnarray}
+which is typically employed in moving puncture method.
+
+\subsection{BSSN}
+The 3+1 ADM evolution equations are
+\begin{equation}
+	(\partial_t - \mathcal{L}_\beta)\gamma_{ij} = -2\alpha K_{ij},
+\end{equation}
+
+\begin{eqnarray}
+	(\partial_t - \mathcal{L}_\beta)K_{ij} &=& -D_i D_j \alpha + \alpha (R_{ij} + KK_{ij}-2K_{ik}K^k{}_{j})\nonumber\\&&+4\pi \alpha M_{ij},
+\end{eqnarray}
+and this set of PDE's is only weakly hyperbolic and is therefore not suitable for stable numerical evolution. Here, we adopt the BSSN(\textit{Baumgarte-Shapiro-Shibata-Nakmura}) formulation.
+
+In the BSSN formulation, spatial metric $\gamma_{ij}$ is decomposed into conformally related metric as \eqref{eq:conformalmetric} with $\det (\bar{\gamma}_{ij}) = 1$. Extrinsic curvature also decomposed into its trace and traceless parts and conformally transform the traceless part as we do the metric,
+\begin{equation}
+	K_{ij} = e^{4\phi}\tilde{A}_{ij} + \frac{1}{3}\gamma_{ij}K.
+\end{equation}
+We then promote the following variables to evolution variable
+\begin{equation}
+	\phi = \ln \psi = \frac{1}{12}\ln \gamma,
+\end{equation}
+as well as the conformal connection functions
+\begin{equation}
+	\bar{\Gamma}^i = \bar{\gamma}^{jk}\bar{\Gamma}^i{}_{jk} = -\partial_j \bar{\gamma}^{ij}.
+\end{equation}
+Then the evolution equation for $\gamma_{ij}$ splits into two equations,
+\begin{equation}
+	\partial_t \phi = - \frac{1}{6}\alpha K + \beta^i \partial_i \phi + \frac{1}{6}\partial_i \beta^i,
+\end{equation}
+\begin{eqnarray}
+	\partial_t \bar{\gamma}_{ij} &=& -2\alpha \tilde{A}_{ij} + \beta^k \partial_k \bar{\gamma}_{ij}  \nonumber\\&&+\bar{\gamma}_{ik}\partial_j \beta^k + \bar{\gamma}_{jk}\partial_i \beta^k - \frac{2}{3}\bar{\gamma}_{ij}\partial_k\beta^k.
+\end{eqnarray}
+And the evolution equation for $K_{ij}$ splits into the two equations,
+\begin{eqnarray}
+\partial_t K &=& -D^iD_i \alpha + \alpha (\tilde{A}_{ij}\title{A}^{ij} + \frac{1}{3}K^2)\nonumber\\&&+\beta^i\partial_i K + 4\pi \alpha (\rho + S),
+\end{eqnarray}
+\begin{eqnarray}
+	\partial_t \tilde{A}_{ij} &=& e^{-4\phi}\qty[-D_iD_j\alpha + \alpha(R_{ij} - 8\pi S_{ij})]^{TF}\nonumber\\&& + \alpha(K\tilde{A}_{ij} - 2\tilde{A}_{ik}\tilde{A}^k{}_{j}) + \beta^k\partial_k \tilde{A}_{ij} \nonumber\\&&+ \tilde{A}_{ik}\partial_j\beta^k + \tilde{A}_{jk}\partial_i\beta^k - \frac{2}{3}\tilde{A}_{ij}\partial_k\beta^k,
+\end{eqnarray}
+where the superscript $TF$ denotes the trace-free part of a tensor. The We also split the Ricci tensor into 
+\begin{eqnarray}
+	R_{ij}
+	&=& \bar{R}_{ij} - 2 \qty(\bar{D}_i\bar{D}_j \ln \psi + \bar{\gamma}_{ij}\bar{\gamma}^{lm}\bar{D}_l \bar{D}_m \ln \psi)\nonumber\\&&+4\qty((\bar{D}_i \ln \psi)(\bar{D}_j \ln \psi) - \bar{\gamma}_{ij}\bar{\gamma}^{lm}(\bar{D}_l \ln \psi)(\bar{D}_m \ln \psi) )\nonumber\\
+	&=& \bar{R}_{ij} - 2 \qty(\bar{D}_i\bar{D}_j \phi + \bar{\gamma}_{ij}\bar{\gamma}^{lm}\bar{D}_l \bar{D}_m \phi)\nonumber\\&&+4\qty((\bar{D}_i \phi)(\bar{D}_j \phi) - \bar{\gamma}_{ij}\bar{\gamma}^{lm}(\bar{D}_l \phi)(\bar{D}_m \phi) )\nonumber\\
+	&\equiv& \bar{R}_{ij} + R^\phi_{ij}.
+\end{eqnarray}
+The $\bar{\Gamma}^{i}$ are now treated as independent functions that satisfy their own evolution equations,
+\begin{eqnarray}
+	\partial_t \bar{\Gamma}^i &=& 2\alpha \qty(\bar{\Gamma}^i{}_{jk} \tilde{A}^{kj} - \frac{2}{3}\bar{\gamma}^{ij}\partial_j K - 8\pi \bar{\gamma}^{ij} S_j + 6\tilde{A}^{ij}\partial_j \phi) \nonumber\\&& -2\tilde{A}^{ij}\partial_j \alpha + \beta^j \partial_j \bar{\Gamma}^i - \bar{\Gamma}^j \partial_j \beta^i \nonumber\\&&+ \frac{2}{3}\bar{\Gamma}^i \partial_j \beta^j + \frac{1}{3}\bar{\gamma}^{il}\partial_l \partial_j \beta^j + \bar{\gamma}^{jl}\partial_j\partial_l\beta^i.
+\end{eqnarray}
+
+We used variable
+\begin{eqnarray}
+	W = \gamma^{-1/6} = e^{-2\phi}
+\end{eqnarray}
+instead of using $\phi$. The evolution equation for $W$ is
+\begin{eqnarray}
+	\partial_t W = \frac{1}{3}W(\alpha K - \partial_i \beta^i)+\beta^i \partial_i W.
+\end{eqnarray}
 
 \section{Numerical Setup}
 
@@ -208,6 +293,21 @@ for all grid points. Fig.~\ref{fig:gammaxx} shows $\gamma_{xx}$ along $x$-axis a
 We used mesh refinement for puncture center with 7 levels. Refinement factor set to 2, so the minimum resolution is $3.072M\times 2^{-6} = 0.048M$.
 
 We have used the \textsc{Einstein Toolkit} to simulate evolving a single puncture. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{\label{sec:level1}First-level heading:\protect\\ The line
 break was forced \lowercase{via} \textbackslash\textbackslash}
