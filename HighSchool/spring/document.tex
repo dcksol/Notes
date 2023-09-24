@@ -1,0 +1,111 @@
+\documentclass{article}
+
+\usepackage{setspace}
+
+\usepackage{graphicx}        % standard LaTeX graphics tool
+\usepackage{float}
+
+\usepackage[hangul]{kotex}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{newtxtext}
+\usepackage[subscriptcorrection,mtpcal,nofontinfo]{mtpro2}
+\setstretch{1.5} % 1.5만큼 조절
+\usepackage[scale=0.75,hmarginratio=1:1,vmarginratio=2:3,a4paper]{geometry} 
+
+
+\newtheorem{theorem}{정리}
+\newtheorem{corollary}{따름 정리}
+
+\newcommand{\qed}{$\hfill\blacksquare$}
+\newcommand{\qedwhite}{$\hfill \ensuremath{\Box}$}
+\begin{document}
+\title{용수철}
+\author{D.C. Kim}
+\maketitle
+
+본 문서는 고등학교 물리학 교육과정에서 다루는 이상적인 1차원 운동에 대해서 국한한다. 일반적으로 물체의 크기와 용수철의 질량, 마찰, 공기 저항 등은 특별한 언급이 없는 한 무시한다.
+
+\begin{theorem}\label{theorem:1}
+(장력) 질량이 각각 $m_\mathrm{A}$, $m_{\mathrm{B}}$인 두 물체 $\mathrm{A}$, $\mathrm{B}$가 실 $\mathrm{p}$로 팽팽하게 연결되어 있다. 각 물체에 서로 반대 방향으로 힘 $F_\mathrm{A}$, $F_\mathrm{B}$가 작용할 때, $\mathrm{p}$에 걸리는 장력의 크기는
+\begin{equation}
+	T = \frac{m_\mathrm{A}F_\mathrm{B} + m_\mathrm{B}F_\mathrm{A}}{m_\mathrm{A} + m_\mathrm{B}}
+\end{equation}
+이다.
+\end{theorem}
+증명 생략. 23학년도 9월 14번 문제, 22학년도 10월 13번 문제 등은 이를 이용하여 쉽게 풀 수 있다. 기하적 해석은 내분이다.
+\qed
+
+\begin{theorem}\label{theorem:2}
+	(수직항력) 질량이 각각 $m_\mathrm{A}$, $m_{\mathrm{B}}$인 두 물체 $\mathrm{A}$, $\mathrm{B}$가 서로 맞닿아 있다. 각 물체에 서로 반대 방향으로 힘 $F_\mathrm{A}$, $F_\mathrm{B}$가 작용할 때, 수직항력의 크기는
+	\begin{equation}
+		f=\frac{m_\mathrm{A}F_\mathrm{B} + m_\mathrm{B}F_\mathrm{A}}{m_\mathrm{A} + m_\mathrm{B}}
+	\end{equation}
+	이다.
+\end{theorem}
+정리 \ref{theorem:1}과 같은 방법으로 할 수 있다.
+\qed
+
+\begin{theorem}
+	(분리) 두 물체가 분리될 때 수직항력은 0이다.
+\end{theorem}
+
+\begin{theorem}
+	(한 물체에 용수철이 연결된 두 물체의 분리) 물체 $\mathrm{A}$에 용수철이 연결되어 있고, 물체 $\mathrm{B}$는 $\mathrm{A}$와 맞닿아 용수철이 압축되어 있다. 두 물체는 용수철의 원래 길이에서 분리된다.
+\end{theorem}
+마찰이 없는 한, 두 물체가 수평면에 있든 경사면에 있든 연직선상에 있든 상관없이 모두 성립한다. 정리 \ref{theorem:2}를 이용하여 증명해보자.
+\qed
+
+
+\begin{theorem}
+	(운동 에너지의 비) 질량이 각각 $m_\mathrm{A}$, $m_{\mathrm{B}}$인 두 물체가 같은 속도로 운동하고 있을 때, 두 물체의 운동 에너지의 비는 $m_\mathrm{A} : m_\mathrm{B}$이다.
+\end{theorem}
+당연한 정리이지만 문제 풀이 시 계를 설정할 때 떠올려야 한다.
+\qed
+
+\begin{theorem}\label{theorem:6}
+	(일-운동 에너지 정리) 물체의 운동 에너지 변화량은 물체에 가한 일과 같다.
+\end{theorem}
+증명 생략.
+\qed
+
+\begin{theorem}
+	(평형의 깨짐) (실을 자르는 행위 등의) 평형이 깨지는 경우 물체가 처음 받는 힘의 크기는 평형이 깨진 원인이 되는 힘의 크기와 같다.
+\end{theorem}
+예를 들어 장력이 $T$만큼 걸린 실로 두 물체가 연결되어 있을 때, 실을 자른 후 두 물체가 처음 받는 힘의 크기는 각각 $T$이다.
+\qed
+
+\begin{theorem}
+	(용수철의 평형점) 용수철과 연결된 물체가 평형점에서 속력이 0일 때 물체는 계속 정지 상태를 유지한다.
+\end{theorem}
+이때 평형점의 위치는 중력과 용수철의 방향에 따라 용수철의 원래 길이로부터 떨어져 있을 것이다.
+\qed
+\begin{theorem}
+	(용수철의 평형점과 운동) 용수철과 연결된 물체를 평형점에서 $L$만큼 떨어진 곳에서 가만히 놓았을 때, 물체는 평형점에서 $L$만큼 떨어진 곳에서 정지한다.
+\end{theorem}
+평형점에서 $L$만큼 떨어진 곳은 두 군데 존재함에 유의하자. 물체와 용수철이 수평면에 있다면 단순히 용수철의 탄성 퍼텐셜 에너지를 포함하는 역학적 에너지 보존이고, 단순히 식으로도 쓸 수 있다. 그렇지 않은 경우 평형점은 용수철의 원래 길이가 아니고 일반적인 식을 쓸 경우 물체의 위치 에너지까지 고려해주어야 한다.
+\qed
+
+\begin{theorem}
+	(용수철의 힘) 용수철 상수가 $k$인 용수철과 연결된 물체가 용수철의 원래 길이로부터 $L$만큼 떨어진 곳에 있을 때, 용수철이 물체에 작용하는 힘의 크기는 $kL$이고 힘의 방향은 용수철의 원래 길이를 향하는 방향이다.
+\end{theorem}
+방향을 고려하여 $F=-kx$라 하자.
+\qed
+\begin{corollary}
+	(용수철의 힘2) 용수철 상수가 $k$인 용수철과 연결된 물체가 변위 $x_0$에서 변위 $x_1$로 이동할 때, 물체가 받는 힘은 $-kx_0 + F_0$에서 $-kx_1 + F_0$까지 선형적으로 변한다.
+\end{corollary}
+용수철 문제 풀이의 핵심이다. 정리 \ref{theorem:6}과 같이 사용할 수 있다. 
+\qed
+\begin{corollary}
+	(용수철과 일) 용수철 상수가 $k$인 용수철과 연결된 물체가 변위 $x_0$에서 변위 $x_1$로 이동할 때, 물체가 받은 일은
+	\begin{equation}
+		W = \frac{2F_0 - kx_0 - kx_1}{2}(x_1 - x_0)
+	\end{equation}
+	이다.
+\end{corollary}
+다름 아닌 양쪽 끝에서 두 힘의 평균과 변위차의 곱이다! 삼각형을 그려놓고 기울기는 용수철 상수, 가로 길이는 변위, 양끝 세로 길이는 힘의 크기를 사용하는 이유이다.
+\qed
+
+\end{document}
