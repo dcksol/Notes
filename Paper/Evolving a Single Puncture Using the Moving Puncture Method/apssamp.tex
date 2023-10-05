@@ -61,6 +61,8 @@
 \usepackage[scr=rsfs]{mathalfa}
 \usepackage{physics}
 \usepackage[shortlabels]{enumitem}
+\usepackage{url}
+\usepackage{cleveref}
 
 
 \begin{document}
@@ -102,8 +104,7 @@
              %  but any date may be explicitly specified
 
 \begin{abstract}
-An article usually includes an abstract, a concise summary of the work
-covered at length in the main body of the article. 
+In this paper, we investigate the evolution of a single puncture within the framework of the Moving Puncture Method. The Moving Puncture Method has proven to be a powerful technique in numerical relativity for evolving black hole spacetimes. In our study, we focus on its application to the evolution of a single puncture, which can serve as a fundamental building block in simulating more complex spacetime scenarios.
 \begin{description}
 \item[Usage]
 Secondary publications and information retrieval purposes.
@@ -119,10 +120,77 @@ use the optional argument of the \verb+\item+ command to give the category of ea
 
 %\tableofcontents
 
+%\section{Introduction}
+%Since the first succeeded simulations of merging black-hole binaries to compute accurate gravitational waveforms form, the formulations or techniques used in the simulation such as BSSN(\textit{Baumgarte-Shapiro-Shibata-Nakmura}) formulation \cite{Nakamura:1987,  Shibata:1995we, Baumgarte:1998te}, conformal decompositions \cite{PhysRevLett.26.1656, Lichnerowicz:1944zz}, Bowen-York approach \cite{Bowen:1980yu} and moving puncture gauge \cite{PhysRevD.77.024027} have been used until recently.
+%
+%Evolving a schwarzschild black hole is good to see how numerical codes works, since we know its analytic solutions.
+%
+%In this paper, we present the way to get analytic solutions to schwarzschild black hole in case of time-independent. We present numerical setups and results as comparison to analytic solutions.
+
 \section{Introduction}
+Since the first successful simulations of merging black-hole binaries for computing accurate gravitational waveforms, various formulations and techniques have been employed. These include the BSSN (\textit{Baumgarte-Shapiro-Shibata-Nakamura}) formulation \cite{Nakamura:1987, Shibata:1995we, Baumgarte:1998te}, conformal decompositions \cite{PhysRevLett.26.1656, Lichnerowicz:1944zz}, the Bowen-York approach \cite{Bowen:1980yu}, and the moving puncture gauge \cite{PhysRevD.77.024027}. These methods have been in use until recently.
+
+Evolving a Schwarzschild black hole serves as a valuable benchmark for assessing the performance of numerical codes, given that we possess its analytical solutions.
+
+In this paper, we present a method for obtaining analytic solutions for a Schwarzschild black hole under time-independent conditions. We provide numerical setups and results for comparison with these analytical solutions.
+
+
+%\section{Initial data}
+%\subsection{Spatial metric}
+%We need to specify the spatial metric $\gamma_{ij}$ and the extrinsic curvature $K_{ij}$ which satisfy the Hamiltonian constraint
+%\begin{equation}
+%	\label{eq:ham}
+%	R + K^2 - K_{ij}K^{ij} = 16 \pi \rho,
+%\end{equation}
+%and the momentum constraint
+%\begin{equation}
+%	\label{eq:mom}
+%	D_j(K^{ij} - \gamma^{ij}K) = 8\pi j^i.
+%\end{equation}
+%
+%To construct a single puncture initial data, we adopt York-Lichnerowicz conformal decompositions \cite{PhysRevLett.26.1656, Lichnerowicz:1944zz}. The spatial metric is decomposed into a conformal factor $\psi$ multiplying an conformally related metric:
+%\begin{equation}
+%	\label{eq:conformalmetric}
+%	\gamma_{ij} = \psi^4 \bar{\gamma}_{ij}.
+%\end{equation}
+%With this, \eqref{eq:ham} turns into
+%\begin{equation}
+%	\label{eq:conham}
+%	\bar{D}^2\psi - \frac{\psi}{8}\bar{R}+\frac{\psi^5}{8}\qty(K_{ij}K^{ij}-K^2)=-2\pi \psi^5 \rho,
+%\end{equation}
+%where we define the conformal Laplace operator
+%\begin{equation}
+%	\bar{D}^2\psi \equiv \bar{\gamma}^{ij}\bar{D}_i\bar{D}_j \psi.
+%\end{equation}
+%We assume
+%\begin{enumerate}[1)]
+%	\item \textit{vacuum spacetime} ($\rho = 0$, $j^i = 0$),
+%	\item \textit{time symmetry} ($\partial_t \gamma_{ij} = 0$, $\beta^i = 0$),
+%\end{enumerate}
+%so the extrinsic curvature
+%\begin{equation}
+%	K_{ij} = \frac{1}{2\alpha}\qty(\mathcal{L}_\beta \gamma_{ij} - \partial_t \gamma_{ij})
+%\end{equation}
+%vanishes and also $K=0$. Therefore, \eqref{eq:mom} satisfied identically. If we assume \textit{conformal flatness}, the conformally related metric to be flat,
+%\begin{equation}
+%	\bar{\gamma}_{ij} = \eta_{ij},
+%\end{equation}
+%\eqref{eq:conham} reduces to the simple Laplace equation
+%\begin{equation}
+%	\bar{D}^2\psi = 0,
+%\end{equation}
+%which has the solution
+%\begin{equation}
+%	\psi = A + \frac{B}{r}.
+%\end{equation}
+%To satisfy asymptotically flat as $r\to \infty$, and ADM mass to be $M$, we should choose $A=1$ and $B=\frac{M}{2}$:
+%\begin{equation}
+%	\label{eq:psi}
+%	\psi = 1 + \frac{M}{2r}.
+%\end{equation}
 
 \section{Initial data}
-\subsection{Spatial metric}
+\subsection{Spatial Metric}
 We need to specify the spatial metric $\gamma_{ij}$ and the extrinsic curvature $K_{ij}$ which satisfy the Hamiltonian constraint
 \begin{equation}
 	\label{eq:ham}
@@ -134,7 +202,7 @@ and the momentum constraint
 	D_j(K^{ij} - \gamma^{ij}K) = 8\pi j^i.
 \end{equation}
 
-To construct a single puncture initial data, we adopt York-Lichnerowicz conformal decompositions. The spatial metric is decomposed into a conformal factor $\psi$ multiplying an conformally related metric:
+To construct a single puncture initial data, we adopt York-Lichnerowicz conformal decompositions \cite{PhysRevLett.26.1656, Lichnerowicz:1944zz}. The spatial metric is decomposed into a conformal factor $\psi$ multiplying an conformally related metric:
 \begin{equation}
 	\label{eq:conformalmetric}
 	\gamma_{ij} = \psi^4 \bar{\gamma}_{ij}.
@@ -175,61 +243,329 @@ To satisfy asymptotically flat as $r\to \infty$, and ADM mass to be $M$, we shou
 	\psi = 1 + \frac{M}{2r}.
 \end{equation}
 
-\textsc{TwoPunctures} use Bowen-York approach \cite{PhysRevD.21.2047} and using method in \cite{PhysRevD.77.024027}. Since there is a single puncture with neither spin nor momentum, the result should be same as \eqref{eq:psi}. We used \texttt{TP_epsilon} to $10^{-6}$ and \texttt{TP_Tiny} to $0$, so
+%
+%\textsc{TwoPunctures} \cite{Ansorg:2004ds} use Bowen-York approach \cite{Bowen:1980yu} and using method in \cite{PhysRevD.77.024027}. Since there is a single puncture with neither spin nor momentum, the result should be same as \eqref{eq:psi}. We used \texttt{TP_epsilon} to $10^{-6}$ and \texttt{TP_Tiny} to $0$, so
+%\begin{equation}
+%	\psi = 1 + \frac{M}{2\tilde{r}},
+%\end{equation}
+%where
+%\begin{equation}
+%	\tilde{r} = \qty(r^4 + 10^{-24})^{1/4}.
+%\end{equation}
+%
+%The initial metric set by \textsc{TwoPunctures} exactly has the form
+%\begin{equation}
+%	\gamma_{ij} = \qty(1 + \frac{M}{2\tilde{r}})^4\eta_{ij},
+%\end{equation}
+%for all grid points. Fig.~\ref{fig:gammaxx} shows $\gamma_{xx}$ along $x$ axis at initial time. Each marker represents grid point for refinement level respectively. Non-diagonal component of spatial metric and all component of extrinsic curvature has value of 0 explicitly.
+%
+%\begin{figure}[h]
+%	\includegraphics[width=0.5\textwidth]{data/gammaxx.png}% Here is how to import EPS art
+%	\caption{\label{fig:gammaxx} $\gamma_{xx}$ along $x$ axis at initial time. Only 3 of 7 refinement level plotted.}
+%\end{figure}
+
+\textsc{TwoPunctures} \cite{Ansorg:2004ds} uses the Bowen-York approach \cite{Bowen:1980yu} and the method presented in \cite{PhysRevD.77.024027}. Since there is a single puncture with neither spin nor momentum, the result should be the same as in \eqref{eq:psi}. We set \texttt{TP_epsilon} to $10^{-6}$ and \texttt{TP_Tiny} to $0$, resulting in
 \begin{equation}
 	\psi = 1 + \frac{M}{2\tilde{r}},
 \end{equation}
 where
 \begin{equation}
-	\tilde{r} = \qty(r^4 + 10^{-24})^{1/4}.
+	\tilde{r} = \left(r^4 + 10^{-24}\right)^{1/4}.
 \end{equation}
 
-The initial metric set by \textsc{TwoPunctures} exactly has the form
+The initial metric set by \textsc{TwoPunctures} exactly takes the form
 \begin{equation}
-	\gamma_{ij} = \qty(1 + \frac{M}{2\tilde{r}})^4\eta_{ij},
+	\gamma_{ij} = \left(1 + \frac{M}{2\tilde{r}}\right)^4\eta_{ij},
 \end{equation}
-for all grid points. Fig.~\ref{fig:gammaxx} shows $\gamma_{xx}$ along $x$ axis at initial time. Each marker represents grid point for refinement level respectively. Non-diagonal component of spatial metric and all component of extrinsic curvature has value of 0 explicitly.
+for all grid points. Fig.~\ref{fig:gammaxx} shows $\gamma_{xx}$ along the $x$-axis at the initial time. Each marker represents a grid point for a respective refinement level. The non-diagonal components of the spatial metric and all components of the extrinsic curvature have explicit values of 0.
 
 \begin{figure}[h]
-	\includegraphics[width=0.5\textwidth]{data/gammaxx.png}% Here is how to import EPS art
-	\caption{\label{fig:gammaxx} $\gamma_{xx}$ along $x$ axis at initial time. Only 3 of 7 refinement level plotted.}
+	\includegraphics[width=0.5\textwidth]{data/gammaxx.png}% Here is how to import an image
+	\caption{\label{fig:gammaxx} $\gamma_{xx}$ along the $x$-axis at the initial time. Only 3 of the 7 refinement levels are plotted.}
 \end{figure}
+
+%
+%\subsection{Constraints}
+%
+%From \eqref{eq:ham} and \eqref{eq:mom}, we can define
+%\begin{equation}
+%	\mathcal{H} \equiv R + K^2 -K_{ij}K^{ij}-16\pi \rho,
+%\end{equation}
+%\begin{equation}
+%	\mathcal{M}^ i \equiv D_j (K^{ij} - \gamma^{ij}K) - 8\pi j^i,
+%\end{equation}
+%and it should be satisfy that $\mathcal{H} = 0$ and $\mathcal{M}^i = 0$. Fig.~\ref{fig:ham_xy} shows $\log_{10}\qty|\mathcal{H}|$ on the $xy$ plane at the initial time. Every value at each grid points is less than $10^{-7}$. In case of $\mathcal{M}^i$, all of the values are explicitly 0.
+%
+%\begin{figure}[h]
+%	\includegraphics[width=0.5\textwidth]{data/ham_xy.png}% Here is how to import EPS art
+%	\caption{\label{fig:ham_xy} $\log_{10}\qty|\mathcal{H}|$ on the $xy$ plane at the initial time.}
+%\end{figure}
+%
+%Fig.~\ref{fig:ham_evol} shows Hamiltonian constraint violation $\mathcal{H}$ along the $x$ axis. The data at $x=0$ has been cut since its value is order of $1$ at the late time. $\mathcal{H}$ increased as time passed and most peak point's $x$ coordinate also increased. But still order of $10^{-6}$ at the $t=115.2M$.
+%\begin{figure}[h]
+%	\includegraphics[width=0.5\textwidth]{data/ham_evol.png}% Here is how to import EPS art
+%	\caption{\label{fig:ham_evol} The Hamiltonian constraint violation along the $x$ axis.}
+%\end{figure}
 
 \subsection{Constraints}
 
 From \eqref{eq:ham} and \eqref{eq:mom}, we can define
 \begin{equation}
-	\mathcal{H} \equiv R + K^2 -K_{ij}K^{ij}-16\pi \rho,
+	\mathcal{H} \equiv R + K^2 - K_{ij}K^{ij} - 16\pi \rho,
 \end{equation}
 \begin{equation}
-	\mathcal{M}^ i \equiv D_j (K^{ij} - \gamma^{ij}K) - 8\pi j^i,
+	\mathcal{M}^i \equiv D_j (K^{ij} - \gamma^{ij}K) - 8\pi j^i,
 \end{equation}
-and it should be satisfy that $\mathcal{H} = 0$ and $\mathcal{M}^i = 0$. Fig.~\ref{fig:ham_xy} shows $\log_{10}\qty|\mathcal{H}|$ on the $xy$ plane at the initial time. Every value at each grid points is less than $10^{-7}$. In case of $\mathcal{M}^i$, all of the values are explicitly 0.
+and it should satisfy that $\mathcal{H} = 0$ and $\mathcal{M}^i = 0$. Fig.~\ref{fig:ham_xy} shows $\log_{10}\qty|\mathcal{H}|$ on the $xy$ plane at the initial time. Every value at each grid point is less than $10^{-7}$. In the case of $\mathcal{M}^i$, all of the values are explicitly 0.
 
 \begin{figure}[h]
 	\includegraphics[width=0.5\textwidth]{data/ham_xy.png}% Here is how to import EPS art
 	\caption{\label{fig:ham_xy} $\log_{10}\qty|\mathcal{H}|$ on the $xy$ plane at the initial time.}
 \end{figure}
 
+Fig.~\ref{fig:ham_evol} shows the Hamiltonian constraint violation $\mathcal{H}$ along the $x$ axis. The data at $x=0$ has been cut since its value is on the order of $1$ at the late time. $\mathcal{H}$ increased as time passed, and most peak point's $x$ coordinate also increased. But it still remains on the order of $10^{-6}$ at $t=115.2M$.
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{data/ham_evol.png}% Here is how to import EPS art
+	\caption{\label{fig:ham_evol} The Hamiltonian constraint violation along the $x$ axis.}
+\end{figure}
+
+
+
+%\section{Evolution}
+%
+%\subsection{Gauge Condition}
+%
+%The 1+log slicing with advection term is
+%\begin{eqnarray}
+%	\label{eq:logadv}
+%	\partial_t \alpha = -2\alpha K + \beta^i \partial_i \alpha,
+%\end{eqnarray}
+%and hyperbolic gamma driver condition for the shift with advection term is
+%\begin{eqnarray}
+%	\label{eq:betaadv}
+%	\partial_t \beta^i = \frac{3}{4}B^i + \beta^j\partial_j \beta^i,
+%\end{eqnarray}
+%\begin{eqnarray}
+%	\label{eq:Badv}
+%	\partial_t B^i = \partial_t \bar{\Gamma}^i -B^i + \beta^j \partial_j B^i,
+%\end{eqnarray}
+%which is typically employed in moving puncture method \cite{Campanelli:2005dd, Alcubierre:2002kk}. Sometimes we can drop advection term so that the \eqref{eq:logadv}, \eqref{eq:betaadv}. \eqref{eq:Badv} becomes
+%\begin{eqnarray}
+%	\label{eq:lognoadv}
+%	\partial_t \alpha = -2\alpha K,
+%\end{eqnarray}
+%\begin{eqnarray}
+%	\label{eq:betanoadv}
+%	\partial_t \beta^i = \frac{3}{4}B^i,
+%\end{eqnarray}
+%\begin{eqnarray}
+%	\label{eq:Bnoadv}
+%	\partial_t B^i = \partial_t \bar{\Gamma}^i -B^i,
+%\end{eqnarray}
+%which we adopt this paper.
+%
+%We used \texttt{twopunctures-averaged} initial lapse which given by
+%\begin{eqnarray}
+%	\alpha &=& \frac{1}{2}(1 + \alpha'),
+%\end{eqnarray}
+%where
+%\begin{eqnarray}
+%	\alpha' &=& \frac{1 - \frac{M}{2r}}{1 + \frac{M}{2r}},
+%\end{eqnarray}
+%therefore lapse satisfy $0 \le \alpha \le 1$.
+%
+%When the simulation goes sufficiently and the solution becomes time-independent, it must be $\partial_t \alpha = 0$, implying $K=0$. Since we choose hyperbolic gamma driver condition, it has special solution (see \cite{PhysRevD.75.067502, PhysRevD.78.064020})
+%\begin{eqnarray}
+%	\label{eq:alpha}
+%	\alpha = \qty(1 - \frac{2M}{r_s} + \frac{27M^4}{16r_s^4})^{1/2}.
+%\end{eqnarray}
+%$r_s$ is an areal radius and it is related with isotropic radius $r$ as
+%\begin{widetext}
+%\begin{eqnarray}
+%	\label{eq:rtors}
+%	r &=& \frac{2r_s + M + (4r_s^2 +4Mr_s+3M^2)^{1/2}}{4}\times \qty(\frac{(4+3\sqrt{2})(2r_s - 3M)}{8r_s + 6M + 3 (8r_s^2 + 8Mr_s+6M^2)^{1/2}})^{1/\sqrt{2}}.
+%\end{eqnarray}
+%\end{widetext}
+%
+%The conformal factor is given by $\psi = \qty(\frac{r_s}{r})^{1/2}$, and substitute \eqref{eq:rtors},
+%\begin{widetext}
+%\begin{eqnarray}
+%	\label{eq:psi_long}
+%	\psi = \qty(\frac{4r_s}{2r_s + M + (4r_s^2 + 4Mr_s + 3M^2)^{1/2}})^{1/2}\qty(\frac{8r_s + 6M + 3 (8r_s^2 + 8Mr_s + 6M^2)^{1/2}}{(4+3\sqrt{2})(2r_s - 3M)})^{1/2\sqrt{2}}.
+%\end{eqnarray}
+%\end{widetext}
+%
+%Fig.~\ref{fig:alphas} shows $\alpha$ along $x$ axis at several times. After $t=49.152M$, $\alpha$ almost static. Black solid line indicates analytic solution given as \eqref{eq:alpha}.
+%\begin{figure}[h]
+%	\includegraphics[width=0.5\textwidth]{data/alphas.png}% Here is how to import EPS art
+%	\caption{\label{fig:alphas} $\alpha$ along $x$ axis at several times. Only 5 refinement level plotted. Time unit is divided by $M$.}
+%\end{figure}
+%
+%Fig.~\ref{fig:ev_gammaxx} shows $\gamma_{xx}$ along $x$ axis. The black solid line indicates analytic solution $\gamma_{ij} = \psi^4 \eta_{ij}$, where $\psi$ is given by \eqref{eq:psi_long}.
+%
+%\begin{figure}[h]
+%	\includegraphics[width=0.5\textwidth]{data/ev_gammaxx.png}% Here is how to import EPS art
+%	\caption{\label{fig:ev_gammaxx} $\gamma_{xx}$ along $x$ axis at several times. Only refinement level 4 plotted. Time unit is divided by $M$.}
+%\end{figure}
+
 \section{Evolution}
 
 \subsection{Gauge Condition}
 
-We used 1+log slicing
+The 1+log slicing with advection term is given by
 \begin{eqnarray}
+	\label{eq:logadv}
 	\partial_t \alpha = -2\alpha K + \beta^i \partial_i \alpha,
 \end{eqnarray}
-and hyperbolic gamma driver condition for the shift,
+and the hyperbolic gamma driver condition for the shift with advection term is defined as
 \begin{eqnarray}
+	\label{eq:betaadv}
 	\partial_t \beta^i = \frac{3}{4}B^i + \beta^j\partial_j \beta^i,
 \end{eqnarray}
 \begin{eqnarray}
+	\label{eq:Badv}
 	\partial_t B^i = \partial_t \bar{\Gamma}^i -B^i + \beta^j \partial_j B^i,
 \end{eqnarray}
-which is typically employed in moving puncture method.
+which is typically employed in the moving puncture method \cite{Campanelli:2005dd, Alcubierre:2002kk}. Sometimes we can drop the advection term, simplifying \eqref{eq:logadv}, \eqref{eq:betaadv}, and \eqref{eq:Badv} to
+\begin{eqnarray}
+	\label{eq:lognoadv}
+	\partial_t \alpha = -2\alpha K,
+\end{eqnarray}
+\begin{eqnarray}
+	\label{eq:betanoadv}
+	\partial_t \beta^i = \frac{3}{4}B^i,
+\end{eqnarray}
+\begin{eqnarray}
+	\label{eq:Bnoadv}
+	\partial_t B^i = \partial_t \bar{\Gamma}^i -B^i,
+\end{eqnarray}
+which we adopt in this paper.
+
+We used the \texttt{twopunctures-averaged} initial lapse, which is given by
+\begin{eqnarray}
+	\alpha &=& \frac{1}{2}(1 + \alpha'),
+\end{eqnarray}
+where
+\begin{eqnarray}
+	\alpha' &=& \frac{1 - \frac{M}{2r}}{1 + \frac{M}{2r}},
+\end{eqnarray}
+ensuring that the lapse satisfies $0 \le \alpha \le 1$.
+
+When the simulation progresses sufficiently, and the solution becomes time-independent, we have $\partial_t \alpha = 0$, implying $K=0$. Since we choose the hyperbolic gamma driver condition, it has a special solution (see \cite{PhysRevD.75.067502, PhysRevD.78.064020})
+\begin{eqnarray}
+	\label{eq:alpha}
+	\alpha = \sqrt{1 - \frac{2M}{r_s} + \frac{27M^4}{16r_s^4}},
+\end{eqnarray}
+where $r_s$ is an areal radius related to the isotropic radius $r$ as
+\begin{widetext}
+	\begin{eqnarray}
+		\label{eq:rtors}
+		r &=& \frac{2r_s + M + (4r_s^2 +4Mr_s+3M^2)^{1/2}}{4}\times \left(\frac{(4+3\sqrt{2})(2r_s - 3M)}{8r_s + 6M + 3 (8r_s^2 + 8Mr_s+6M^2)^{1/2}}\right)^{1/\sqrt{2}}.
+	\end{eqnarray}
+\end{widetext}
+
+The conformal factor is given by $\psi = \left(\frac{r_s}{r}\right)^{1/2}$, and when substituted into \eqref{eq:rtors}, we obtain
+\begin{widetext}
+	\begin{eqnarray}
+		\label{eq:psi_long}
+		\psi = \left(\frac{4r_s}{2r_s + M + (4r_s^2 + 4Mr_s + 3M^2)^{1/2}}\right)^{1/2}\left(\frac{8r_s + 6M + 3 (8r_s^2 + 8Mr_s + 6M^2)^{1/2}}{(4+3\sqrt{2})(2r_s - 3M)}\right)^{1/2\sqrt{2}}.
+	\end{eqnarray}
+\end{widetext}
+
+Fig.~\ref{fig:alphas} shows $\alpha$ along the $x$ axis at several times. After $t=49.152M$, $\alpha$ remains almost constant. The black solid line represents the analytic solution given in \eqref{eq:alpha}.
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{data/alphas.png}% Here is how to import an image
+	\caption{\label{fig:alphas} $\alpha$ along the $x$ axis at several times. Only 5 refinement levels are plotted. The time unit is divided by $M$.}
+\end{figure}
+
+Fig.~\ref{fig:ev_gammaxx} shows $\gamma_{xx}$ along the $x$ axis. The black solid line indicates the analytic solution $\gamma_{ij} = \psi^4 \eta_{ij}$, where $\psi$ is given by \eqref{eq:psi_long}.
+
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{data/ev_gammaxx.png}% Here is how to import an image
+	\caption{\label{fig:ev_gammaxx} $\gamma_{xx}$ along the $x$ axis at several times. Only refinement level 4 is plotted. The time unit is divided by $M$.}
+\end{figure}
+
+
+
+%\subsection{BSSN}
+%The 3+1 ADM evolution equations are
+%\begin{equation}
+%	(\partial_t - \mathcal{L}_\beta)\gamma_{ij} = -2\alpha K_{ij},
+%\end{equation}
+%
+%\begin{eqnarray}
+%	(\partial_t - \mathcal{L}_\beta)K_{ij} &=& -D_i D_j \alpha + \alpha (R_{ij} + KK_{ij}-2K_{ik}K^k{}_{j})\nonumber\\&&+4\pi \alpha M_{ij},
+%\end{eqnarray}
+%and this set of PDE's is only weakly hyperbolic and is therefore not suitable for stable numerical evolution. Here, we adopt the BSSN(\textit{Baumgarte-Shapiro-Shibata-Nakmura}) formulation \cite{Nakamura:1987,  Shibata:1995we, Baumgarte:1998te}.
+%
+%In the BSSN formulation, spatial metric $\gamma_{ij}$ is decomposed into conformally related metric as \eqref{eq:conformalmetric} with $\det (\bar{\gamma}_{ij}) = 1$. Extrinsic curvature also decomposed into its trace and traceless parts and conformally transform the traceless part as we do the metric,
+%\begin{equation}
+%	K_{ij} = e^{4\phi}\tilde{A}_{ij} + \frac{1}{3}\gamma_{ij}K.
+%\end{equation}
+%We then promote the following variables to evolution variable
+%\begin{equation}
+%	\phi = \ln \psi = \frac{1}{12}\ln \gamma,
+%\end{equation}
+%as well as the conformal connection functions
+%\begin{equation}
+%	\bar{\Gamma}^i = \bar{\gamma}^{jk}\bar{\Gamma}^i{}_{jk} = -\partial_j \bar{\gamma}^{ij}.
+%\end{equation}
+%Then the evolution equation for $\gamma_{ij}$ splits into two equations,
+%\begin{equation}
+%	\partial_t \phi = - \frac{1}{6}\alpha K + \beta^i \partial_i \phi + \frac{1}{6}\partial_i \beta^i,
+%\end{equation}
+%\begin{eqnarray}
+%	\label{eq:bssn_gamma}
+%	\partial_t \bar{\gamma}_{ij} &=& -2\alpha \tilde{A}_{ij} + \beta^k \partial_k \bar{\gamma}_{ij}  \nonumber\\&&+\bar{\gamma}_{ik}\partial_j \beta^k + \bar{\gamma}_{jk}\partial_i \beta^k - \frac{2}{3}\bar{\gamma}_{ij}\partial_k\beta^k.
+%\end{eqnarray}
+%And the evolution equation for $K_{ij}$ splits into the two equations,
+%\begin{eqnarray}
+%	\label{eq:bssn_K}
+%\partial_t K &=& -D^iD_i \alpha + \alpha (\tilde{A}_{ij}\title{A}^{ij} + \frac{1}{3}K^2)\nonumber\\&&+\beta^i\partial_i K + 4\pi \alpha (\rho + S),
+%\end{eqnarray}
+%\begin{eqnarray}
+%	\label{eq:bssn_A}
+%	\partial_t \tilde{A}_{ij} &=& e^{-4\phi}\qty[-D_iD_j\alpha + \alpha(R_{ij} - 8\pi S_{ij})]^{TF}\nonumber\\&& + \alpha(K\tilde{A}_{ij} - 2\tilde{A}_{ik}\tilde{A}^k{}_{j}) + \beta^k\partial_k \tilde{A}_{ij} \nonumber\\&&+ \tilde{A}_{ik}\partial_j\beta^k + \tilde{A}_{jk}\partial_i\beta^k - \frac{2}{3}\tilde{A}_{ij}\partial_k\beta^k,
+%\end{eqnarray}
+%where the superscript $TF$ denotes the trace-free part of a tensor. The We also split the Ricci tensor into 
+%\begin{eqnarray}
+%	R_{ij}
+%	&=& \bar{R}_{ij} - 2 \qty(\bar{D}_i\bar{D}_j \ln \psi + \bar{\gamma}_{ij}\bar{\gamma}^{lm}\bar{D}_l \bar{D}_m \ln \psi)\nonumber\\&&+4\qty((\bar{D}_i \ln \psi)(\bar{D}_j \ln \psi) - \bar{\gamma}_{ij}\bar{\gamma}^{lm}(\bar{D}_l \ln \psi)(\bar{D}_m \ln \psi) )\nonumber\\
+%	&=& \bar{R}_{ij} - 2 \qty(\bar{D}_i\bar{D}_j \phi + \bar{\gamma}_{ij}\bar{\gamma}^{lm}\bar{D}_l \bar{D}_m \phi)\nonumber\\&&+4\qty((\bar{D}_i \phi)(\bar{D}_j \phi) - \bar{\gamma}_{ij}\bar{\gamma}^{lm}(\bar{D}_l \phi)(\bar{D}_m \phi) )\nonumber\\
+%	&\equiv& \bar{R}_{ij} + R^\phi_{ij}.
+%\end{eqnarray}
+%The $\bar{\Gamma}^{i}$ are now treated as independent functions that satisfy their own evolution equations,
+%\begin{eqnarray}
+%	\label{eq:bssn_Gamma}
+%	\partial_t \bar{\Gamma}^i &=& 2\alpha \qty(\bar{\Gamma}^i{}_{jk} \tilde{A}^{kj} - \frac{2}{3}\bar{\gamma}^{ij}\partial_j K - 8\pi \bar{\gamma}^{ij} S_j + 6\tilde{A}^{ij}\partial_j \phi) \nonumber\\&& -2\tilde{A}^{ij}\partial_j \alpha + \beta^j \partial_j \bar{\Gamma}^i - \bar{\Gamma}^j \partial_j \beta^i \nonumber\\&&+ \frac{2}{3}\bar{\Gamma}^i \partial_j \beta^j + \frac{1}{3}\bar{\gamma}^{il}\partial_l \partial_j \beta^j + \bar{\gamma}^{jl}\partial_j\partial_l\beta^i.
+%\end{eqnarray}
+%
+%We used variable
+%\begin{eqnarray}
+%	W = \gamma^{-1/6} = e^{-2\phi}
+%\end{eqnarray}
+%instead of using $\phi$. The evolution equation for $W$ is
+%\begin{eqnarray}
+%	\label{eq:bssn_W}
+%	\partial_t W = \frac{1}{3}W(\alpha K - \partial_i \beta^i)+\beta^i \partial_i W.
+%\end{eqnarray}
+%
+%The other choice which evolve $\phi$, can be crash easily due to numerical singularity.
+%
+%\texttt{McLachlan} \cite{Brown:2008sb, Kranc:web, McLachlan:web} uses the set of \eqref{eq:bssn_gamma}, \eqref{eq:bssn_K}, \eqref{eq:bssn_A}, \eqref{eq:bssn_Gamma}, \eqref{eq:bssn_W} for evolution, and uses gauge condition as \eqref{eq:lognoadv}, \eqref{eq:betanoadv}.
+%
+%\section{Numerical Setup}
+%
+%\subsection{Mesh Refinement}
+%
+%We used mesh refinement \cite{CarpetCode:web} for puncture center with 7 levels. Basic grid resolution is $3.072M$. Refinement factor set to 2, so the minimum resolution is $3.072M\times 2^{-6} = 0.048M$.
+%
+%We have used the \textsc{Einstein Toolkit} \cite{EinsteinToolkit:2023_05} to simulate evolving a single puncture. 
 
 \subsection{BSSN}
-The 3+1 ADM evolution equations are
+
+The 3+1 ADM evolution equations are given as:
+
 \begin{equation}
 	(\partial_t - \mathcal{L}_\beta)\gamma_{ij} = -2\alpha K_{ij},
 \end{equation}
@@ -237,714 +573,143 @@ The 3+1 ADM evolution equations are
 \begin{eqnarray}
 	(\partial_t - \mathcal{L}_\beta)K_{ij} &=& -D_i D_j \alpha + \alpha (R_{ij} + KK_{ij}-2K_{ik}K^k{}_{j})\nonumber\\&&+4\pi \alpha M_{ij},
 \end{eqnarray}
-and this set of PDE's is only weakly hyperbolic and is therefore not suitable for stable numerical evolution. Here, we adopt the BSSN(\textit{Baumgarte-Shapiro-Shibata-Nakmura}) formulation.
 
-In the BSSN formulation, spatial metric $\gamma_{ij}$ is decomposed into conformally related metric as \eqref{eq:conformalmetric} with $\det (\bar{\gamma}_{ij}) = 1$. Extrinsic curvature also decomposed into its trace and traceless parts and conformally transform the traceless part as we do the metric,
+However, this set of partial differential equations is only weakly hyperbolic and is therefore not suitable for stable numerical evolution. To address this, we adopt the BSSN (\textit{Baumgarte-Shapiro-Shibata-Nakmura}) formulation \cite{Nakamura:1987,  Shibata:1995we, Baumgarte:1998te}.
+
+In the BSSN formulation, the spatial metric $\gamma_{ij}$ is decomposed into a conformally related metric as in \eqref{eq:conformalmetric}, with $\det (\bar{\gamma}_{ij}) = 1$. The extrinsic curvature is also decomposed into its trace and traceless parts, and we conformally transform the traceless part as follows:
+
 \begin{equation}
 	K_{ij} = e^{4\phi}\tilde{A}_{ij} + \frac{1}{3}\gamma_{ij}K.
 \end{equation}
-We then promote the following variables to evolution variable
+
+We then promote the following variables to evolution variables:
+
 \begin{equation}
 	\phi = \ln \psi = \frac{1}{12}\ln \gamma,
 \end{equation}
-as well as the conformal connection functions
+
+as well as the conformal connection functions:
+
 \begin{equation}
 	\bar{\Gamma}^i = \bar{\gamma}^{jk}\bar{\Gamma}^i{}_{jk} = -\partial_j \bar{\gamma}^{ij}.
 \end{equation}
-Then the evolution equation for $\gamma_{ij}$ splits into two equations,
+
+The evolution equation for $\gamma_{ij}$ splits into two equations:
+
 \begin{equation}
 	\partial_t \phi = - \frac{1}{6}\alpha K + \beta^i \partial_i \phi + \frac{1}{6}\partial_i \beta^i,
 \end{equation}
+
 \begin{eqnarray}
+	\label{eq:bssn_gamma}
 	\partial_t \bar{\gamma}_{ij} &=& -2\alpha \tilde{A}_{ij} + \beta^k \partial_k \bar{\gamma}_{ij}  \nonumber\\&&+\bar{\gamma}_{ik}\partial_j \beta^k + \bar{\gamma}_{jk}\partial_i \beta^k - \frac{2}{3}\bar{\gamma}_{ij}\partial_k\beta^k.
 \end{eqnarray}
-And the evolution equation for $K_{ij}$ splits into the two equations,
+
+The evolution equation for $K_{ij}$ also splits into two equations:
+
 \begin{eqnarray}
-\partial_t K &=& -D^iD_i \alpha + \alpha (\tilde{A}_{ij}\title{A}^{ij} + \frac{1}{3}K^2)\nonumber\\&&+\beta^i\partial_i K + 4\pi \alpha (\rho + S),
+	\label{eq:bssn_K}
+	\partial_t K &=& -D^iD_i \alpha + \alpha (\tilde{A}_{ij}\title{A}^{ij} + \frac{1}{3}K^2)\nonumber\\&&+\beta^i\partial_i K + 4\pi \alpha (\rho + S),
 \end{eqnarray}
+
 \begin{eqnarray}
+	\label{eq:bssn_A}
 	\partial_t \tilde{A}_{ij} &=& e^{-4\phi}\qty[-D_iD_j\alpha + \alpha(R_{ij} - 8\pi S_{ij})]^{TF}\nonumber\\&& + \alpha(K\tilde{A}_{ij} - 2\tilde{A}_{ik}\tilde{A}^k{}_{j}) + \beta^k\partial_k \tilde{A}_{ij} \nonumber\\&&+ \tilde{A}_{ik}\partial_j\beta^k + \tilde{A}_{jk}\partial_i\beta^k - \frac{2}{3}\tilde{A}_{ij}\partial_k\beta^k,
 \end{eqnarray}
-where the superscript $TF$ denotes the trace-free part of a tensor. The We also split the Ricci tensor into 
+
+where the superscript $TF$ denotes the trace-free part of a tensor. The Ricci tensor is also split into:
+
 \begin{eqnarray}
 	R_{ij}
-	&=& \bar{R}_{ij} - 2 \qty(\bar{D}_i\bar{D}_j \ln \psi + \bar{\gamma}_{ij}\bar{\gamma}^{lm}\bar{D}_l \bar{D}_m \ln \psi)\nonumber\\&&+4\qty((\bar{D}_i \ln \psi)(\bar{D}_j \ln \psi) - \bar{\gamma}_{ij}\bar{\gamma}^{lm}(\bar{D}_l \ln \psi)(\bar{D}_m \ln \psi) )\nonumber\\
 	&=& \bar{R}_{ij} - 2 \qty(\bar{D}_i\bar{D}_j \phi + \bar{\gamma}_{ij}\bar{\gamma}^{lm}\bar{D}_l \bar{D}_m \phi)\nonumber\\&&+4\qty((\bar{D}_i \phi)(\bar{D}_j \phi) - \bar{\gamma}_{ij}\bar{\gamma}^{lm}(\bar{D}_l \phi)(\bar{D}_m \phi) )\nonumber\\
 	&\equiv& \bar{R}_{ij} + R^\phi_{ij}.
 \end{eqnarray}
-The $\bar{\Gamma}^{i}$ are now treated as independent functions that satisfy their own evolution equations,
+
+The $\bar{\Gamma}^{i}$ are now treated as independent functions that satisfy their own evolution equations:
+
 \begin{eqnarray}
+	\label{eq:bssn_Gamma}
 	\partial_t \bar{\Gamma}^i &=& 2\alpha \qty(\bar{\Gamma}^i{}_{jk} \tilde{A}^{kj} - \frac{2}{3}\bar{\gamma}^{ij}\partial_j K - 8\pi \bar{\gamma}^{ij} S_j + 6\tilde{A}^{ij}\partial_j \phi) \nonumber\\&& -2\tilde{A}^{ij}\partial_j \alpha + \beta^j \partial_j \bar{\Gamma}^i - \bar{\Gamma}^j \partial_j \beta^i \nonumber\\&&+ \frac{2}{3}\bar{\Gamma}^i \partial_j \beta^j + \frac{1}{3}\bar{\gamma}^{il}\partial_l \partial_j \beta^j + \bar{\gamma}^{jl}\partial_j\partial_l\beta^i.
 \end{eqnarray}
 
-We used variable
+We use the variable:
+
 \begin{eqnarray}
 	W = \gamma^{-1/6} = e^{-2\phi}
 \end{eqnarray}
-instead of using $\phi$. The evolution equation for $W$ is
+
+instead of $\phi$. The evolution equation for $W$ is:
+
 \begin{eqnarray}
+	\label{eq:bssn_W}
 	\partial_t W = \frac{1}{3}W(\alpha K - \partial_i \beta^i)+\beta^i \partial_i W.
 \end{eqnarray}
+
+The other choice, which evolves $\phi$, can lead to crashes due to numerical singularities.
+
+We use \texttt{McLachlan} \cite{Brown:2008sb, Kranc:web, McLachlan:web} and adopt the set of equations \eqref{eq:bssn_gamma}, \eqref{eq:bssn_K}, \eqref{eq:bssn_A}, \eqref{eq:bssn_Gamma}, \eqref{eq:bssn_W} for evolution and the gauge conditions \eqref{eq:lognoadv}, \eqref{eq:betanoadv}.
 
 \section{Numerical Setup}
 
 \subsection{Mesh Refinement}
 
-We used mesh refinement for puncture center with 7 levels. Refinement factor set to 2, so the minimum resolution is $3.072M\times 2^{-6} = 0.048M$.
+We employ mesh refinement \cite{CarpetCode:web} for the puncture center with 7 levels. The basic grid resolution is $3.072M$, and the refinement factor is set to 2. Therefore, the minimum resolution is $3.072M\times 2^{-6} = 0.048M$.
 
-We have used the \textsc{Einstein Toolkit} to simulate evolving a single puncture. 
-
-
+We utilize the \textsc{Einstein Toolkit} \cite{EinsteinToolkit:2023_05} to simulate the evolution of a single puncture.
 
 
+%\section{Result}
+%
+%\subsection{Gravitational waves}
+%
+%For the wave extraction, we have used \textsc{WeylScal4} and \textsc{Multipole} thorns \cite{Baker:2001sf} which extract the Weyl scalar and decompose into the spin-weighted spherical harmonics. In order to calculate the radiated energy, we have used the modes up to $l=8$, which are credible because the higher modes are dominated by the numerical noise \cite{Pollney:2009yz}.
+%
+%Since schwarzschild metric has spherical symmetry, there should be no gravitational waves radiation. Fig.~\ref{fig:psi4_r50} shows real part and imaginary part of $r_\mathrm{ex}\psi_4$. There is no notably comparison between $r_\mathrm{ex} = 50M$. Also all of $r_\mathrm{ex}\psi_4$ has value of order $10^{-14}$ which can be regarded as numerical noise.
+%
+%\begin{figure}[h]
+%	\includegraphics[width=0.5\textwidth]{data/psi4_r50.png}% Here is how to import EPS art
+%	\caption{\label{fig:psi4_r50} Real part and imaginary part of $r_\mathrm{ex}\psi_4$. Red dashed line indicates $r=r_\mathrm{ex}=50M$.}
+%\end{figure}
 
+\section{Result}
 
+\subsection{Gravitational Waves}
 
+For wave extraction, we utilized the \textsc{WeylScal4} and \textsc{Multipole} thorns \cite{Baker:2001sf}. These thorns extract the Weyl scalar and decompose it into the spin-weighted spherical harmonics. To calculate the radiated energy, we considered modes up to $l=8$, which are considered credible because higher modes are dominated by numerical noise \cite{Pollney:2009yz}.
 
+Since the Schwarzschild metric has spherical symmetry, there should be no gravitational wave radiation. Figure~\ref{fig:psi4_r50} displays the real and imaginary parts of $r_\mathrm{ex}\psi_4$. There is no notable difference between $r_\mathrm{ex} = 50M$. Furthermore, all values of $r_\mathrm{ex}\psi_4$ are on the order of $10^{-14}$, which can be regarded as numerical noise.
 
-
-
-
-
-
-
-
-\section{\label{sec:level1}First-level heading:\protect\\ The line
-break was forced \lowercase{via} \textbackslash\textbackslash}
-
-This sample document demonstrates proper use of REV\TeX~4.2 (and $\partial$
-\LaTeXe) in mansucripts prepared for submission to APS
-journals. Further information can be found in the REV\TeX~4.2
-documentation included in the distribution or available at
-\url{http://journals.aps.org/revtex/}.
-
-When commands are referred to in this example file, they are always
-shown with their required arguments, using normal \TeX{} format. In
-this format, \verb+#1+, \verb+#2+, etc. stand for required
-author-supplied arguments to commands. For example, in
-\verb+\section{#1}+ the \verb+#1+ stands for the title text of the
-author's section heading, and in \verb+\title{#1}+ the \verb+#1+
-stands for the title text of the paper.
-
-Line breaks in section headings at all levels can be introduced using
-\textbackslash\textbackslash. A blank input line tells \TeX\ that the
-paragraph has ended. Note that top-level section headings are
-automatically uppercased. If a specific letter or word should appear in
-lowercase instead, you must escape it using \verb+\lowercase{#1}+ as
-in the word ``via'' above.
-
-\subsection{\label{sec:level2}Second-level heading: Formatting}
-
-This file may be formatted in either the \texttt{preprint} or
-\texttt{reprint} style. \texttt{reprint} format mimics final journal output. 
-Either format may be used for submission purposes. \texttt{letter} sized paper should
-be used when submitting to APS journals.
-
-\subsubsection{Wide text (A level-3 head)}
-The \texttt{widetext} environment will make the text the width of the
-full page, as on page~\pageref{eq:wideeq}. (Note the use the
-\verb+\pageref{#1}+ command to refer to the page number.) 
-\paragraph{Note (Fourth-level head is run in)}
-The width-changing commands only take effect in two-column formatting. 
-There is no effect if text is in a single column.
-
-\subsection{\label{sec:citeref}Citations and References}
-A citation in text uses the command \verb+\cite{#1}+ or
-\verb+\onlinecite{#1}+ and refers to an entry in the bibliography. 
-An entry in the bibliography is a reference to another document.
-
-\subsubsection{Citations}
-Because REV\TeX\ uses the \verb+natbib+ package of Patrick Daly, 
-the entire repertoire of commands in that package are available for your document;
-see the \verb+natbib+ documentation for further details. Please note that
-REV\TeX\ requires version 8.31a or later of \verb+natbib+.
-
-\paragraph{Syntax}
-The argument of \verb+\cite+ may be a single \emph{key}, 
-or may consist of a comma-separated list of keys.
-The citation \emph{key} may contain 
-letters, numbers, the dash (-) character, or the period (.) character. 
-New with natbib 8.3 is an extension to the syntax that allows for 
-a star (*) form and two optional arguments on the citation key itself.
-The syntax of the \verb+\cite+ command is thus (informally stated)
-\begin{quotation}\flushleft\leftskip1em
-\verb+\cite+ \verb+{+ \emph{key} \verb+}+, or\\
-\verb+\cite+ \verb+{+ \emph{optarg+key} \verb+}+, or\\
-\verb+\cite+ \verb+{+ \emph{optarg+key} \verb+,+ \emph{optarg+key}\ldots \verb+}+,
-\end{quotation}\noindent
-where \emph{optarg+key} signifies 
-\begin{quotation}\flushleft\leftskip1em
-\emph{key}, or\\
-\texttt{*}\emph{key}, or\\
-\texttt{[}\emph{pre}\texttt{]}\emph{key}, or\\
-\texttt{[}\emph{pre}\texttt{]}\texttt{[}\emph{post}\texttt{]}\emph{key}, or even\\
-\texttt{*}\texttt{[}\emph{pre}\texttt{]}\texttt{[}\emph{post}\texttt{]}\emph{key}.
-\end{quotation}\noindent
-where \emph{pre} and \emph{post} is whatever text you wish to place 
-at the beginning and end, respectively, of the bibliographic reference
-(see Ref.~[\onlinecite{witten2001}] and the two under Ref.~[\onlinecite{feyn54}]).
-(Keep in mind that no automatic space or punctuation is applied.)
-It is highly recommended that you put the entire \emph{pre} or \emph{post} portion 
-within its own set of braces, for example: 
-\verb+\cite+ \verb+{+ \texttt{[} \verb+{+\emph{text}\verb+}+\texttt{]}\emph{key}\verb+}+.
-The extra set of braces will keep \LaTeX\ out of trouble if your \emph{text} contains the comma (,) character.
-
-The star (*) modifier to the \emph{key} signifies that the reference is to be 
-merged with the previous reference into a single bibliographic entry, 
-a common idiom in APS and AIP articles (see below, Ref.~[\onlinecite{epr}]). 
-When references are merged in this way, they are separated by a semicolon instead of 
-the period (full stop) that would otherwise appear.
-
-\paragraph{Eliding repeated information}
-When a reference is merged, some of its fields may be elided: for example, 
-when the author matches that of the previous reference, it is omitted. 
-If both author and journal match, both are omitted.
-If the journal matches, but the author does not, the journal is replaced by \emph{ibid.},
-as exemplified by Ref.~[\onlinecite{epr}]. 
-These rules embody common editorial practice in APS and AIP journals and will only
-be in effect if the markup features of the APS and AIP Bib\TeX\ styles is employed.
-
-\paragraph{The options of the cite command itself}
-Please note that optional arguments to the \emph{key} change the reference in the bibliography, 
-not the citation in the body of the document. 
-For the latter, use the optional arguments of the \verb+\cite+ command itself:
-\verb+\cite+ \texttt{*}\allowbreak
-\texttt{[}\emph{pre-cite}\texttt{]}\allowbreak
-\texttt{[}\emph{post-cite}\texttt{]}\allowbreak
-\verb+{+\emph{key-list}\verb+}+.
-
-\subsubsection{Example citations}
-By default, citations are numerical\cite{Beutler1994}.
-Author-year citations are used when the journal is RMP. 
-To give a textual citation, use \verb+\onlinecite{#1}+: 
-Refs.~\onlinecite{[][{, and references therein}]witten2001,Bire82}. 
-By default, the \texttt{natbib} package automatically sorts your citations into numerical order and ``compresses'' runs of three or more consecutive numerical citations.
-REV\TeX\ provides the ability to automatically change the punctuation when switching between journal styles that provide citations in square brackets and those that use a superscript style instead. This is done through the \texttt{citeautoscript} option. For instance, the journal style \texttt{prb} automatically invokes this option because \textit{Physical 
-Review B} uses superscript-style citations. The effect is to move the punctuation, which normally comes after a citation in square brackets, to its proper position before the superscript. 
-To illustrate, we cite several together 
-\cite{[See the explanation of time travel in ]feyn54,*[The classical relativistic treatment of ][ is a relative classic]epr,witten2001,Berman1983,Davies1998,Bire82}, 
-and once again in different order (Refs.~\cite{epr,feyn54,Bire82,Berman1983,witten2001,Davies1998}). 
-Note that the citations were both compressed and sorted. Futhermore, running this sample file under the \texttt{prb} option will move the punctuation to the correct place.
-
-When the \verb+prb+ class option is used, the \verb+\cite{#1}+ command
-displays the reference's number as a superscript rather than in
-square brackets. Note that the location of the \verb+\cite{#1}+
-command should be adjusted for the reference style: the superscript
-references in \verb+prb+ style must appear after punctuation;
-otherwise the reference must appear before any punctuation. This
-sample was written for the regular (non-\texttt{prb}) citation style.
-The command \verb+\onlinecite{#1}+ in the \texttt{prb} style also
-displays the reference on the baseline.
-
-\subsubsection{References}
-A reference in the bibliography is specified by a \verb+\bibitem{#1}+ command
-with the same argument as the \verb+\cite{#1}+ command.
-\verb+\bibitem{#1}+ commands may be crafted by hand or, preferably,
-generated by Bib\TeX. 
-REV\TeX~4.2 includes Bib\TeX\ style files
-\verb+apsrev4-2.bst+, \verb+apsrmp4-2.bst+ appropriate for
-\textit{Physical Review} and \textit{Reviews of Modern Physics},
-respectively.
-
-\subsubsection{Example references}
-This sample file employs the \verb+\bibliography+ command, 
-which formats the \texttt{\jobname .bbl} file
-and specifies which bibliographic databases are to be used by Bib\TeX\ 
-(one of these should be by arXiv convention \texttt{\jobname .bib}).
-Running Bib\TeX\ (via \texttt{bibtex \jobname}) 
-after the first pass of \LaTeX\ produces the file
-\texttt{\jobname .bbl} which contains the automatically formatted
-\verb+\bibitem+ commands (including extra markup information via
-\verb+\bibinfo+ and \verb+\bibfield+ commands). 
-If not using Bib\TeX, you will have to create the \verb+thebibiliography+ environment 
-and its \verb+\bibitem+ commands by hand.
-
-Numerous examples of the use of the APS bibliographic entry types appear in the bibliography of this sample document.
-You can refer to the \texttt{\jobname .bib} file, 
-and compare its information to the formatted bibliography itself.
-
-\subsection{Footnotes}%
-Footnotes, produced using the \verb+\footnote{#1}+ command, 
-usually integrated into the bibliography alongside the other entries.
-Numerical citation styles do this%
-\footnote{Automatically placing footnotes into the bibliography requires using BibTeX to compile the bibliography.};
-author-year citation styles place the footnote at the bottom of the text column.
-Note: due to the method used to place footnotes in the bibliography, 
-\emph{you must re-run Bib\TeX\ every time you change any of your document's footnotes}. 
-
-\section{Math and Equations}
-Inline math may be typeset using the \verb+$+ delimiters. Bold math
-symbols may be achieved using the \verb+bm+ package and the
-\verb+\bm{#1}+ command it supplies. For instance, a bold $\alpha$ can
-be typeset as \verb+$\bm{\alpha}$+ giving $\bm{\alpha}$. Fraktur and
-Blackboard (or open face or double struck) characters should be
-typeset using the \verb+\mathfrak{#1}+ and \verb+\mathbb{#1}+ commands
-respectively. Both are supplied by the \texttt{amssymb} package. For
-example, \verb+$\mathbb{R}$+ gives $\mathbb{R}$ and
-\verb+$\mathfrak{G}$+ gives $\mathfrak{G}$
-
-In \LaTeX\ there are many different ways to display equations, and a
-few preferred ways are noted below. Displayed math will center by
-default. Use the class option \verb+fleqn+ to flush equations left.
-
-Below we have numbered single-line equations; this is the most common
-type of equation in \textit{Physical Review}:
-\begin{eqnarray}
-\chi_+(p)\alt{\bf [}2|{\bf p}|(|{\bf p}|+p_z){\bf ]}^{-1/2}
-\left(
-\begin{array}{c}
-|{\bf p}|+p_z\\
-px+ip_y
-\end{array}\right)\;,
-\\
-\left\{%
- \openone234567890abc123\alpha\beta\gamma\delta1234556\alpha\beta
- \frac{1\sum^{a}_{b}}{A^2}%
-\right\}%
-\label{eq:one}.
-\end{eqnarray}
-Note the open one in Eq.~(\ref{eq:one}).
-
-Not all numbered equations will fit within a narrow column this
-way. The equation number will move down automatically if it cannot fit
-on the same line with a one-line equation:
-\begin{equation}
-\left\{
- ab12345678abc123456abcdef\alpha\beta\gamma\delta1234556\alpha\beta
- \frac{1\sum^{a}_{b}}{A^2}%
-\right\}.
-\end{equation}
-
-When the \verb+\label{#1}+ command is used [cf. input for
-Eq.~(\ref{eq:one})], the equation can be referred to in text without
-knowing the equation number that \TeX\ will assign to it. Just
-use \verb+\ref{#1}+, where \verb+#1+ is the same name that used in
-the \verb+\label{#1}+ command.
-
-Unnumbered single-line equations can be typeset
-using the \verb+\[+, \verb+\]+ format:
-\[g^+g^+ \rightarrow g^+g^+g^+g^+ \dots ~,~~q^+q^+\rightarrow
-q^+g^+g^+ \dots ~. \]
-
-
-\subsection{Multiline equations}
-
-Multiline equations are obtained by using the \verb+eqnarray+
-environment.  Use the \verb+\nonumber+ command at the end of each line
-to avoid assigning a number:
-\begin{eqnarray}
-{\cal M}=&&ig_Z^2(4E_1E_2)^{1/2}(l_i^2)^{-1}
-\delta_{\sigma_1,-\sigma_2}
-(g_{\sigma_2}^e)^2\chi_{-\sigma_2}(p_2)\nonumber\\
-&&\times
-[\epsilon_jl_i\epsilon_i]_{\sigma_1}\chi_{\sigma_1}(p_1),
-\end{eqnarray}
-\begin{eqnarray}
-\sum \vert M^{\text{viol}}_g \vert ^2&=&g^{2n-4}_S(Q^2)~N^{n-2}
-        (N^2-1)\nonumber \\
- & &\times \left( \sum_{i<j}\right)
-  \sum_{\text{perm}}
- \frac{1}{S_{12}}
- \frac{1}{S_{12}}
- \sum_\tau c^f_\tau~.
-\end{eqnarray}
-\textbf{Note:} Do not use \verb+\label{#1}+ on a line of a multiline
-equation if \verb+\nonumber+ is also used on that line. Incorrect
-cross-referencing will result. Notice the use \verb+\text{#1}+ for
-using a Roman font within a math environment.
-
-To set a multiline equation without \emph{any} equation
-numbers, use the \verb+\begin{eqnarray*}+,
-\verb+\end{eqnarray*}+ format:
-\begin{eqnarray*}
-\sum \vert M^{\text{viol}}_g \vert ^2&=&g^{2n-4}_S(Q^2)~N^{n-2}
-        (N^2-1)\\
- & &\times \left( \sum_{i<j}\right)
- \left(
-  \sum_{\text{perm}}\frac{1}{S_{12}S_{23}S_{n1}}
- \right)
- \frac{1}{S_{12}}~.
-\end{eqnarray*}
-
-To obtain numbers not normally produced by the automatic numbering,
-use the \verb+\tag{#1}+ command, where \verb+#1+ is the desired
-equation number. For example, to get an equation number of
-(\ref{eq:mynum}),
-\begin{equation}
-g^+g^+ \rightarrow g^+g^+g^+g^+ \dots ~,~~q^+q^+\rightarrow
-q^+g^+g^+ \dots ~. \tag{2.6$'$}\label{eq:mynum}
-\end{equation}
-
-\paragraph{A few notes on \texttt{tag}s} 
-\verb+\tag{#1}+ requires the \texttt{amsmath} package. 
-Place the \verb+\tag{#1}+ command before the \verb+\label{#1}+, if any. 
-The numbering produced by \verb+\tag{#1}+ \textit{does not affect} 
-the automatic numbering in REV\TeX; 
-therefore, the number must be known ahead of time, 
-and it must be manually adjusted if other equations are added. 
-\verb+\tag{#1}+ works with both single-line and multiline equations. 
-\verb+\tag{#1}+ should only be used in exceptional cases---%
-do not use it to number many equations in your paper. 
-Please note that this feature of the \texttt{amsmath} package
-is \emph{not} compatible with the \texttt{hyperref} (6.77u) package.
-
-Enclosing display math within
-\verb+\begin{subequations}+ and \verb+\end{subequations}+ will produce
-a set of equations that are labeled with letters, as shown in
-Eqs.~(\ref{subeq:1}) and (\ref{subeq:2}) below.
-You may include any number of single-line and multiline equations,
-although it is probably not a good idea to follow one display math
-directly after another.
-\begin{subequations}
-\label{eq:whole}
-\begin{eqnarray}
-{\cal M}=&&ig_Z^2(4E_1E_2)^{1/2}(l_i^2)^{-1}
-(g_{\sigma_2}^e)^2\chi_{-\sigma_2}(p_2)\nonumber\\
-&&\times
-[\epsilon_i]_{\sigma_1}\chi_{\sigma_1}(p_1).\label{subeq:2}
-\end{eqnarray}
-\begin{equation}
-\left\{
- abc123456abcdef\alpha\beta\gamma\delta1234556\alpha\beta
- \frac{1\sum^{a}_{b}}{A^2}
-\right\},\label{subeq:1}
-\end{equation}
-\end{subequations}
-Giving a \verb+\label{#1}+ command directly after the \verb+\begin{subequations}+, 
-allows you to reference all the equations in the \texttt{subequations} environment. 
-For example, the equations in the preceding subequations environment were
-Eqs.~(\ref{eq:whole}).
-
-\subsubsection{Wide equations}
-The equation that follows is set in a wide format, i.e., it spans the full page. 
-The wide format is reserved for long equations
-that cannot easily be set in a single column:
-\begin{widetext}
-\begin{equation}
-{\cal R}^{(\text{d})}=
- g_{\sigma_2}^e
- \left(
-   \frac{[\Gamma^Z(3,21)]_{\sigma_1}}{Q_{12}^2-M_W^2}
-  +\frac{[\Gamma^Z(13,2)]_{\sigma_1}}{Q_{13}^2-M_W^2}
- \right)
- + x_WQ_e
- \left(
-   \frac{[\Gamma^\gamma(3,21)]_{\sigma_1}}{Q_{12}^2-M_W^2}
-  +\frac{[\Gamma^\gamma(13,2)]_{\sigma_1}}{Q_{13}^2-M_W^2}
- \right)\;. 
- \label{eq:wideeq}
-\end{equation}
-\end{widetext}
-This is typed to show how the output appears in wide format.
-(Incidentally, since there is no blank line between the \texttt{equation} environment above 
-and the start of this paragraph, this paragraph is not indented.)
-
-\section{Cross-referencing}
-REV\TeX{} will automatically number such things as
-sections, footnotes, equations, figure captions, and table captions. 
-In order to reference them in text, use the
-\verb+\label{#1}+ and \verb+\ref{#1}+ commands. 
-To reference a particular page, use the \verb+\pageref{#1}+ command.
-
-The \verb+\label{#1}+ should appear 
-within the section heading, 
-within the footnote text, 
-within the equation, or 
-within the table or figure caption. 
-The \verb+\ref{#1}+ command
-is used in text at the point where the reference is to be displayed.  
-Some examples: Section~\ref{sec:level1} on page~\pageref{sec:level1},
-Table~\ref{tab:table1},%
-\begin{table}[b]%The best place to locate the table environment is directly after its first reference in text
-\caption{\label{tab:table1}%
-A table that fits into a single column of a two-column layout. 
-Note that REV\TeX~4 adjusts the intercolumn spacing so that the table fills the
-entire width of the column. Table captions are numbered
-automatically. 
-This table illustrates left-, center-, decimal- and right-aligned columns,
-along with the use of the \texttt{ruledtabular} environment which sets the 
-Scotch (double) rules above and below the alignment, per APS style.
-}
-\begin{ruledtabular}
-\begin{tabular}{lcdr}
-\textrm{Left\footnote{Note a.}}&
-\textrm{Centered\footnote{Note b.}}&
-\multicolumn{1}{c}{\textrm{Decimal}}&
-\textrm{Right}\\
-\colrule
-1 & 2 & 3.001 & 4\\
-10 & 20 & 30 & 40\\
-100 & 200 & 300.0 & 400\\
-\end{tabular}
-\end{ruledtabular}
-\end{table}
-and Fig.~\ref{fig:epsart}.%
-\begin{figure}[b]
-\includegraphics{fig_1}% Here is how to import EPS art
-\caption{\label{fig:epsart} A figure caption. The figure captions are
-automatically numbered.}
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{data/psi4_r50.png}% Here is how to import EPS art
+	\caption{\label{fig:psi4_r50} Real and imaginary parts of $r_\mathrm{ex}\psi_4$. The red dashed line indicates $r=r_\mathrm{ex}=50M$.}
 \end{figure}
 
-\section{Floats: Figures, Tables, Videos, etc.}
-Figures and tables are usually allowed to ``float'', which means that their
-placement is determined by \LaTeX, while the document is being typeset. 
 
-Use the \texttt{figure} environment for a figure, the \texttt{table} environment for a table.
-In each case, use the \verb+\caption+ command within to give the text of the
-figure or table caption along with the \verb+\label+ command to provide
-a key for referring to this figure or table.
-The typical content of a figure is an image of some kind; 
-that of a table is an alignment.%
-\begin{figure*}
-\includegraphics{fig_2}% Here is how to import EPS art
-\caption{\label{fig:wide}Use the figure* environment to get a wide
-figure that spans the page in \texttt{twocolumn} formatting.}
-\end{figure*}
-\begin{table*}
-\caption{\label{tab:table3}This is a wide table that spans the full page
-width in a two-column layout. It is formatted using the
-\texttt{table*} environment. It also demonstates the use of
-\textbackslash\texttt{multicolumn} in rows with entries that span
-more than one column.}
-\begin{ruledtabular}
-\begin{tabular}{ccccc}
- &\multicolumn{2}{c}{$D_{4h}^1$}&\multicolumn{2}{c}{$D_{4h}^5$}\\
- Ion&1st alternative&2nd alternative&lst alternative
-&2nd alternative\\ \hline
- K&$(2e)+(2f)$&$(4i)$ &$(2c)+(2d)$&$(4f)$ \\
- Mn&$(2g)$\footnote{The $z$ parameter of these positions is $z\sim\frac{1}{4}$.}
- &$(a)+(b)+(c)+(d)$&$(4e)$&$(2a)+(2b)$\\
- Cl&$(a)+(b)+(c)+(d)$&$(2g)$\footnotemark[1]
- &$(4e)^{\text{a}}$\\
- He&$(8r)^{\text{a}}$&$(4j)^{\text{a}}$&$(4g)^{\text{a}}$\\
- Ag& &$(4k)^{\text{a}}$& &$(4h)^{\text{a}}$\\
-\end{tabular}
-\end{ruledtabular}
-\end{table*}
 
-Insert an image using either the \texttt{graphics} or
-\texttt{graphix} packages, which define the \verb+\includegraphics{#1}+ command.
-(The two packages differ in respect of the optional arguments 
-used to specify the orientation, scaling, and translation of the image.) 
-To create an alignment, use the \texttt{tabular} environment. 
+\subsection{Apparent Horizon}
 
-The best place to locate the \texttt{figure} or \texttt{table} environment
-is immediately following its first reference in text; this sample document
-illustrates this practice for Fig.~\ref{fig:epsart}, which
-shows a figure that is small enough to fit in a single column. 
-
-In exceptional cases, you will need to move the float earlier in the document, as was done
-with Table~\ref{tab:table3}: \LaTeX's float placement algorithms need to know
-about a full-page-width float earlier. 
-
-Fig.~\ref{fig:wide}
-has content that is too wide for a single column,
-so the \texttt{figure*} environment has been used.%
-\begin{table}[b]
-\caption{\label{tab:table4}%
-Numbers in columns Three--Five are aligned with the ``d'' column specifier 
-(requires the \texttt{dcolumn} package). 
-Non-numeric entries (those entries without a ``.'') in a ``d'' column are aligned on the decimal point. 
-Use the ``D'' specifier for more complex layouts. }
-\begin{ruledtabular}
-\begin{tabular}{ccddd}
-One&Two&
-\multicolumn{1}{c}{\textrm{Three}}&
-\multicolumn{1}{c}{\textrm{Four}}&
-\multicolumn{1}{c}{\textrm{Five}}\\
-%\mbox{Three}&\mbox{Four}&\mbox{Five}\\
-\hline
-one&two&\mbox{three}&\mbox{four}&\mbox{five}\\
-He&2& 2.77234 & 45672. & 0.69 \\
-C\footnote{Some tables require footnotes.}
-  &C\footnote{Some tables need more than one footnote.}
-  & 12537.64 & 37.66345 & 86.37 \\
-\end{tabular}
-\end{ruledtabular}
-\end{table}
-
-The content of a table is typically a \texttt{tabular} environment, 
-giving rows of type in aligned columns. 
-Column entries separated by \verb+&+'s, and 
-each row ends with \textbackslash\textbackslash. 
-The required argument for the \texttt{tabular} environment
-specifies how data are aligned in the columns. 
-For instance, entries may be centered, left-justified, right-justified, aligned on a decimal
-point. 
-Extra column-spacing may be be specified as well, 
-although REV\TeX~4 sets this spacing so that the columns fill the width of the
-table. Horizontal rules are typeset using the \verb+\hline+
-command. The doubled (or Scotch) rules that appear at the top and
-bottom of a table can be achieved enclosing the \texttt{tabular}
-environment within a \texttt{ruledtabular} environment. Rows whose
-columns span multiple columns can be typeset using the
-\verb+\multicolumn{#1}{#2}{#3}+ command (for example, see the first
-row of Table~\ref{tab:table3}).%
-
-Tables~\ref{tab:table1}, \ref{tab:table3}, \ref{tab:table4}, and \ref{tab:table2}%
-\begin{table}[b]
-\caption{\label{tab:table2}
-A table with numerous columns that still fits into a single column. 
-Here, several entries share the same footnote. 
-Inspect the \LaTeX\ input for this table to see exactly how it is done.}
-\begin{ruledtabular}
-\begin{tabular}{cccccccc}
- &$r_c$ (\AA)&$r_0$ (\AA)&$\kappa r_0$&
- &$r_c$ (\AA) &$r_0$ (\AA)&$\kappa r_0$\\
-\hline
-Cu& 0.800 & 14.10 & 2.550 &Sn\footnotemark[1]
-& 0.680 & 1.870 & 3.700 \\
-Ag& 0.990 & 15.90 & 2.710 &Pb\footnotemark[2]
-& 0.450 & 1.930 & 3.760 \\
-Au& 1.150 & 15.90 & 2.710 &Ca\footnotemark[3]
-& 0.750 & 2.170 & 3.560 \\
-Mg& 0.490 & 17.60 & 3.200 &Sr\footnotemark[4]
-& 0.900 & 2.370 & 3.720 \\
-Zn& 0.300 & 15.20 & 2.970 &Li\footnotemark[2]
-& 0.380 & 1.730 & 2.830 \\
-Cd& 0.530 & 17.10 & 3.160 &Na\footnotemark[5]
-& 0.760 & 2.110 & 3.120 \\
-Hg& 0.550 & 17.80 & 3.220 &K\footnotemark[5]
-&  1.120 & 2.620 & 3.480 \\
-Al& 0.230 & 15.80 & 3.240 &Rb\footnotemark[3]
-& 1.330 & 2.800 & 3.590 \\
-Ga& 0.310 & 16.70 & 3.330 &Cs\footnotemark[4]
-& 1.420 & 3.030 & 3.740 \\
-In& 0.460 & 18.40 & 3.500 &Ba\footnotemark[5]
-& 0.960 & 2.460 & 3.780 \\
-Tl& 0.480 & 18.90 & 3.550 & & & & \\
-\end{tabular}
-\end{ruledtabular}
-\footnotetext[1]{Here's the first, from Ref.~\onlinecite{feyn54}.}
-\footnotetext[2]{Here's the second.}
-\footnotetext[3]{Here's the third.}
-\footnotetext[4]{Here's the fourth.}
-\footnotetext[5]{And etc.}
-\end{table}
-show various effects.
-A table that fits in a single column employs the \texttt{table}
-environment. 
-Table~\ref{tab:table3} is a wide table, set with the \texttt{table*} environment. 
-Long tables may need to break across pages. 
-The most straightforward way to accomplish this is to specify
-the \verb+[H]+ float placement on the \texttt{table} or
-\texttt{table*} environment. 
-However, the \LaTeXe\ package \texttt{longtable} allows headers and footers to be specified for each page of the table. 
-A simple example of the use of \texttt{longtable} can be found
-in the file \texttt{summary.tex} that is included with the REV\TeX~4
-distribution.
-
-There are two methods for setting footnotes within a table (these
-footnotes will be displayed directly below the table rather than at
-the bottom of the page or in the bibliography). The easiest
-and preferred method is just to use the \verb+\footnote{#1}+
-command. This will automatically enumerate the footnotes with
-lowercase roman letters. However, it is sometimes necessary to have
-multiple entries in the table share the same footnote. In this case,
-there is no choice but to manually create the footnotes using
-\verb+\footnotemark[#1]+ and \verb+\footnotetext[#1]{#2}+.
-\texttt{\#1} is a numeric value. Each time the same value for
-\texttt{\#1} is used, the same mark is produced in the table. The
-\verb+\footnotetext[#1]{#2}+ commands are placed after the \texttt{tabular}
-environment. Examine the \LaTeX\ source and output for
-Tables~\ref{tab:table1} and \ref{tab:table2}
-for examples.
-
-Video~\ref{vid:PRSTPER.4.010101} 
-illustrates several features new with REV\TeX4.2,
-starting with the \texttt{video} environment, which is in the same category with
-\texttt{figure} and \texttt{table}.%
-\begin{video}
-\href{http://prst-per.aps.org/multimedia/PRSTPER/v4/i1/e010101/e010101_vid1a.mpg}{\includegraphics{vid_1a}}%
- \quad
-\href{http://prst-per.aps.org/multimedia/PRSTPER/v4/i1/e010101/e010101_vid1b.mpg}{\includegraphics{vid_1b}}
- \setfloatlink{http://link.aps.org/multimedia/PRSTPER/v4/i1/e010101}%
- \caption{\label{vid:PRSTPER.4.010101}%
-  Students explain their initial idea about Newton's third law to a teaching assistant. 
-  Clip (a): same force.
-  Clip (b): move backwards.
- }%
-\end{video}
-The \verb+\setfloatlink+ command causes the title of the video to be a hyperlink to the
-indicated URL; it may be used with any environment that takes the \verb+\caption+
-command.
-The \verb+\href+ command has the same significance as it does in the context of
-the \texttt{hyperref} package: the second argument is a piece of text to be 
-typeset in your document; the first is its hyperlink, a URL.
-
-\textit{Physical Review} style requires that the initial citation of
-figures or tables be in numerical order in text, so don't cite
-Fig.~\ref{fig:wide} until Fig.~\ref{fig:epsart} has been cited.
-
-\begin{acknowledgments}
-We wish to acknowledge the support of the author community in using
-REV\TeX{}, offering suggestions and encouragement, testing new versions,
-\dots.
-\end{acknowledgments}
-
-\appendix
-
-\section{Appendixes}
-
-To start the appendixes, use the \verb+\appendix+ command.
-This signals that all following section commands refer to appendixes
-instead of regular sections. Therefore, the \verb+\appendix+ command
-should be used only once---to setup the section commands to act as
-appendixes. Thereafter normal section commands are used. The heading
-for a section can be left empty. For example,
-\begin{verbatim}
-\appendix
-\section{}
-\end{verbatim}
-will produce an appendix heading that says ``APPENDIX A'' and
-\begin{verbatim}
-\appendix
-\section{Background}
-\end{verbatim}
-will produce an appendix heading that says ``APPENDIX A: BACKGROUND''
-(note that the colon is set automatically).
-
-If there is only one appendix, then the letter ``A'' should not
-appear. This is suppressed by using the star version of the appendix
-command (\verb+\appendix*+ in the place of \verb+\appendix+).
-
-\section{A little more on appendixes}
-
-Observe that this appendix was started by using
-\begin{verbatim}
-\section{A little more on appendixes}
-\end{verbatim}
-
-Note the equation number in an appendix:
-\begin{equation}
-E=mc^2.
-\end{equation}
-
-\subsection{\label{app:subsec}A subsection in an appendix}
-
-You can use a subsection or subsubsection in an appendix. Note the
-numbering: we are now in Appendix~\ref{app:subsec}.
-
-Note the equation numbers in this appendix, produced with the
-subequations environment:
-\begin{subequations}
+We measured apparent horizon at each time using \textsc{AHFinderDirect} \cite{Thornburg:1995cp, Thornburg:2003sf}. It finds an apparent horizon by numerically solving equation
 \begin{eqnarray}
-E&=&mc, \label{appa}
-\\
-E&=&mc^2, \label{appb}
-\\
-E&\agt& mc^3. \label{appc}
+	\Theta &\equiv & D_i n^i + K_{ij} n^i n^j - K = 0,
 \end{eqnarray}
-\end{subequations}
-They turn out to be Eqs.~(\ref{appa}), (\ref{appb}), and (\ref{appc}).
+where $n^i$ is the outward-pointing unit normal to the apparent horizon, and $D_i$ is the covariant derivative operator associated with the 3-metric in the slice.
 
-% The \nocite command causes all entries in a bibliography to be printed out
-% whether or not they are actually referenced in the text. This is appropriate
-% for the sample file to show the different styles of references, but authors
-% most likely will not want to use it.
-\nocite{*}
+We don't fixed puncture location at the origin, but there was no puncture moving and the puncture still at the origin. Fig.~\ref{fig:expansion} shows expansion of apparent horizon as function of time. Fig.~\ref{fig:m_irr} shows irreducible mass as function of time. 
 
-\bibliography{apssamp}% Produces the bibliography via BibTeX.
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{data/expansion.png}% Here is how to import EPS art
+	\caption{\label{fig:expansion} Expansion $\Theta$ of apparent horizon as function of time.}
+\end{figure}
+
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{data/m_irr.png}% Here is how to import EPS art
+	\caption{\label{fig:m_irr} Irreducible mass $M_\mathrm{irr}$ as function of time.}
+	\end{figure}
+
+%\nocite{*}
+
+\bibliography{eintk}% Produces the bibliography via BibTeX.
+
 
 \end{document}
 %

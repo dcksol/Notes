@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: apssamp.aux
 Reallocating 'name_of_file' (item size: 1) to 13 items.
-Reallocating 'name_of_file' (item size: 1) to 8 items.
+Reallocating 'name_of_file' (item size: 1) to 6 items.
 Reallocating 'name_of_file' (item size: 1) to 10 items.
 The style file: apsrev4-2.bst
 Reallocating 'singl_function' (item size: 4) to 100 items.
@@ -15,7 +15,12 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: apssampNotes.bib
-Database file #2: apssamp.bib
+Database file #2: eintk.bib
+I was expecting a `,' or a `}'---line 4408 of file eintk.bib
+ :  
+ :  title          = "{Three-Dimensional General-Relativistic Hydrodynamic
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 control{REVTEX42Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
 control{apsrev42Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{0}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
 Warning--jnrlst (dependency: not reversed) set 1
@@ -29,52 +34,48 @@ Control: production of article title (0) allowed
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
-Warning--can't use both volume and number fields in Smith2007
-Warning--empty title in Nelson1999
-Warning--empty institution in Nelson1999
-Warning--empty title in Fields2005
-Warning--empty institution in Fields2005
-Warning--empty chapter and pages in ballagh2000
-Warning--empty chapter and pages in Smith80
-You've used 49 entries,
+Warning--empty year in Kranc:web
+Warning--empty year in McLachlan:web
+Warning--empty year in CarpetCode:web
+You've used 23 entries,
             6079 wiz_defined-function locations,
-            1934 strings with 20600 characters,
-and the built_in function-call counts, 43092 in all, are:
-= -- 3123
-> -- 832
-< -- 239
-+ -- 290
-- -- 194
-* -- 6433
-:= -- 4297
-add.period$ -- 47
-call.type$ -- 49
-change.case$ -- 272
-chr.to.int$ -- 72
-cite$ -- 56
-duplicate$ -- 4280
-empty$ -- 3215
-format.name$ -- 490
-if$ -- 8463
-int.to.chr$ -- 9
-int.to.str$ -- 56
-missing$ -- 576
-newline$ -- 194
-num.names$ -- 150
-pop$ -- 1665
-preamble$ -- 2
-purify$ -- 234
+            1821 strings with 21802 characters,
+and the built_in function-call counts, 33416 in all, are:
+= -- 1759
+> -- 1297
+< -- 246
++ -- 392
+- -- 358
+* -- 5872
+:= -- 2791
+add.period$ -- 21
+call.type$ -- 23
+change.case$ -- 105
+chr.to.int$ -- 33
+cite$ -- 26
+duplicate$ -- 3010
+empty$ -- 2270
+format.name$ -- 730
+if$ -- 6781
+int.to.chr$ -- 1
+int.to.str$ -- 30
+missing$ -- 433
+newline$ -- 121
+num.names$ -- 54
+pop$ -- 1073
+preamble$ -- 1
+purify$ -- 102
 quote$ -- 0
-skip$ -- 1596
+skip$ -- 1218
 stack$ -- 0
-substring$ -- 987
-swap$ -- 3904
-text.length$ -- 124
+substring$ -- 556
+swap$ -- 3207
+text.length$ -- 169
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 620
-warning$ -- 8
-while$ -- 147
+type$ -- 412
+warning$ -- 4
+while$ -- 64
 width$ -- 0
-write$ -- 458
-(There were 8 warnings)
+write$ -- 247
+(There was 1 error message)
