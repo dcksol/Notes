@@ -651,11 +651,18 @@ We use \texttt{McLachlan} \cite{Brown:2008sb, Kranc:web, McLachlan:web} and adop
 
 \section{Numerical Setup}
 
+We utilize the \textsc{Einstein Toolkit} \cite{EinsteinToolkit:2023_05, Cactuscode:web} to simulate the evolution of a single puncture.
+
 \subsection{Mesh Refinement}
 
 We employ mesh refinement \cite{CarpetCode:web} for the puncture center with 7 levels. The basic grid resolution is $3.072M$, and the refinement factor is set to 2. Therefore, the minimum resolution is $3.072M\times 2^{-6} = 0.048M$.
 
-We utilize the \textsc{Einstein Toolkit} \cite{EinsteinToolkit:2023_05} to simulate the evolution of a single puncture.
+\subsection{Boundary Conditions}
+We used Minkowski boundary condition in \textsc{ML\_BSSN}. We used ghost zones size of 3.
+
+\subsection{Symmetry}
+We used \textsc{ReflectionSymmetry} to reflection on $z$ plane and \textsc{CarpetRegrid2} to $180^\circ$ rotating symmetry.
+
 
 
 %\section{Result}

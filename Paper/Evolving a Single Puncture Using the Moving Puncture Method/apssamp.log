@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  6 OCT 2023 00:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  6 OCT 2023 01:13
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -478,30 +478,30 @@ LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
 <data/psi4_r50.png, id=39, 354.123pt x 245.718pt>
 File: data/psi4_r50.png Graphic file (type png)
 <use data/psi4_r50.png>
-Package pdftex.def Info: data/psi4_r50.png  used on input line 683.
+Package pdftex.def Info: data/psi4_r50.png  used on input line 690.
 (pdftex.def)             Requested size: 255.0pt x 176.94305pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 683--684
+Overfull \hbox (9.0pt too wide) in paragraph at lines 690--691
  [][] 
  []
 
 <data/expansion.png, id=40, 354.123pt x 245.718pt>
 File: data/expansion.png Graphic file (type png)
 <use data/expansion.png>
-Package pdftex.def Info: data/expansion.png  used on input line 700.
+Package pdftex.def Info: data/expansion.png  used on input line 707.
 (pdftex.def)             Requested size: 255.0pt x 176.94305pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 700--701
+Overfull \hbox (9.0pt too wide) in paragraph at lines 707--708
  [][] 
  []
 
 <data/m_irr.png, id=41, 354.123pt x 245.718pt>
 File: data/m_irr.png Graphic file (type png)
 <use data/m_irr.png>
-Package pdftex.def Info: data/m_irr.png  used on input line 705.
+Package pdftex.def Info: data/m_irr.png  used on input line 712.
 (pdftex.def)             Requested size: 255.0pt x 176.94305pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 705--706
+Overfull \hbox (9.0pt too wide) in paragraph at lines 712--713
  [][] 
  []
 
@@ -509,7 +509,7 @@ Overfull \hbox (9.0pt too wide) in paragraph at lines 705--706
 ] (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
-Underfull \hbox (badness 2426) in paragraph at lines 423--431
+Underfull \hbox (badness 2426) in paragraph at lines 427--435
  []\OT1/minntx/m/n/9 J. Thorn-burg, A Fast Apparent-Horizon Finder for 3-
  []
 
@@ -521,10 +521,10 @@ L3 programming layer <2023-06-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9978 strings out of 475513
- 159234 string characters out of 5760853
- 1952238 words of memory out of 5000000
- 31078 multiletter control sequences out of 15000+600000
+ 9982 strings out of 475513
+ 159318 string characters out of 5760853
+ 1954238 words of memory out of 5000000
+ 31082 multiletter control sequences out of 15000+600000
  654951 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,9n,93p,1153b,411s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -541,7 +541,7 @@ ppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txtt.pfb><C:/Users/hali
 n/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/hal
 in/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/ha
 lin/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
-Output written on apssamp.pdf (6 pages, 968451 bytes).
+Output written on apssamp.pdf (6 pages, 969864 bytes).
 PDF statistics:
  114 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
