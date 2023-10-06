@@ -693,25 +693,46 @@ Since the Schwarzschild metric has spherical symmetry, there should be no gravit
 
 
 
+%\subsection{Apparent Horizon}
+%
+%We measured apparent horizon at each time using \textsc{AHFinderDirect} \cite{Thornburg:1995cp, Thornburg:2003sf}. It finds an apparent horizon by numerically solving equation
+%\begin{eqnarray}
+%	\Theta &\equiv & D_i n^i + K_{ij} n^i n^j - K = 0,
+%\end{eqnarray}
+%where $n^i$ is the outward-pointing unit normal to the apparent horizon, and $D_i$ is the covariant derivative operator associated with the 3-metric in the slice.
+%
+%We don't fixed puncture location at the origin, but there was no puncture moving and the puncture still at the origin. Fig.~\ref{fig:expansion} shows expansion of apparent horizon as function of time. Fig.~\ref{fig:m_irr} shows irreducible mass as function of time. 
+%
+%\begin{figure}[h]
+%	\includegraphics[width=0.5\textwidth]{data/expansion.png}% Here is how to import EPS art
+%	\caption{\label{fig:expansion} Expansion $\Theta$ of apparent horizon as function of time.}
+%\end{figure}
+%
+%\begin{figure}[h]
+%	\includegraphics[width=0.5\textwidth]{data/m_irr.png}% Here is how to import EPS art
+%	\caption{\label{fig:m_irr} Irreducible mass $M_\mathrm{irr}$ as function of time.}
+%	\end{figure}
+
 \subsection{Apparent Horizon}
 
-We measured apparent horizon at each time using \textsc{AHFinderDirect} \cite{Thornburg:1995cp, Thornburg:2003sf}. It finds an apparent horizon by numerically solving equation
-\begin{eqnarray}
-	\Theta &\equiv & D_i n^i + K_{ij} n^i n^j - K = 0,
-\end{eqnarray}
-where $n^i$ is the outward-pointing unit normal to the apparent horizon, and $D_i$ is the covariant derivative operator associated with the 3-metric in the slice.
+We measured the apparent horizon at each time using \textsc{AHFinderDirect} \cite{Thornburg:1995cp, Thornburg:2003sf}. This tool identifies an apparent horizon by numerically solving the equation
+\begin{equation}
+	\Theta \equiv D_i n^i + K_{ij} n^i n^j - K = 0,
+\end{equation}
+where $n^i$ represents the outward-pointing unit normal to the apparent horizon, and $D_i$ is the covariant derivative operator associated with the 3-metric in the slice.
 
-We don't fixed puncture location at the origin, but there was no puncture moving and the puncture still at the origin. Fig.~\ref{fig:expansion} shows expansion of apparent horizon as function of time. Fig.~\ref{fig:m_irr} shows irreducible mass as function of time. 
+We did not fix the puncture location at the origin, but there was no puncture movement, and the puncture remained at the origin. Figure~\ref{fig:expansion} illustrates the expansion $\Theta$ of the apparent horizon as a function of time, while Figure~\ref{fig:m_irr} displays the irreducible mass $M_\mathrm{irr}$ as a function of time.
 
 \begin{figure}[h]
 	\includegraphics[width=0.5\textwidth]{data/expansion.png}% Here is how to import EPS art
-	\caption{\label{fig:expansion} Expansion $\Theta$ of apparent horizon as function of time.}
+	\caption{\label{fig:expansion} Expansion $\Theta$ of the apparent horizon as a function of time.}
 \end{figure}
 
 \begin{figure}[h]
 	\includegraphics[width=0.5\textwidth]{data/m_irr.png}% Here is how to import EPS art
-	\caption{\label{fig:m_irr} Irreducible mass $M_\mathrm{irr}$ as function of time.}
-	\end{figure}
+	\caption{\label{fig:m_irr} Irreducible mass $M_\mathrm{irr}$ as a function of time.}
+\end{figure}
+
 
 %\nocite{*}
 
