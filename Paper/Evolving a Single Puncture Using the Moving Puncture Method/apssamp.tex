@@ -43,7 +43,7 @@
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 %\usepackage{bm}% bold math
-%\usepackage{hyperref}% add hypertext capabilities
+\usepackage{hyperref}% add hypertext capabilities
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 
@@ -63,6 +63,13 @@
 \usepackage[shortlabels]{enumitem}
 \usepackage{url}
 \usepackage{cleveref}
+\usepackage{xcolor}
+\hypersetup{
+	colorlinks   = true, %Colours links instead of ugly boxes
+	urlcolor     = blue, %Colour for external hyperlinks
+	linkcolor    = blue, %Colour of internal links
+	citecolor   = red %Colour of citations
+}
 
 
 \begin{document}
@@ -279,7 +286,7 @@ The initial metric set by \textsc{TwoPunctures} exactly takes the form
 \end{equation}
 for all grid points. Fig.~\ref{fig:gammaxx} shows $\gamma_{xx}$ along the $x$-axis at the initial time. Each marker represents a grid point for a respective refinement level. The non-diagonal components of the spatial metric and all components of the extrinsic curvature have explicit values of 0.
 
-\begin{figure}[h]
+\begin{figure}[ht!]
 	\includegraphics[width=0.5\textwidth]{data/gammaxx.png}% Here is how to import an image
 	\caption{\label{fig:gammaxx} $\gamma_{xx}$ along the $x$-axis at the initial time. Only 3 of the 7 refinement levels are plotted.}
 \end{figure}
@@ -318,13 +325,13 @@ From \eqref{eq:ham} and \eqref{eq:mom}, we can define
 \end{equation}
 and it should satisfy that $\mathcal{H} = 0$ and $\mathcal{M}^i = 0$. Fig.~\ref{fig:ham_xy} shows $\log_{10}\qty|\mathcal{H}|$ on the $xy$ plane at the initial time. Every value at each grid point is less than $10^{-7}$. In the case of $\mathcal{M}^i$, all of the values are explicitly 0.
 
-\begin{figure}[h]
+\begin{figure}[ht!]
 	\includegraphics[width=0.5\textwidth]{data/ham_xy.png}% Here is how to import EPS art
 	\caption{\label{fig:ham_xy} $\log_{10}\qty|\mathcal{H}|$ on the $xy$ plane at the initial time.}
 \end{figure}
 
 Fig.~\ref{fig:ham_evol} shows the Hamiltonian constraint violation $\mathcal{H}$ along the $x$ axis. The data at $x=0$ has been cut since its value is on the order of $1$ at the late time. $\mathcal{H}$ increased as time passed, and most peak point's $x$ coordinate also increased. But it still remains on the order of $10^{-6}$ at $t=115.2M$.
-\begin{figure}[h]
+\begin{figure}[ht!]
 	\includegraphics[width=0.5\textwidth]{data/ham_evol.png}% Here is how to import EPS art
 	\caption{\label{fig:ham_evol} The Hamiltonian constraint violation along the $x$ axis.}
 \end{figure}
@@ -473,14 +480,14 @@ The conformal factor is given by $\psi = \left(\frac{r_s}{r}\right)^{1/2}$, and 
 \end{widetext}
 
 Fig.~\ref{fig:alphas} shows $\alpha$ along the $x$ axis at several times. After $t=49.152M$, $\alpha$ remains almost constant. The black solid line represents the analytic solution given in \eqref{eq:alpha}.
-\begin{figure}[h]
+\begin{figure}[ht!]
 	\includegraphics[width=0.5\textwidth]{data/alphas.png}% Here is how to import an image
 	\caption{\label{fig:alphas} $\alpha$ along the $x$ axis at several times. Only 5 refinement levels are plotted. The time unit is divided by $M$.}
 \end{figure}
 
 Fig.~\ref{fig:ev_gammaxx} shows $\gamma_{xx}$ along the $x$ axis. The black solid line indicates the analytic solution $\gamma_{ij} = \psi^4 \eta_{ij}$, where $\psi$ is given by \eqref{eq:psi_long}.
 
-\begin{figure}[h]
+\begin{figure}[ht!]
 	\includegraphics[width=0.5\textwidth]{data/ev_gammaxx.png}% Here is how to import an image
 	\caption{\label{fig:ev_gammaxx} $\gamma_{xx}$ along the $x$ axis at several times. Only refinement level 4 is plotted. The time unit is divided by $M$.}
 \end{figure}
@@ -686,7 +693,7 @@ For wave extraction, we utilized the \textsc{WeylScal4} and \textsc{Multipole} t
 
 Since the Schwarzschild metric has spherical symmetry, there should be no gravitational wave radiation. Fig.~\ref{fig:psi4_r50} displays the real and imaginary parts of $r_\mathrm{ex}\psi_4$. There is no notable difference between $r_\mathrm{ex} = 50M$. Furthermore, all values of $r_\mathrm{ex}\psi_4$ are on the order of $10^{-14}$, which can be regarded as numerical noise.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\includegraphics[width=0.5\textwidth]{data/psi4_r50.png}% Here is how to import EPS art
 	\caption{\label{fig:psi4_r50} Real and imaginary parts of $r_\mathrm{ex}\psi_4$. The red dashed line indicates $t=r_\mathrm{ex}=50M$.}
 \end{figure}
@@ -721,14 +728,15 @@ We measured the apparent horizon at each time using \textsc{AHFinderDirect} \cit
 \end{equation}
 where $n^i$ represents the outward-pointing unit normal to the apparent horizon, and $D_i$ is the covariant derivative operator associated with the 3-metric in the slice.
 
-We did not fix the puncture location at the origin, but there was no puncture movement, and the puncture remained at the origin. Fig.~\ref{fig:expansion} illustrates the expansion $\Theta$ of the apparent horizon as a function of time, while Fig.~\ref{fig:m_irr} displays the irreducible mass $M_\mathrm{irr}$ as a function of time.
+We did not fix the puncture location at the origin, but there was no puncture movement, and the puncture remained at the origin. Fig.~\ref{fig:expansion} illustrates the $L_\infty$ norm of expansion $\Theta$ of the apparent horizon as a function of time, while Fig.~\ref{fig:m_irr} displays the irreducible mass $M_\mathrm{irr}$ as a function of time.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\includegraphics[width=0.5\textwidth]{data/expansion.png}% Here is how to import EPS art
-	\caption{\label{fig:expansion} Expansion $\Theta$ of the apparent horizon as a function of time.}
+	\caption{\label{fig:expansion} $L_\infty$ norm of expansion $\Theta$ of the apparent horizon as a function of time.}
 \end{figure}
 
-\begin{figure}[h]
+
+\begin{figure}[h!]
 	\includegraphics[width=0.5\textwidth]{data/m_irr.png}% Here is how to import EPS art
 	\caption{\label{fig:m_irr} Irreducible mass $M_\mathrm{irr}$ as a function of time.}
 \end{figure}
