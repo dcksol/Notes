@@ -304,22 +304,27 @@
   \end{block}
 
   \begin{block}{Results}
+  	
+  	Figure~\ref{fig:traj} shows the trajectories of the punctures while Figure~\ref{fig:rerpsi4} shows the real part of the $(l=2,m=2)$ mode of $r_\mathrm{ext}\psi_4$ at $r_\mathrm{ext}=100M$. In the early stages, we can observe junk radiation caused by spin.
+  	
+  	From the waveform and the track, binary undergoes about 3 orbits before merging in aligned case and about 1 orbits in antialigned case.
+  	The time it takes from the beginning to the black hole merging phase is approximately three times longer in the aligned case, about $380M$, compared to the antialigned case, which takes about $120M$.
+  	
 
 	\begin{figure}
 		\centering
 		\includegraphics[width=\columnwidth]{img/traj}
-		\caption{The puncture trajectories on the $xy$ plane with ticks every $10.3186M$. Left shows the spin aligned case and right shows the spin antialigned case.}
+		\caption{\label{fig:traj}The puncture trajectories on the $xy$ plane with ticks every $10.3186M$. Left shows the spin aligned case and right shows the spin antialigned case.}
 	\end{figure}
 	
-	Figure~\ref{fig:rerpsi4} shows the real part of the $(l=2,m=2)$ mode of $r_\mathrm{ext}\psi_4$ at $r_\mathrm{ext}=100M$. In the early stages, we can observe junk radiation caused by spin.
+	 
     \begin{figure}
       \centering
-      \label{fig:rerpsi4}
       \includegraphics[width=\columnwidth]{img/Rerpsi4}
-      \caption{The real component of $r_\mathrm{ext}\psi_4$ at $r_\mathrm{ext}=100M$. Left shows the spin aligned case and right shows the spin antialigned case.}
+      \caption{\label{fig:rerpsi4}The real component of $r_\mathrm{ext}\psi_4$ at $r_\mathrm{ext}=100M$. Left shows the spin aligned case and right shows the spin antialigned case.}
     \end{figure}
     
-    
+    Figure~\ref{fig:psi4i} shows imaginary component of $psi_4$ on $xz$ plane in aligned case. The first three images depict junk radiation, while the subsequent images show the actual gravitational wave emissions. Through this, we can confirm the intensity of gravitational waves based on the polar angle along the $z$-axis, clearly indicating that the intensity is greater closer to the $z$-axis.
 
   \end{block}
 
@@ -335,28 +340,43 @@
   	\begin{figure}
   		\centering
   		\includegraphics[width=\columnwidth]{img/psi4i}
-  		\caption{The imaginary component of $psi_4$ on $xz$ plane in aligned case. Each snapshot has a time interval of $34.6706M$.}
+  		\caption{\label{fig:psi4i}The imaginary component of $psi_4$ on $xz$ plane in aligned case. Each snapshot has a time interval of $34.6706M$.}
   	\end{figure}
 	
+	After the black hole merger, a Kerr black hole is left. The energy and angular momentum emitted through gravitational waves can be calculated by the difference in physical quantities of the Kerr black hole measured at the initial data and the end of the simulation. This value should match the value calculated through the following equation, as measured from $\psi_4$ as shown in Figure~\ref{fig:rerpsi4}:
 	\begin{eqnarray}
-		L_\mathrm{GW} = - \frac{dE}{dt} = \lim_{r\to\infty}{\frac{r^2}{16\pi}\sum_{l=2}^{\infty}\sum_{m=-l}^{l}\qty|\int_{-\infty}^{t}dt'\psi_4^{lm}|^2}
+		L_\mathrm{GW} = - \frac{dE}{dt} = \lim_{r\to\infty}{\frac{r^2}{16\pi}\sum_{l=2}^{\infty}\sum_{m=-l}^{l}\qty|\int_{-\infty}^{t}dt'\psi_4^{lm}|^2},
 	\end{eqnarray}
-	
 	\begin{eqnarray}
-		\frac{dJ_z}{dt}&=&\lim_{r\to\infty} \frac{r^2}{16\pi}\sum_{l=2}^{\infty}\sum_{m=-l}^{l}m \Im \biggl[\biggl(\int_{-\infty}^{t}dt'\psi_4^{lm}\biggr) \nonumber\\ &&\times \biggr( \int_{-\infty}^tdt'\int_{-\infty}^{t'}dt''\psi_4^{lm\ast} \biggr)\biggr]
+		\frac{dJ_z}{dt}&=&\lim_{r\to\infty} \frac{r^2}{16\pi}\sum_{l=2}^{\infty}\sum_{m=-l}^{l}m \Im \biggl[\biggl(\int_{-\infty}^{t}dt'\psi_4^{lm}\biggr) \nonumber\\ &&\times \biggr( \int_{-\infty}^tdt'\int_{-\infty}^{t'}dt''\psi_4^{lm\ast} \biggr)\biggr].
 	\end{eqnarray}
-	
+	Figure~\ref{fig:erad} and Figure~\ref{fig:jrad} depict $L_\mathrm{GW}$, $dJ_z/dt$, and their integrated values $E_\mathrm{rad}$ and $J_\mathrm{rad}$. Table~\ref{tab:comp} shows the values comparing each of them.
 	\begin{figure}
 		\centering
 		\includegraphics[width=\columnwidth]{img/erad}
-		\caption{The luminosity and accumulated radiated energy. Left shows the spin aligned case and right shows the spin antialigned case.}
+		\caption{\label{fig:erad}The luminosity and accumulated radiated energy. Left shows the spin aligned case and right shows the spin antialigned case.}
 	\end{figure}
 	
 	\begin{figure}
 		\centering
 		\includegraphics[width=\columnwidth]{img/jrad}
-		\caption{The loss of angular momentum. Left shows the spin aligned case and right shows the spin antialigned case.}
+		\caption{\label{fig:jrad}The loss of angular momentum. Left shows the spin aligned case and right shows the spin antialigned case.}
 	\end{figure}
+	
+	\begin{table}
+		\centering
+		\begin{tabular}{c c c}
+			\toprule
+			\textbf{} & \textbf{Aligned} & \textbf{Antialigned}\\
+			\midrule
+			$E_\mathrm{rad}^{(0)}/M_\mathrm{ADM}$ & 6.92\% & 2.16\% \\
+			$E_\mathrm{rad}^{(1)}/M_\mathrm{ADM}$ & 6.95\% & 2.19\% \\
+			$J_\mathrm{rad}^{(0)}/J_\mathrm{ADM}$ & 29.1\% & 24.7\% \\
+			$J_\mathrm{rad}^{(1)}/J_\mathrm{ADM}$ & 34.1\% & 26.6\% \\
+			\bottomrule
+		\end{tabular}
+		\caption{\label{tab:comp} The emitted energy and angular momentum are expressed as percentiles of the initial values. The superscript $(0)$ represents values calculated from metric information, and $(1)$ represents values calculated through gravitational waveforms.}
+	\end{table}
 	
 
 
@@ -364,7 +384,7 @@
 
   \begin{block}{Conclusion}
 	
-    
+    % 이번 연구에서 스핀을 가지는 블랙홀 쌍성에 대한 수치 시뮬레이션을 성공하였다. 
 
   \end{block}
 

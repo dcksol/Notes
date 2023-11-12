@@ -1,0 +1,82 @@
+\begin{thebibliography}{10}
+
+\bibitem{Alcubierre:2002kk}
+Miguel Alcubierre, Bernd Br{\"u}gmann, Peter Diener, Michael Koppitz, Denis
+  Pollney, Edward Seidel, and Ryoji Takahashi.
+\newblock {Gauge conditions for long term numerical black hole evolutions
+  without excision}.
+\newblock {\em Phys. Rev. D}, 67:084023, 2003.
+
+\bibitem{Ansorg:2004ds}
+Marcus Ansorg, Bernd Br{\"u}gmann, and Wolfgang Tichy.
+\newblock A single-domain spectral method for black hole puncture data.
+\newblock {\em Phys. Rev. D}, 70:064011, 2004.
+
+\bibitem{Baker:2005vv}
+John~G. Baker, Joan Centrella, Dae-Il Choi, Michael Koppitz, and James van
+  Meter.
+\newblock Gravitational wave extraction from an inspiraling configuration of
+  merging black holes.
+\newblock {\em Phys. Rev. Lett.}, 96:111102, 2006.
+
+\bibitem{Baumgarte:1998te}
+Thomas~W. Baumgarte and Stuart~L. Shapiro.
+\newblock {On the numerical integration of Einstein's field equations}.
+\newblock {\em Phys. Rev. D}, 59:024007, 1999.
+
+\bibitem{Brown:2008sb}
+J.~David Brown, Peter Diener, Olivier Sarbach, Erik Schnetter, and Manuel
+  Tiglio.
+\newblock {Turduckening black holes: an analytical and computational study}.
+\newblock {\em Phys. Rev. D}, 79:044023, 2009.
+
+\bibitem{Campanelli:2005dd}
+Manuela Campanelli, Carlos~O. Lousto, Pedro Marronetti, and Yosef Zlochower.
+\newblock Accurate evolutions of orbiting black-hole binaries without excision.
+\newblock {\em Phys. Rev. Lett.}, 96:111101, 2006.
+
+\bibitem{Campanelli:2006uy}
+Manuela Campanelli, Carlos~O. Lousto, and Yosef Zlochower.
+\newblock Gravitational radiation from spinning-black-hole binaries: The
+  orbital hang up.
+\newblock {\em Phys. Rev. D}, 74:041501, 2006.
+
+\bibitem{CarpetCode:web}
+{Carpet}: Adaptive Mesh Refinement for the {Cactus} Framework.
+
+\bibitem{EinsteinToolkit:2023_05}
+Leonardo~Werneck et~al.
+\newblock The einstein toolkit, May 2023.
+\newblock To find out more, visit http://einsteintoolkit.org.
+
+\bibitem{Kranc:web}
+{Kranc}: {Kranc} assembles numerical code.
+
+\bibitem{McLachlan:web}
+{McLachlan}, a public {BSSN} code.
+
+\bibitem{Nakamura:1987}
+Takashi Nakamura, Kenichi Oohara, and Yasufumi Kojima.
+\newblock {General Relativistic Collapse to Black Holes and Gravitational Waves
+  from Black Holes}.
+\newblock {\em Progress of Theoretical Physics Supplement}, 90:1--218, 01 1987.
+
+\bibitem{Pollney:2009yz}
+Denis Pollney, Christian Reisswig, Erik Schnetter, Nils Dorband, and Peter
+  Diener.
+\newblock {High accuracy binary black hole simulations with an extended wave
+  zone}.
+\newblock {\em Phys. Rev. D}, 83:044045, 2011.
+
+\bibitem{Pretorius:2005gq}
+Frans Pretorius.
+\newblock Evolution of binary black hole spacetimes.
+\newblock {\em Phys. Rev. Lett.}, 95:121101, 2005.
+
+\bibitem{Shibata:1995we}
+Masaru Shibata and Takashi Nakamura.
+\newblock {Evolution of three-dimensional gravitational waves: Harmonic slicing
+  case}.
+\newblock {\em Phys. Rev. D}, 52:5428--5444, 1995.
+
+\end{thebibliography}
