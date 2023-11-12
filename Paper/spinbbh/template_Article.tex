@@ -1,0 +1,247 @@
+\documentclass[]{article}
+
+\usepackage{kotex}
+\usepackage{hyperref}% add hypertext capabilities
+\usepackage{newtxtext}
+%\usepackage{newtxmath}
+\usepackage[subscriptcorrection,nofontinfo]{mtpro2}
+\usepackage[scr=rsfs]{mathalfa}
+\usepackage{physics}
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{xcolor}
+\hypersetup{
+	colorlinks   = true, %Colours links instead of ugly boxes
+	urlcolor     = blue, %Colour for external hyperlinks
+	linkcolor    = blue, %Colour of internal links
+	citecolor   = red %Colour of citations
+}
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Introduction}
+블랙홀 쌍성계의 운동과 이로부터 발생하는 중력파 파형의 성공적인 수치적 계산은 수치 상대론의 창발 이후 주된 관심사였습니다. 블랙홀 쌍성계로부터 방출되는 중력파는 관측할 수 있는 가장 강한 중력파를 만들어내며 이를 실제로 관측하기 위해선 정확한 중력파 파형 계산이 필요합니다. \cite{Campanelli:2005dd, Baker:2005vv, Pretorius:2005gq}에서 2005년과 2006년 스핀이 없는 블랙홀이 quasi circular orbit으로부터 시작하여 merge후 중력파를 방출해내는 것을 성공적으로 계산한 이후 두 블랙홀의 질량, 스핀, 이심률 등과 같은 다양한 물리량들에 대해 시스템이 어떤 behavior를 보이는 지에 대한 연구가 이어졌습니다.
+
+we present 동일한 질량의 두 블랙홀이 궤도 각운동량과 aligned 되어 있는지 antialigned 되어 있는지에 따라 병합까지의 시간, 중력파 파형, 방출된 에너지와 각운동량 등을 제시합니다. 다음 섹션에서 initial data를 어떻게 구성하고 어떤 게이지 조건과 evolution method를 사용하였는지 등을 제시합니다. 이어서 스핀의 방향에 대해 각각 어떠한 결과가 계산되었는 지 제시합니다.
+
+
+\section{Setup}
+
+\subsection{Grid}
+시뮬레이션은 Einstein Toolkit\cite{EinsteinToolkit:2023_05}을 이용하여 이루어 졌습니다. 각 시뮬레이션에서 초기 전체 ADM mass는 $M$로 스케일하였으며, geometric unit을 채택하여 $c=G=1$로 두었습니다.
+두 블랙홀은 $xy$평면상에서 운동하며, $xy$평면 대칭을 이용함으로써 계산 자원을 줄였습니다. 좌표계로는 multipatch coordinate system\cite{Pollney:2009yz}을 채택하였습니다. 각 블랙홀 puncture를 중심으로 Carpet\cite{CarpetCode:web}을 통한 adaptive mesh refinement이 시행되었습니다. 기본 그리드 간격은 $0.9172M$이며 가장 세밀한 그리드 간격은 $0.0036M$입니다. 
+
+\subsection{Initial data}
+
+스핀의 효과를 잘 보기 위해서는 post-Newtonian 을 사용하여 적절한 separation, 모멘텀, 스핀 등을 결정해야 합니다. 우리는 \cite{Campanelli:2006uy}에서 제시한 물리량을 기반으로 이 값들을 결정하였습니다.
+결정된 물리량을 기반으로 metric과 extrinsic curvature를 결정해야 합니다. 이 과정은 \textsc{TwoPuncture} \cite{Ansorg:2004ds}에 의해 이루어집니다. 이는 다음과 같은 가정으로부터 출발합니다.
+\begin{itemize}
+	
+	\item Conformal flatness, $\bar{\gamma}_{ij} = \eta_{ij}$.
+	\item Transverse part to vanish, $\bar{A}_\mathrm{TT}^{ij} = 0$.
+	\item Maximal slicing, $K=0$.
+	
+\end{itemize}
+이후 momentum constraint는 Cartesian coordinates에서
+\begin{eqnarray}
+	\partial^j \partial_j W^i + \frac{1}{3}\partial^i\partial_j W^j=0
+\end{eqnarray}
+이 됩니다. 이제 이 식은 linear하기 때문에 단일 블랙홀에 대한 해의 합으로 multiple black holes 해를 구성할 수 있습니다.
+
+Hamiltonian constraint의 경우 같은 가정에 의하여
+\begin{eqnarray}
+	\bar{D}^2\psi + \frac{1}{8}\psi^{-7}\bar{A}^\mathrm{L}_{ij}\bar{A}^{ij}_\mathrm{L} = 0
+\end{eqnarray}
+이 됩니다. \textsc{TwoPunctures} thorn은 위의 방정식을 single-domain spectral method를 사용하여 해결합니다.
+
+
+
+
+이 방법은 York’s conformal-transverse-traceless decomposition method 를 사용합니다. With this ansatz the Hamiltonian constraint yields an equation for the conformal factor $\psi$
+\begin{eqnarray}
+	\bar{D}^2\psi + \frac{1}{8}\psi^5 K_{ij}K^{ij} = 0,
+\end{eqnarray}
+while the momentum constraint yields an equation for the vector potential $W$,
+\begin{eqnarray}
+	````````````````````````````````````````````````````````````````````````````````````\bar{\Delta}_\mathrm{L} W^i + \frac{1}{3}\bar{D}^i\bar{D}_jW^j = 0.
+\end{eqnarray}
+
+
+
+
+We need to specify the spatial metric $\gamma_{ij}$ and the extrinsic curvature $K_{ij}$ which satisfy the Hamiltonian constraint
+\begin{equation}
+	\label{eq:ham}
+	R + K^2 - K_{ij}K^{ij} = 16 \pi \rho,
+\end{equation}
+and the momentum constraint
+\begin{equation}
+	\label{eq:mom}
+	D_j(K^{ij} - \gamma^{ij}K) = 8\pi j^i.
+\end{equation}
+
+To construct a two puncture initial data, we adopt York-Lichnerowicz conformal decompositions \cite{PhysRevLett.26.1656, Lichnerowicz:1944zz}. The spatial metric is decomposed into a conformal factor $\psi$ multiplying an conformally related metric:
+\begin{equation}
+	\label{eq:conformalmetric}
+	\gamma_{ij} = \psi^4 \bar{\gamma}_{ij}.
+\end{equation}
+With this, \eqref{eq:ham} turns into
+\begin{equation}
+	\label{eq:conham}
+	\bar{D}^2\psi - \frac{\psi}{8}\bar{R}+\frac{\psi^5}{8}\qty(K_{ij}K^{ij}-K^2)=-2\pi \psi^5 \rho,
+\end{equation}
+where we define the conformal Laplace operator
+\begin{equation}
+	\bar{D}^2\psi \equiv \bar{\gamma}^{ij}\bar{D}_i\bar{D}_j \psi.
+\end{equation}
+
+\textsc{TwoPunctures} \cite{Ansorg:2004ds} uses the Bowen-York approach \cite{Bowen:1980yu} and the method presented in \cite{PhysRevD.77.024027}.
+
+
+\subsection{Gauge Condition}
+
+The 1+log slicing with advection term is given by
+\begin{eqnarray}
+	\label{eq:logadv}
+	\partial_t \alpha = -2\alpha K + \beta^i \partial_i \alpha,
+\end{eqnarray}
+and the hyperbolic gamma driver condition for the shift with advection term is defined as
+\begin{eqnarray}
+	\label{eq:betaadv}
+	\partial_t \beta^i = \frac{3}{4}B^i + \beta^j\partial_j \beta^i,
+\end{eqnarray}
+\begin{eqnarray}
+	\label{eq:Badv}
+	\partial_t B^i = \partial_t \bar{\Gamma}^i -B^i + \beta^j \partial_j B^i,
+\end{eqnarray}
+which is typically employed in the moving puncture method \cite{Campanelli:2005dd, Alcubierre:2002kk}. Sometimes we can drop the advection term, simplifying \eqref{eq:logadv}, \eqref{eq:betaadv}, and \eqref{eq:Badv} to
+\begin{eqnarray}
+	\label{eq:lognoadv}
+	\partial_t \alpha = -2\alpha K,
+\end{eqnarray}
+\begin{eqnarray}
+	\label{eq:betanoadv}
+	\partial_t \beta^i = \frac{3}{4}B^i,
+\end{eqnarray}
+\begin{eqnarray}
+	\label{eq:Bnoadv}
+	\partial_t B^i = \partial_t \bar{\Gamma}^i -B^i,
+\end{eqnarray}
+which we adopt in this paper.
+
+We used the \texttt{twopunctures-averaged} initial lapse, which is given by
+\begin{eqnarray}
+	\alpha &=& \frac{1}{2}(1 + \alpha'),
+\end{eqnarray}
+where
+\begin{eqnarray}
+	\alpha' &=& \frac{1 - \frac{M}{2r}}{1 + \frac{M}{2r}},
+\end{eqnarray}
+ensuring that the lapse satisfies $0 \le \alpha \le 1$.
+
+\subsection{Evolution}
+
+The 3+1 ADM evolution equations are given as:
+
+\begin{equation}
+	(\partial_t - \mathcal{L}_\beta)\gamma_{ij} = -2\alpha K_{ij},
+\end{equation}
+
+\begin{eqnarray}
+	(\partial_t - \mathcal{L}_\beta)K_{ij} &=& -D_i D_j \alpha + \alpha (R_{ij} + KK_{ij}-2K_{ik}K^k{}_{j})\nonumber\\&&+4\pi \alpha M_{ij},
+\end{eqnarray}
+
+However, this set of partial differential equations is only weakly hyperbolic and is therefore not suitable for stable numerical evolution. To address this, we adopt the BSSN (\textit{Baumgarte-Shapiro-Shibata-Nakmura}) formulation \cite{Nakamura:1987,  Shibata:1995we, Baumgarte:1998te}.
+
+In the BSSN formulation, the spatial metric $\gamma_{ij}$ is decomposed into a conformally related metric as in \eqref{eq:conformalmetric}, with $\det (\bar{\gamma}_{ij}) = 1$. The extrinsic curvature is also decomposed into its trace and traceless parts, and we conformally transform the traceless part as follows:
+
+\begin{equation}
+	K_{ij} = e^{4\phi}\tilde{A}_{ij} + \frac{1}{3}\gamma_{ij}K.
+\end{equation}
+
+We then promote the following variables to evolution variables:
+
+\begin{equation}
+	\phi = \ln \psi = \frac{1}{12}\ln \gamma,
+\end{equation}
+
+as well as the conformal connection functions:
+
+\begin{equation}
+	\bar{\Gamma}^i = \bar{\gamma}^{jk}\bar{\Gamma}^i{}_{jk} = -\partial_j \bar{\gamma}^{ij}.
+\end{equation}
+
+The evolution equation for $\gamma_{ij}$ splits into two equations:
+
+\begin{equation}
+	\partial_t \phi = - \frac{1}{6}\alpha K + \beta^i \partial_i \phi + \frac{1}{6}\partial_i \beta^i,
+\end{equation}
+
+\begin{eqnarray}
+	\label{eq:bssn_gamma}
+	\partial_t \bar{\gamma}_{ij} &=& -2\alpha \tilde{A}_{ij} + \beta^k \partial_k \bar{\gamma}_{ij}  \nonumber\\&&+\bar{\gamma}_{ik}\partial_j \beta^k + \bar{\gamma}_{jk}\partial_i \beta^k - \frac{2}{3}\bar{\gamma}_{ij}\partial_k\beta^k.
+\end{eqnarray}
+
+The evolution equation for $K_{ij}$ also splits into two equations:
+
+\begin{eqnarray}
+	\label{eq:bssn_K}
+	\partial_t K &=& -D^iD_i \alpha + \alpha (\tilde{A}_{ij}\title{A}^{ij} + \frac{1}{3}K^2)\nonumber\\&&+\beta^i\partial_i K + 4\pi \alpha (\rho + S),
+\end{eqnarray}
+
+\begin{eqnarray}
+	\label{eq:bssn_A}
+	\partial_t \tilde{A}_{ij} &=& e^{-4\phi}\qty[-D_iD_j\alpha + \alpha(R_{ij} - 8\pi S_{ij})]^{TF}\nonumber\\&& + \alpha(K\tilde{A}_{ij} - 2\tilde{A}_{ik}\tilde{A}^k{}_{j}) + \beta^k\partial_k \tilde{A}_{ij} \nonumber\\&&+ \tilde{A}_{ik}\partial_j\beta^k + \tilde{A}_{jk}\partial_i\beta^k - \frac{2}{3}\tilde{A}_{ij}\partial_k\beta^k,
+\end{eqnarray}
+
+where the superscript $TF$ denotes the trace-free part of a tensor. The Ricci tensor is also split into:
+
+\begin{eqnarray}
+	R_{ij}
+	&=& \bar{R}_{ij} - 2 \qty(\bar{D}_i\bar{D}_j \phi + \bar{\gamma}_{ij}\bar{\gamma}^{lm}\bar{D}_l \bar{D}_m \phi)\nonumber\\&&+4\qty((\bar{D}_i \phi)(\bar{D}_j \phi) - \bar{\gamma}_{ij}\bar{\gamma}^{lm}(\bar{D}_l \phi)(\bar{D}_m \phi) )\nonumber\\
+	&\equiv& \bar{R}_{ij} + R^\phi_{ij}.
+\end{eqnarray}
+
+The $\bar{\Gamma}^{i}$ are now treated as independent functions that satisfy their own evolution equations:
+
+\begin{eqnarray}
+	\label{eq:bssn_Gamma}
+	\partial_t \bar{\Gamma}^i &=& 2\alpha \qty(\bar{\Gamma}^i{}_{jk} \tilde{A}^{kj} - \frac{2}{3}\bar{\gamma}^{ij}\partial_j K - 8\pi \bar{\gamma}^{ij} S_j + 6\tilde{A}^{ij}\partial_j \phi) \nonumber\\&& -2\tilde{A}^{ij}\partial_j \alpha + \beta^j \partial_j \bar{\Gamma}^i - \bar{\Gamma}^j \partial_j \beta^i \nonumber\\&&+ \frac{2}{3}\bar{\Gamma}^i \partial_j \beta^j + \frac{1}{3}\bar{\gamma}^{il}\partial_l \partial_j \beta^j + \bar{\gamma}^{jl}\partial_j\partial_l\beta^i.
+\end{eqnarray}
+
+We use the variable:
+
+\begin{eqnarray}
+	W = \gamma^{-1/6} = e^{-2\phi}
+\end{eqnarray}
+
+instead of $\phi$. The evolution equation for $W$ is:
+
+\begin{eqnarray}
+	\label{eq:bssn_W}
+	\partial_t W = \frac{1}{3}W(\alpha K - \partial_i \beta^i)+\beta^i \partial_i W.
+\end{eqnarray}
+
+The other choice, which evolves $\phi$, can lead to crashes due to numerical singularities.
+
+We use \texttt{McLachlan} \cite{Brown:2008sb, Kranc:web, McLachlan:web} and adopt the set of equations \eqref{eq:bssn_gamma}, \eqref{eq:bssn_K}, \eqref{eq:bssn_A}, \eqref{eq:bssn_Gamma}, \eqref{eq:bssn_W} for evolution and the gauge conditions \eqref{eq:lognoadv}, \eqref{eq:betanoadv}.
+
+\section{Result}
+
+\section{Conclusion}
+
+더 높은 스핀의 블랙홀을 성공적으로 시뮬레이션 하기 위해서는 junk radiation 등의 문제로 initial data를 구성할 때 Bowen-York Approach이 아닌 다른 접근 방법이 필요합니다. 
+
+\bibliographystyle{plain}
+\bibliography{eintk}% Produces the bibliography via BibTeX.
+
+\end{document}
