@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  13 NOV 2023 00:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  13 NOV 2023 13:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1404,37 +1404,42 @@ File: logos/white.pdf Graphic file (type pdf)
 <use logos/white.pdf>
 Package pdftex.def Info: logos/white.pdf  used on input line 403.
 (pdftex.def)             Requested size: 257.29282pt x 227.62204pt.
+<img/intro.png, id=21, 415.0707pt x 122.1363pt>
+File: img/intro.png Graphic file (type png)
+<use img/intro.png>
+Package pdftex.def Info: img/intro.png  used on input line 403.
+(pdftex.def)             Requested size: 655.56898pt x 192.90614pt.
 (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ot1ntxtt.fd
 File: ot1ntxtt.fd 2012/04/20 v3.1
 )
-<img/traj.png, id=39, 578.16pt x 289.08pt>
+<img/traj.png, id=41, 578.16pt x 289.08pt>
 File: img/traj.png Graphic file (type png)
 <use img/traj.png>
 Package pdftex.def Info: img/traj.png  used on input line 403.
 (pdftex.def)             Requested size: 819.45811pt x 409.75099pt.
-<img/Rerpsi4.png, id=41, 578.16pt x 216.81pt>
+<img/Rerpsi4.png, id=42, 578.16pt x 216.81pt>
 File: img/Rerpsi4.png Graphic file (type png)
 <use img/Rerpsi4.png>
 Package pdftex.def Info: img/Rerpsi4.png  used on input line 403.
 (pdftex.def)             Requested size: 819.45811pt x 307.31325pt.
-<img/psi4i.png, id=43, 797.1381pt x 457.2282pt>
+<img/psi4i.png, id=44, 797.1381pt x 457.2282pt>
 File: img/psi4i.png Graphic file (type png)
 <use img/psi4i.png>
 Package pdftex.def Info: img/psi4i.png  used on input line 403.
 (pdftex.def)             Requested size: 819.45811pt x 470.03635pt.
-<img/erad.png, id=48, 578.16pt x 216.81pt>
+<img/erad.png, id=49, 578.16pt x 216.81pt>
 File: img/erad.png Graphic file (type png)
 <use img/erad.png>
 Package pdftex.def Info: img/erad.png  used on input line 403.
 (pdftex.def)             Requested size: 819.45811pt x 307.31325pt.
-<img/jrad.png, id=49, 578.16pt x 216.81pt>
+<img/jrad.png, id=50, 578.16pt x 216.81pt>
 File: img/jrad.png Graphic file (type png)
 <use img/jrad.png>
 Package pdftex.def Info: img/jrad.png  used on input line 403.
 (pdftex.def)             Requested size: 819.45811pt x 307.31325pt.
 
 (main.bbl)
-Overfull \vbox (14.53761pt too high) detected at line 403
+Overfull \vbox (14.27513pt too high) detected at line 403
  []
 
 File: logos/blue_emblem.pdf Graphic file (type pdf)
@@ -1449,8 +1454,9 @@ Package pdftex.def Info: logos/white.pdf  used on input line 403.
 lin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/carlito/crlt_zisnlb.enc}
 
 {C:/Users/halin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf
-.enc} <./logos/blue_emblem.pdf> <./logos/white.pdf> <./img/traj.png> <./img/Rer
-psi4.png> <./img/psi4i.png (PNG copy)> <./img/erad.png> <./img/jrad.png>]
+.enc} <./logos/blue_emblem.pdf> <./logos/white.pdf> <./img/intro.png> <./img/tr
+aj.png> <./img/Rerpsi4.png> <./img/psi4i.png (PNG copy)> <./img/erad.png> <./im
+g/jrad.png>]
 \tf@nav=\write6
 \openout6 = `main.nav'.
 
@@ -1469,10 +1475,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 38705 strings out of 475513
- 895238 string characters out of 5760853
- 2103238 words of memory out of 5000000
- 59145 multiletter control sequences out of 15000+600000
+ 38718 strings out of 475513
+ 895465 string characters out of 5760853
+ 2106238 words of memory out of 5000000
+ 59157 multiletter control sequences out of 15000+600000
  706098 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,20n,123p,783b,994s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1485,9 +1491,9 @@ ctex/mtpro2/mt2exa.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2mi
 t.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2syt.pfb><C:/Users/h
 alin/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txtt.pfb><C:/User
 s/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (1 page, 2988393 bytes).
+Output written on main.pdf (1 page, 3043838 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 175 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

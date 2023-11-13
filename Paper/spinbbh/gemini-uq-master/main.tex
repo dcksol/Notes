@@ -69,7 +69,7 @@
 % ====================
 
 \footercontent{
-  https://cauastro.github.io \hfill
+  2023. 11. 13 \hfill
   2023 CAU Physics Academic \hfill
   krq3268@cau.ac.kr}
 % (can be left out to remove footer)
@@ -105,13 +105,7 @@
 
   \begin{block}{Abstract}
 
-    Some block contents, followed by a diagram, followed by a dummy paragraph.
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultricies
-    eget libero ac ullamcorper. Integer et euismod ante. Aenean vestibulum
-    lobortis augue, ut lobortis turpis rhoncus sed. Proin feugiat nibh a
-    lacinia dignissim. Proin scelerisque, risus eget tempor fermentum, ex
-    turpis condimentum urna, quis malesuada sapien arcu eu purus. 
+    We present a numerical relativistic study of spinning binary black holes. We investigate their dynamics with respect to black hole spins by simulating two cases. We compare how their dynamics are affected by spin. We find that the case where the spins are aligned with the orbital angular momentum forms more orbits and emits more energy and angular momentum compared to the case where the spins are anti-aligned. We calculate energy and angular momentum using two different methods and confirm their validity.
 
   \end{block}
   
@@ -151,6 +145,12 @@
   		\end{tabular}
   		\caption{Initial data for black hole binaries. The holes have puncture locations $(\pm x, 0, 0)$, linear momenta $(0, \pm P, 0)$, and spin $(0, 0, S)$.}
   	\end{table}
+  	
+  	\begin{figure}
+  		\centering
+  		\includegraphics[width=0.8\columnwidth]{img/intro}
+  		\caption{\label{fig:intro}The orientation of each black hole's spin and orbital angular momentum. Left shows the spin aligned case and right shows the spin antialigned case.}
+  	\end{figure}
   	
   	Based on the determined physical quantities, we need to establish the metric and extrinsic curvature. This process is carried out by \textsc{TwoPunctures} \cite{Ansorg:2004ds}, which operates under the following assumptions:
   	\begin{itemize}
@@ -324,7 +324,7 @@
       \caption{\label{fig:rerpsi4}The real component of $r_\mathrm{ext}\psi_4$ at $r_\mathrm{ext}=100M$. Left shows the spin aligned case and right shows the spin antialigned case.}
     \end{figure}
     
-    Figure~\ref{fig:psi4i} shows imaginary component of $psi_4$ on $xz$ plane in aligned case. The first three images depict junk radiation, while the subsequent images show the actual gravitational wave emissions. Through this, we can confirm the intensity of gravitational waves based on the polar angle along the $z$-axis, clearly indicating that the intensity is greater closer to the $z$-axis.
+    Figure~\ref{fig:psi4i} shows imaginary component of $\psi_4$ on $xz$ plane in aligned case. The first three images depict junk radiation, while the subsequent images show the actual gravitational wave emissions. Through this, we can confirm the intensity of gravitational waves based on the polar angle along the $z$-axis, clearly indicating that the intensity is greater closer to the $z$-axis.
 
   \end{block}
 
