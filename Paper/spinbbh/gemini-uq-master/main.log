@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  13 NOV 2023 13:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.30)  13 NOV 2023 13:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1283,6 +1283,20 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 41.
 \sepwidth=\skip85
 \colwidth=\skip86
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 24.88pt
+(hyperref)                replaced by space on input line 63.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 63.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.90904pt
+(hyperref)                removed on input line 63.
+
 (C:\Users\halin\AppData\Local\Programs\MiKTeX\tex/latex/carlito\ot1crlt-osf.fd
 File: OT1Crlt-OsF.fd 2022/10/05 (autoinst) Font definitions for OT1/Crlt-OsF.
 ) (main.aux)
@@ -1491,7 +1505,7 @@ ctex/mtpro2/mt2exa.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2mi
 t.pfb><C:/Users/halin/TexCustom/fonts/type1/pctex/mtpro2/mt2syt.pfb><C:/Users/h
 alin/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txtt.pfb><C:/User
 s/halin/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (1 page, 3043838 bytes).
+Output written on main.pdf (1 page, 3043878 bytes).
 PDF statistics:
  175 PDF objects out of 1000 (max. 8388607)
  33 named destinations out of 1000 (max. 500000)
