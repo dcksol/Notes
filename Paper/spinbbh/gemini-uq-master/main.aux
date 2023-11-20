@@ -2,10 +2,13 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -46,7 +49,7 @@
 \bibcite{Pollney:2009yz}{\hyperlink {beamerbibPollney:2009yz}{13}}
 \bibcite{Pretorius:2005gq}{\hyperlink {beamerbibPretorius:2005gq}{14}}
 \bibcite{Shibata:1995we}{\hyperlink {beamerbibShibata:1995we}{15}}
-\pgfsyspdfmark {pgfid2}{0}{226551159}
+\pgfsyspdfmark {pgfid1}{0}{226551159}
 \newlabel{fig:intro}{{1}{1}{}{Doc-Start}{}}
 \@writefile{snm}{\beamer@slide {fig:intro}{1}}
 \newlabel{eq:logadv}{{3}{1}{}{Doc-Start}{}}
